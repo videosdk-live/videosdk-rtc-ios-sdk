@@ -1,0 +1,19 @@
+# User data
+xcuserdata/
+xcshareddata/
+
+# Output
+/derivedData
+/output
+/build
+
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Environment
+.env.default
+
+# MacOS folder structure
+/vendor
+.DS_Store
