@@ -17,3 +17,4 @@ playground.xcworkspace
 # MacOS folder structure
 /vendor
 .DS_Store
+Example/.DS_Store
