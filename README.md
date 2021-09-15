@@ -102,4 +102,4 @@ meeting?.join()
 
 ## Example
 
-See [Example](https://github.com/videosdk-live/videosdk-rtc-ios-sdk/tree/main/Example) for more details.
+See [Example](https://github.com/videosdk-live/videosdk-rtc-ios-sdk-example) for more details.
