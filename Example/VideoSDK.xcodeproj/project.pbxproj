@@ -19,7 +19,7 @@
 		A2573BF626F121270087AB36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2573BF426F121270087AB36 /* Main.storyboard */; };
 		A2573BFA26F12A8D0087AB36 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A2573BF726F12A8D0087AB36 /* README.md */; };
 		A2573BFB26F12A8D0087AB36 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = A2573BF826F12A8D0087AB36 /* LICENSE */; };
-		A2573BFC26F12A8D0087AB36 /* VideoSDK.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A2573BF926F12A8D0087AB36 /* VideoSDK.podspec */; };
+		A2573BFC26F12A8D0087AB36 /* VideoSDKRTC.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A2573BF926F12A8D0087AB36 /* VideoSDKRTC.podspec */; };
 		F9716B6E06BC87FC0FAB89C3 /* Pods_VideoSDK_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C50A93B796B4F9C09B5D6D /* Pods_VideoSDK_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +40,7 @@
 		A2573BF526F121270087AB36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A2573BF726F12A8D0087AB36 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A2573BF826F12A8D0087AB36 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		A2573BF926F12A8D0087AB36 /* VideoSDK.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = VideoSDK.podspec; path = ../VideoSDK.podspec; sourceTree = "<group>"; };
+		A2573BF926F12A8D0087AB36 /* VideoSDKRTC.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = VideoSDKRTC.podspec; path = ../VideoSDKRTC.podspec; sourceTree = "<group>"; };
 		AF584C9C67779E0C3308AD9A /* Pods-VideoSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoSDK_Example.release.xcconfig"; path = "Target Support Files/Pods-VideoSDK_Example/Pods-VideoSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,7 +78,7 @@
 			children = (
 				A2573BF826F12A8D0087AB36 /* LICENSE */,
 				A2573BF726F12A8D0087AB36 /* README.md */,
-				A2573BF926F12A8D0087AB36 /* VideoSDK.podspec */,
+				A2573BF926F12A8D0087AB36 /* VideoSDKRTC.podspec */,
 				607FACD21AFB9204008FA782 /* VideoSDK */,
 				607FACD11AFB9204008FA782 /* Products */,
 				05EA4CDE2F8D990E56A0AFA0 /* Pods */,
@@ -203,7 +203,7 @@
 				A2573BF026F120960087AB36 /* ButtonControlsView.xib in Resources */,
 				A2573BFA26F12A8D0087AB36 /* README.md in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
-				A2573BFC26F12A8D0087AB36 /* VideoSDK.podspec in Resources */,
+				A2573BFC26F12A8D0087AB36 /* VideoSDKRTC.podspec in Resources */,
 				A2573BF626F121270087AB36 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

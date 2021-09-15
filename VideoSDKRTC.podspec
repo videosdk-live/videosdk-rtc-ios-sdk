@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint VideoSDK.podspec' to ensure this is a
+# Be sure to run `pod lib lint VideoSDKRTC.podspec' to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
