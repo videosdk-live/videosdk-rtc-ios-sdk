@@ -23,6 +23,8 @@ Official iOS SDK of [videosdk.live](https://videosdk.live/)
 
 ```ruby
 pod 'VideoSDK'
+or 
+pod 'VideoSDKRTC', :git => 'https://github.com/videosdk-live/videosdk-rtc-ios-sdk.git'
 ```
 
 ## Important

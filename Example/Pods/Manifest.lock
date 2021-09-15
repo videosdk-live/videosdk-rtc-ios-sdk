@@ -1,12 +1,12 @@
 PODS:
   - Starscream (4.0.4)
   - SwiftyJSON (5.0.1)
-  - VideoSDK (1.0.0):
+  - VideoSDKRTC (1.0.0):
     - Starscream
     - SwiftyJSON
 
 DEPENDENCIES:
-  - VideoSDK (from `../`)
+  - VideoSDKRTC (from `https://github.com/videosdk-live/videosdk-rtc-ios-sdk.git`)
 
 SPEC REPOS:
   trunk:
@@ -14,14 +14,19 @@ SPEC REPOS:
     - SwiftyJSON
 
 EXTERNAL SOURCES:
-  VideoSDK:
-    :path: "../"
+  VideoSDKRTC:
+    :git: https://github.com/videosdk-live/videosdk-rtc-ios-sdk.git
+
+CHECKOUT OPTIONS:
+  VideoSDKRTC:
+    :commit: 4b2b8751e7389975cfec2f63695ecbbba16d7c4b
+    :git: https://github.com/videosdk-live/videosdk-rtc-ios-sdk.git
 
 SPEC CHECKSUMS:
   Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
-  VideoSDK: 754d5309d06a4b60fd17083003f56be39e425851
+  VideoSDKRTC: 7ce12928a3ed11bdd28a916851997afccff6beb0
 
-PODFILE CHECKSUM: ac959298d237516cecdde5cb3b30886357bbe7ad
+PODFILE CHECKSUM: d25ef281720df713704de71c990d41e2aaa6e678
 
 COCOAPODS: 1.10.1

@@ -10,7 +10,7 @@ import UIKit
 import SwiftyJSON
 
 /// Server Token URL
-fileprivate let getTokenUrl = "https://dev-ios-api.zujonow.com/get-token"
+fileprivate let getTokenUrl = "<URL to retrieve token>"
 
 class StartViewController: UIViewController {
 
@@ -29,15 +29,14 @@ class StartViewController: UIViewController {
         super.viewDidLoad()
 
         startMeetingButton.layer.cornerRadius = 6
-        
-        // providing hard-coded meeting id for quick start
-        nameTextField.text = "iOS App"
-        meetingIdTextField.text = "lm7t-c3w0-dspp"
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        /**
+         Retrieve token from your server
+         */
         URLSession.shared.dataTask(with: URL(string: getTokenUrl)!) { data, response, error in
             if let data = data, let json = try? JSON(data: data) {
                 self.serverToken = json["token"].stringValue

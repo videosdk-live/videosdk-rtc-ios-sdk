@@ -177,16 +177,16 @@ code_sign_if_enabled() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework"
-  install_framework "${PODS_ROOT}/../../Frameworks/VideoSDK.framework"
-  install_framework "${PODS_ROOT}/../../Frameworks/vl_mediasoup_client_ios.framework"
-  install_framework "${PODS_ROOT}/../../Frameworks/WebRTC.framework"
+  install_framework "${PODS_ROOT}/VideoSDKRTC/Frameworks/VideoSDK.framework"
+  install_framework "${PODS_ROOT}/VideoSDKRTC/Frameworks/vl_mediasoup_client_ios.framework"
+  install_framework "${PODS_ROOT}/VideoSDKRTC/Frameworks/WebRTC.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework"
-  install_framework "${PODS_ROOT}/../../Frameworks/VideoSDK.framework"
-  install_framework "${PODS_ROOT}/../../Frameworks/vl_mediasoup_client_ios.framework"
-  install_framework "${PODS_ROOT}/../../Frameworks/WebRTC.framework"
+  install_framework "${PODS_ROOT}/VideoSDKRTC/Frameworks/VideoSDK.framework"
+  install_framework "${PODS_ROOT}/VideoSDKRTC/Frameworks/vl_mediasoup_client_ios.framework"
+  install_framework "${PODS_ROOT}/VideoSDKRTC/Frameworks/WebRTC.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait
