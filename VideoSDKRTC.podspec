@@ -22,7 +22,7 @@ Video sdk enables opportunity to integrate immersive video experiences into your
   s.source           = { :git => 'https://github.com/videosdk-live/videosdk-rtc-ios-sdk.git', :tag => 'v1.0.1' }
 
   s.ios.deployment_target = '12.0'
-  s.source_files = 'VideoSDK/**/*'
+  #s.source_files = 'VideoSDK/**/*'
   
   # s.resource_bundles = {
   #   'VideoSDK' => ['VideoSDK/Assets/*.png']
