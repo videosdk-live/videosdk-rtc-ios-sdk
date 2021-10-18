@@ -1,0 +1,162 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name VideoSDK
+import AVFoundation
+import Foundation
+import Starscream
+import Swift
+@_exported import VideoSDK
+import WebRTC
+import _Concurrency
+import vl_mediasoup_client_ios
+extension Foundation.Data {
+  public func toJSONString() -> Swift.String
+  public func toJSON() -> [Swift.String : Any]
+}
+extension Swift.String {
+  public func toJSON() -> [Swift.String : Any]
+}
+extension Swift.Dictionary {
+  public func toJSONString() -> Swift.String
+}
+extension Swift.Array {
+  public func toJSONString() -> Swift.String
+}
+public enum StreamKind : Swift.String {
+  case video
+  case audio
+  case share
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class MediaStream : Swift.Equatable {
+  public var id: Swift.String {
+    get
+  }
+  public var kind: VideoSDK.StreamKind {
+    get
+  }
+  public var track: WebRTC.RTCMediaStreamTrack {
+    get
+  }
+  public var producer: vl_mediasoup_client_ios.Producer? {
+    get
+  }
+  public var consumer: vl_mediasoup_client_ios.Consumer? {
+    get
+  }
+  @objc deinit
+}
+extension VideoSDK.MediaStream {
+  public static func == (lhs: VideoSDK.MediaStream, rhs: VideoSDK.MediaStream) -> Swift.Bool
+}
+@_hasMissingDesignatedInitializers public class Meeting : Swift.Equatable {
+  public var id: Swift.String {
+    get
+  }
+  public var localParticipant: VideoSDK.Participant {
+    get
+  }
+  public var participants: [Swift.String : VideoSDK.Participant] {
+    get
+  }
+  @objc deinit
+}
+extension VideoSDK.Meeting {
+  public func join()
+  public func leave()
+  public func enableWebcam()
+  public func disableWebcam()
+  public func muteMic()
+  public func unmuteMic()
+  public func startRecording(webhookUrl: Swift.String)
+  public func stopRecording()
+}
+extension VideoSDK.Meeting {
+  public func addEventListener(_ meetingEventListener: VideoSDK.MeetingEventListener)
+  public func removeEventListener(_ meetingEventListener: VideoSDK.MeetingEventListener)
+}
+extension VideoSDK.Meeting {
+  public static func == (lhs: VideoSDK.Meeting, rhs: VideoSDK.Meeting) -> Swift.Bool
+}
+public protocol MeetingEventListener : AnyObject {
+  func onMeetingJoined()
+  func onMeetingLeft()
+  func onParticipantJoined(_ participant: VideoSDK.Participant)
+  func onParticipantLeft(_ participant: VideoSDK.Participant)
+  func onRecordingStarted()
+  func onRecordingStoppped()
+}
+extension VideoSDK.MeetingEventListener {
+  public func onMeetingJoined()
+  public func onMeetingLeft()
+  public func onParticipantJoined(_ participant: VideoSDK.Participant)
+  public func onParticipantLeft(_ participant: VideoSDK.Participant)
+  public func onRecordingStarted()
+  public func onRecordingStoppped()
+}
+@_hasMissingDesignatedInitializers public class Participant : Swift.Equatable {
+  public var id: Swift.String {
+    get
+  }
+  public var displayName: Swift.String {
+    get
+  }
+  public var videoQuality: VideoSDK.VideoQuality {
+    get
+  }
+  public var isLocal: Swift.Bool {
+    get
+  }
+  public var streams: [Swift.String : VideoSDK.MediaStream] {
+    get
+  }
+  @objc deinit
+}
+extension VideoSDK.Participant {
+  public func addStream(_ stream: VideoSDK.MediaStream)
+  @discardableResult
+  public func removeStream(_ streamId: Swift.String) -> VideoSDK.MediaStream?
+  public func removeAllStreams()
+}
+extension VideoSDK.Participant {
+  public func addEventListener(_ listener: VideoSDK.ParticipantEventListener)
+  public func removeEventListener(_ listener: VideoSDK.ParticipantEventListener)
+}
+extension VideoSDK.Participant {
+  public static func == (lhs: VideoSDK.Participant, rhs: VideoSDK.Participant) -> Swift.Bool
+}
+public protocol ParticipantEventListener {
+  func onStreamEnabled(_ stream: VideoSDK.MediaStream, forParticipant participant: VideoSDK.Participant)
+  func onStreamDisabled(_ stream: VideoSDK.MediaStream, forParticipant participant: VideoSDK.Participant)
+}
+extension VideoSDK.ParticipantEventListener {
+  public func onStreamEnabled(_ stream: VideoSDK.MediaStream, forParticipant participant: VideoSDK.Participant)
+  public func onStreamDisabled(_ stream: VideoSDK.MediaStream, forParticipant participant: VideoSDK.Participant)
+}
+public enum VideoQuality : Swift.String, Swift.CaseIterable {
+  case high, medium, low
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [VideoSDK.VideoQuality]
+  public typealias RawValue = Swift.String
+  public static var allCases: [VideoSDK.VideoQuality] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class VideoSDK {
+  public static func config(token: Swift.String)
+  public static func initMeeting(meetingId: Swift.String, participantName: Swift.String = "Guest", micEnabled: Swift.Bool = true, webcamEnabled: Swift.Bool = true) -> VideoSDK.Meeting
+  @objc deinit
+}
+extension VideoSDK.StreamKind : Swift.Equatable {}
+extension VideoSDK.StreamKind : Swift.Hashable {}
+extension VideoSDK.StreamKind : Swift.RawRepresentable {}
+extension VideoSDK.VideoQuality : Swift.Equatable {}
+extension VideoSDK.VideoQuality : Swift.Hashable {}
+extension VideoSDK.VideoQuality : Swift.RawRepresentable {}
