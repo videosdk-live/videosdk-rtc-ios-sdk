@@ -10,8 +10,8 @@
 #endif
 #endif
 
-#import "VideoSDK-Bridging-Header.h"
+#import "VideoSDKRTC-Bridging-Header.h"
 
-FOUNDATION_EXPORT double VideoSDKVersionNumber;
-FOUNDATION_EXPORT const unsigned char VideoSDKVersionString[];
+FOUNDATION_EXPORT double VideoSDKRTCVersionNumber;
+FOUNDATION_EXPORT const unsigned char VideoSDKRTCVersionString[];
 
