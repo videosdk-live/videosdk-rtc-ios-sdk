@@ -82,6 +82,11 @@ meeting?.join()
 2. `onMeetingLeft()` Called when meeting ends.
 3. `onParticipantJoined(_ participant: Participant)` Called when new participant joins.
 4. `onParticipantLeft(_ participant: Participant)` Called when participant leaves.
+5. `onRecordingStarted()` Called when meeting recording starts.
+6. `onRecordingStoppped` Called after meeting recording stops.
+7. `onLivestreamStarted` Called when livestream starts.
+8. `onLivestreamStopped` Called after livestream stops.
+9. `onSpeakerChanged(participantId: String?)` Called when active speaker changes.
 
 ### ParticipantEventListener
 
