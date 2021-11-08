@@ -22,7 +22,7 @@ Official iOS SDK of [videosdk.live](https://videosdk.live/)
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate VideoSDK into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-pod 'VideoSDK'
+pod 'VideoSDKRTC'
 or 
 pod 'VideoSDKRTC', :git => 'https://github.com/videosdk-live/videosdk-rtc-ios-sdk.git'
 ```
@@ -37,7 +37,7 @@ pod 'VideoSDKRTC', :git => 'https://github.com/videosdk-live/videosdk-rtc-ios-sd
 ### Import
 
 ```swift
-import VideoSDK
+import VideoSDKRTC
 ```
 
 ### Configure VideoSDK
