@@ -2,7 +2,6 @@
 
 Official iOS SDK of [videosdk.live](https://videosdk.live/)
 
-![Alt text](https://docs.videosdk.live/assets/images/Zujonow-whitelabel-min-7e7fcd47dedd07f03f4355427a764caf.jpg "Banner")
 
 ## Features
 
