@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'VideoSDKRTC'
-  s.version          = '1.1.2'
+  s.version          = '1.2.0'
   s.summary          = 'Interactive Video API Experiences for Develoeprs.'
 
   s.description      = <<-DESC
@@ -19,9 +19,10 @@ Video sdk enables opportunity to integrate immersive video experiences into your
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Zujo Tech Pvt Ltd.' => 'support@zujo.io' }
-  s.source           = { :git => 'https://github.com/videosdk-live/videosdk-rtc-ios-sdk.git', :tag => 'v1.1.2' }
+  s.source           = { :git => 'https://github.com/videosdk-live/videosdk-rtc-ios-sdk.git', :tag => 'v1.2.0' }
 
-  s.ios.deployment_target = '12.0'
+  s.swift_version = '5.0'
+  s.ios.deployment_target = '13.0'
   #s.source_files = 'VideoSDK/**/*'
   
   # s.resource_bundles = {
@@ -35,7 +36,7 @@ Video sdk enables opportunity to integrate immersive video experiences into your
   s.dependency 'Starscream'
   
   # output frameworks
-  s.vendored_frameworks = 'Frameworks/VideoSDKRTC.framework', 'Frameworks/vl_mediasoup_client_ios.framework', 'Frameworks/WebRTC.framework'
+  s.vendored_frameworks = 'Frameworks/VideoSDKRTC.xcframework', 'Frameworks/vl_mediasoup_client_ios.xcframework', 'Frameworks/WebRTC.xcframework'
   
   # default bulid settings
   s.xcconfig = {
@@ -45,8 +46,5 @@ Video sdk enables opportunity to integrate immersive video experiences into your
     'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES',
     'SKIP_INSTALL' => 'NO'
   }
-  
-  # swift versions
-  s.swift_versions = ['5.1', '5.2', '5.3', '5.4', '5.5']
   
 end
