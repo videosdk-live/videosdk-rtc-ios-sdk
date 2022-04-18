@@ -141,9 +141,6 @@ extension VideoSDKRTC.MeetingEventListener {
   public func onMicRequested(participantId: Swift.String?, accept: @escaping () -> Swift.Void, reject: @escaping () -> Swift.Void)
   public func onWebcamRequested(participantId: Swift.String?, accept: @escaping () -> Swift.Void, reject: @escaping () -> Swift.Void)
 }
-public protocol PubSubMessageListener {
-  func onMessageReceived(_ message: VideoSDKRTC.PubSubMessage)
-}
 @_hasMissingDesignatedInitializers public class Participant : Swift.Equatable {
   public var id: Swift.String {
     get
@@ -208,6 +205,9 @@ extension VideoSDKRTC.PubSub {
   public var senderName: Swift.String
   public var timestamp: Swift.String
   @objc deinit
+}
+public protocol PubSubMessageListener {
+  func onMessageReceived(_ message: VideoSDKRTC.PubSubMessage)
 }
 public enum VideoQuality : Swift.String, Swift.CaseIterable {
   case high, medium, low
