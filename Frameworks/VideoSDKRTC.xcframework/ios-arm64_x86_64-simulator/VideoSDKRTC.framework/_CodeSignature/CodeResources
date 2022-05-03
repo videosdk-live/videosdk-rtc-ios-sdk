@@ -18,7 +18,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		nmcubuC9L8KwZq9FsspSopD75UQ=
+		PllibUcRo78huruCV0RVs9Qx/qI=
 		</data>
 		<key>Modules/VideoSDKRTC.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/VideoSDKRTC.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		iTSMPk9g8nE0MloFj/RTbWwPaMM=
+		YeZ3KR4hYFRDMeZgag8fjHxUFvk=
 		</data>
 		<key>Modules/VideoSDKRTC.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Modules/VideoSDKRTC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		frW4Il/d1iWKc8nCteaVHIocHQM=
+		7HYk0Zfr8fKdupkOKAGtC8oiQdM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -90,7 +90,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FcNGlxoXYTYqlAohDEDrb/UesU5biLeS91D7f3bByYY=
+			Pd+h/Zk3DZrqFvlaQMHT5loZBypjBpTUzWppTDdmxfE=
 			</data>
 		</dict>
 		<key>Modules/VideoSDKRTC.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -111,7 +111,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rhd7u0rBfRR9AUlyGcZPOTGC3XQxMQFHQpQxpjdDmps=
+			VoMVtmDQWYZ0t8pGMDqtVMTmy2KViJ79eXiJkkslp+s=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
