@@ -5,6 +5,7 @@
 //  Created by Ethan.
 //  Copyright © 2019 Ethan. All rights reserved.
 //
+//
 
 #ifndef Consumer_h
 #define Consumer_h
