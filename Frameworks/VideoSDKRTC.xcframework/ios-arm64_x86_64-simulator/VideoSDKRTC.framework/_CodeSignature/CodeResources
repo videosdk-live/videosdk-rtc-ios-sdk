@@ -18,7 +18,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		VSTRa4M5SR4oUe90fPz+hztF9pY=
+		tE9gx217biK615RM2dp/aSseKlY=
 		</data>
 		<key>Modules/VideoSDKRTC.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/VideoSDKRTC.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		qLBEgt4nvh/sLkfGWFkShf8RLrI=
+		dS+g9PA+D1scmMx3JBmPd8BP3hY=
 		</data>
 		<key>Modules/VideoSDKRTC.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Modules/VideoSDKRTC.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		qLBEgt4nvh/sLkfGWFkShf8RLrI=
+		dS+g9PA+D1scmMx3JBmPd8BP3hY=
 		</data>
 		<key>Modules/VideoSDKRTC.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/VideoSDKRTC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		zosDe0hqycSd/NYhDNtxBGTSVwo=
+		UTz2hxhth3yAIcUoT58Yw+WUyn0=
 		</data>
 		<key>Modules/VideoSDKRTC.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>Modules/VideoSDKRTC.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		zosDe0hqycSd/NYhDNtxBGTSVwo=
+		UTz2hxhth3yAIcUoT58Yw+WUyn0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -114,7 +114,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ys8y4MEGa34cRyzJ60rt3gQrgpdDmtc7HacvyrYmfXc=
+			RvPK8nrxNvvKwZUbIZYx2qZ1bcAx3c7j8yS8AC+z7XE=
 			</data>
 		</dict>
 		<key>Modules/VideoSDKRTC.swiftmodule/arm64.swiftdoc</key>
@@ -135,7 +135,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ys8y4MEGa34cRyzJ60rt3gQrgpdDmtc7HacvyrYmfXc=
+			RvPK8nrxNvvKwZUbIZYx2qZ1bcAx3c7j8yS8AC+z7XE=
 			</data>
 		</dict>
 		<key>Modules/VideoSDKRTC.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -156,7 +156,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IKeDM884O1lfuu9ILH501jTiqUL+CNkPOAn0AOfJY0E=
+			k3J8MnQ6WKj88zHDBnGQ49KoqEQkurAyGORH90KoMZc=
 			</data>
 		</dict>
 		<key>Modules/VideoSDKRTC.swiftmodule/x86_64.swiftdoc</key>
@@ -177,7 +177,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IKeDM884O1lfuu9ILH501jTiqUL+CNkPOAn0AOfJY0E=
+			k3J8MnQ6WKj88zHDBnGQ49KoqEQkurAyGORH90KoMZc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
