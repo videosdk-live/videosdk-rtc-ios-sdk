@@ -19,7 +19,7 @@ Video sdk enables opportunity to integrate immersive video experiences into your
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Zujo Tech Pvt Ltd.' => 'support@zujo.io' }
-  s.source           = { :git => 'https://github.com/videosdk-live/videosdk-rtc-ios-sdk.git', :tag => 'v1.2.11' }
+  s.source           = { :git => 'https://github.com/videosdk-live/videosdk-rtc-ios-sdk.git', :tag => 'v1.2.12' }
 
   s.swift_version = '5.0'
   s.ios.deployment_target = '11.0'
