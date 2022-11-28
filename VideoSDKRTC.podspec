@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'VideoSDKRTC'
-  s.version          = '1.2.11'
+  s.version          = '1.2.12'
   s.summary          = 'Interactive Video API Experiences for Develoeprs.'
 
   s.description      = <<-DESC
