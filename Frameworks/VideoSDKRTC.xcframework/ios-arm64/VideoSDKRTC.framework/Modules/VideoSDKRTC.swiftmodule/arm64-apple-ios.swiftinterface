@@ -50,7 +50,7 @@ public struct LivestreamOutput : Swift.Codable {
   public var id: Swift.String {
     get
   }
-  public var kind: Mediasoup.MediaKind {
+  public var kind: VideoSDKRTC.UpdateMediaKind {
     get
   }
   public var track: WebRTC.RTCMediaStreamTrack {
@@ -70,6 +70,11 @@ extension VideoSDKRTC.MediaStream {
 }
 extension VideoSDKRTC.MediaStream {
   public static func == (lhs: VideoSDKRTC.MediaStream, rhs: VideoSDKRTC.MediaStream) -> Swift.Bool
+}
+public enum UpdateMediaKind : Swift.Equatable {
+  case share
+  case state(value: Mediasoup.MediaKind)
+  public static func == (a: VideoSDKRTC.UpdateMediaKind, b: VideoSDKRTC.UpdateMediaKind) -> Swift.Bool
 }
 @_hasMissingDesignatedInitializers public class Meeting : Swift.Equatable {
   public var id: Swift.String {
