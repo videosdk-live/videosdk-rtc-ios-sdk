@@ -607,14 +607,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "UpdateMediaKind",
-                "printedName": "VideoSDKRTC.UpdateMediaKind",
-                "usr": "s:11VideoSDKRTC15UpdateMediaKindO"
+                "name": "MediaType",
+                "printedName": "VideoSDKRTC.MediaType",
+                "usr": "s:11VideoSDKRTC9MediaTypeO"
               }
             ],
             "declKind": "Var",
-            "usr": "s:11VideoSDKRTC11MediaStreamC4kindAA06UpdateC4KindOvp",
-            "mangledName": "$s11VideoSDKRTC11MediaStreamC4kindAA06UpdateC4KindOvp",
+            "usr": "s:11VideoSDKRTC11MediaStreamC4kindAA0C4TypeOvp",
+            "mangledName": "$s11VideoSDKRTC11MediaStreamC4kindAA0C4TypeOvp",
             "moduleName": "VideoSDKRTC",
             "declAttributes": [
               "HasStorage",
@@ -631,14 +631,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UpdateMediaKind",
-                    "printedName": "VideoSDKRTC.UpdateMediaKind",
-                    "usr": "s:11VideoSDKRTC15UpdateMediaKindO"
+                    "name": "MediaType",
+                    "printedName": "VideoSDKRTC.MediaType",
+                    "usr": "s:11VideoSDKRTC9MediaTypeO"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC11MediaStreamC4kindAA06UpdateC4KindOvg",
-                "mangledName": "$s11VideoSDKRTC11MediaStreamC4kindAA06UpdateC4KindOvg",
+                "usr": "s:11VideoSDKRTC11MediaStreamC4kindAA0C4TypeOvg",
+                "mangledName": "$s11VideoSDKRTC11MediaStreamC4kindAA0C4TypeOvg",
                 "moduleName": "VideoSDKRTC",
                 "implicit": true,
                 "accessorKind": "get"
@@ -913,8 +913,8 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "UpdateMediaKind",
-        "printedName": "UpdateMediaKind",
+        "name": "MediaType",
+        "printedName": "MediaType",
         "children": [
           {
             "kind": "Var",
@@ -924,24 +924,24 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(VideoSDKRTC.UpdateMediaKind.Type) -> VideoSDKRTC.UpdateMediaKind",
+                "printedName": "(VideoSDKRTC.MediaType.Type) -> VideoSDKRTC.MediaType",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UpdateMediaKind",
-                    "printedName": "VideoSDKRTC.UpdateMediaKind",
-                    "usr": "s:11VideoSDKRTC15UpdateMediaKindO"
+                    "name": "MediaType",
+                    "printedName": "VideoSDKRTC.MediaType",
+                    "usr": "s:11VideoSDKRTC9MediaTypeO"
                   },
                   {
                     "kind": "TypeNominal",
                     "name": "Metatype",
-                    "printedName": "VideoSDKRTC.UpdateMediaKind.Type",
+                    "printedName": "VideoSDKRTC.MediaType.Type",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "UpdateMediaKind",
-                        "printedName": "VideoSDKRTC.UpdateMediaKind",
-                        "usr": "s:11VideoSDKRTC15UpdateMediaKindO"
+                        "name": "MediaType",
+                        "printedName": "VideoSDKRTC.MediaType",
+                        "usr": "s:11VideoSDKRTC9MediaTypeO"
                       }
                     ]
                   }
@@ -949,8 +949,8 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:11VideoSDKRTC15UpdateMediaKindO5shareyA2CmF",
-            "mangledName": "$s11VideoSDKRTC15UpdateMediaKindO5shareyA2CmF",
+            "usr": "s:11VideoSDKRTC9MediaTypeO5shareyA2CmF",
+            "mangledName": "$s11VideoSDKRTC9MediaTypeO5shareyA2CmF",
             "moduleName": "VideoSDKRTC"
           },
           {
@@ -961,18 +961,18 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(VideoSDKRTC.UpdateMediaKind.Type) -> (Mediasoup.MediaKind) -> VideoSDKRTC.UpdateMediaKind",
+                "printedName": "(VideoSDKRTC.MediaType.Type) -> (Mediasoup.MediaKind) -> VideoSDKRTC.MediaType",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Mediasoup.MediaKind) -> VideoSDKRTC.UpdateMediaKind",
+                    "printedName": "(Mediasoup.MediaKind) -> VideoSDKRTC.MediaType",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "UpdateMediaKind",
-                        "printedName": "VideoSDKRTC.UpdateMediaKind",
-                        "usr": "s:11VideoSDKRTC15UpdateMediaKindO"
+                        "name": "MediaType",
+                        "printedName": "VideoSDKRTC.MediaType",
+                        "usr": "s:11VideoSDKRTC9MediaTypeO"
                       },
                       {
                         "kind": "TypeNominal",
@@ -992,13 +992,13 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Metatype",
-                    "printedName": "VideoSDKRTC.UpdateMediaKind.Type",
+                    "printedName": "VideoSDKRTC.MediaType.Type",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "UpdateMediaKind",
-                        "printedName": "VideoSDKRTC.UpdateMediaKind",
-                        "usr": "s:11VideoSDKRTC15UpdateMediaKindO"
+                        "name": "MediaType",
+                        "printedName": "VideoSDKRTC.MediaType",
+                        "usr": "s:11VideoSDKRTC9MediaTypeO"
                       }
                     ]
                   }
@@ -1006,8 +1006,8 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:11VideoSDKRTC15UpdateMediaKindO5stateyAC9Mediasoup0dE0O_tcACmF",
-            "mangledName": "$s11VideoSDKRTC15UpdateMediaKindO5stateyAC9Mediasoup0dE0O_tcACmF",
+            "usr": "s:11VideoSDKRTC9MediaTypeO5stateyAC9Mediasoup0C4KindO_tcACmF",
+            "mangledName": "$s11VideoSDKRTC9MediaTypeO5stateyAC9Mediasoup0C4KindO_tcACmF",
             "moduleName": "VideoSDKRTC"
           },
           {
@@ -1023,20 +1023,20 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "UpdateMediaKind",
-                "printedName": "VideoSDKRTC.UpdateMediaKind",
-                "usr": "s:11VideoSDKRTC15UpdateMediaKindO"
+                "name": "MediaType",
+                "printedName": "VideoSDKRTC.MediaType",
+                "usr": "s:11VideoSDKRTC9MediaTypeO"
               },
               {
                 "kind": "TypeNominal",
-                "name": "UpdateMediaKind",
-                "printedName": "VideoSDKRTC.UpdateMediaKind",
-                "usr": "s:11VideoSDKRTC15UpdateMediaKindO"
+                "name": "MediaType",
+                "printedName": "VideoSDKRTC.MediaType",
+                "usr": "s:11VideoSDKRTC9MediaTypeO"
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoSDKRTC15UpdateMediaKindO2eeoiySbAC_ACtFZ",
-            "mangledName": "$s11VideoSDKRTC15UpdateMediaKindO2eeoiySbAC_ACtFZ",
+            "usr": "s:11VideoSDKRTC9MediaTypeO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s11VideoSDKRTC9MediaTypeO2eeoiySbAC_ACtFZ",
             "moduleName": "VideoSDKRTC",
             "static": true,
             "implicit": true,
@@ -1044,8 +1044,8 @@
           }
         ],
         "declKind": "Enum",
-        "usr": "s:11VideoSDKRTC15UpdateMediaKindO",
-        "mangledName": "$s11VideoSDKRTC15UpdateMediaKindO",
+        "usr": "s:11VideoSDKRTC9MediaTypeO",
+        "mangledName": "$s11VideoSDKRTC9MediaTypeO",
         "moduleName": "VideoSDKRTC",
         "declAttributes": [
           "AccessControl"
@@ -6986,7 +6986,7 @@
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/MediaStream.swift",
       "kind": "BooleanLiteral",
-      "offset": 1262,
+      "offset": 1256,
       "length": 5,
       "value": "false"
     },
