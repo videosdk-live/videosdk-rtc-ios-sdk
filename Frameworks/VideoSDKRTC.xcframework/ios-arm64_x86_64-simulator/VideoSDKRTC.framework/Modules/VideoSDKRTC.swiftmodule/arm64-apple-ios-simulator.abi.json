@@ -4148,8 +4148,8 @@
       },
       {
         "kind": "Import",
-        "name": "Starscream",
-        "printedName": "Starscream",
+        "name": "VideosdkWebSocket",
+        "printedName": "VideosdkWebSocket",
         "declKind": "Import",
         "moduleName": "VideoSDKRTC"
       },
@@ -6865,322 +6865,322 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Others\/CameraPosition.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Others\/CameraPosition.swift",
       "kind": "IntegerLiteral",
       "offset": 244,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Others\/CameraPosition.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Others\/CameraPosition.swift",
       "kind": "IntegerLiteral",
       "offset": 263,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Others\/CameraPosition.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Others\/CameraPosition.swift",
       "kind": "IntegerLiteral",
       "offset": 244,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Others\/CameraPosition.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Others\/CameraPosition.swift",
       "kind": "IntegerLiteral",
       "offset": 263,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Others\/CameraPosition.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Others\/CameraPosition.swift",
       "kind": "IntegerLiteral",
       "offset": 244,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Others\/CameraPosition.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Others\/CameraPosition.swift",
       "kind": "IntegerLiteral",
       "offset": 263,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Constants.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 213,
       "length": 31,
       "value": "\"wss:\/\/call-api.videosdk.live\/\""
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/DeviceInfo.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/DeviceInfo.swift",
       "kind": "StringLiteral",
       "offset": 214,
       "length": 28,
       "value": "\"CFBundleShortVersionString\""
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/DeviceInfo.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/DeviceInfo.swift",
       "kind": "StringLiteral",
       "offset": 696,
       "length": 5,
       "value": "\"ios\""
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/DeviceInfo.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/DeviceInfo.swift",
       "kind": "StringLiteral",
       "offset": 743,
       "length": 9,
       "value": "\"unknown\""
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/MediaCapturer.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/MediaCapturer.swift",
       "kind": "StringLiteral",
       "offset": 260,
       "length": 8,
       "value": "\"ARDAMS\""
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/MediaCapturer.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/MediaCapturer.swift",
       "kind": "StringLiteral",
       "offset": 291,
       "length": 10,
       "value": "\"ARDAMSv0\""
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/MediaCapturer.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/MediaCapturer.swift",
       "kind": "StringLiteral",
       "offset": 324,
       "length": 10,
       "value": "\"ARDAMSa0\""
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/MediaCapturer.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/MediaCapturer.swift",
       "kind": "StringLiteral",
       "offset": 260,
       "length": 8,
       "value": "\"ARDAMS\""
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/MediaCapturer.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/MediaCapturer.swift",
       "kind": "StringLiteral",
       "offset": 291,
       "length": 10,
       "value": "\"ARDAMSv0\""
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/MediaCapturer.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/MediaCapturer.swift",
       "kind": "StringLiteral",
       "offset": 324,
       "length": 10,
       "value": "\"ARDAMSa0\""
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/MediaCapturer.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/MediaCapturer.swift",
       "kind": "IntegerLiteral",
       "offset": 1088,
       "length": 2,
       "value": "30"
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/MediaStream.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/MediaStream.swift",
       "kind": "BooleanLiteral",
       "offset": 1256,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/Meeting.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/Meeting.swift",
       "kind": "Dictionary",
       "offset": 556,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/Meeting.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/Meeting.swift",
       "kind": "BooleanLiteral",
       "offset": 858,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/Meeting.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/Meeting.swift",
       "kind": "BooleanLiteral",
       "offset": 894,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/Meeting.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/Meeting.swift",
       "kind": "StringLiteral",
       "offset": 1398,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/Meeting.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/Meeting.swift",
       "kind": "BooleanLiteral",
       "offset": 1436,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/Meeting.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/Meeting.swift",
       "kind": "BooleanLiteral",
       "offset": 1479,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/Participant.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/Participant.swift",
       "kind": "Dictionary",
       "offset": 1025,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/PubSub.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/PubSub.swift",
       "kind": "Dictionary",
       "offset": 307,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/PubSub.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/PubSub.swift",
       "kind": "Dictionary",
       "offset": 387,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/PubSub.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/PubSub.swift",
       "kind": "Dictionary",
       "offset": 800,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/PubSubMessage.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/PubSubMessage.swift",
       "kind": "StringLiteral",
       "offset": 124,
       "length": 13,
       "value": "\"VideoSDKRTC.PubSubMessage\""
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/RoomClient.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/RoomClient.swift",
       "kind": "BooleanLiteral",
       "offset": 935,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/RoomClient.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/RoomClient.swift",
       "kind": "Dictionary",
       "offset": 1586,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/RoomClient.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/RoomClient.swift",
       "kind": "Dictionary",
       "offset": 1630,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/RoomClient.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/RoomClient.swift",
       "kind": "Dictionary",
       "offset": 1714,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/RoomClient.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/RoomClient.swift",
       "kind": "IntegerLiteral",
       "offset": 1880,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/RoomClient.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/RoomClient.swift",
       "kind": "StringLiteral",
       "offset": 766,
       "length": 10,
       "value": "\"VideoSDKRTC.RoomClient\""
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/RoomClient.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/RoomClient.swift",
       "kind": "Dictionary",
       "offset": 7034,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/SocketRequestHandler.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/SocketRequestHandler.swift",
       "kind": "BooleanLiteral",
-      "offset": 823,
+      "offset": 830,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/SocketRequestHandler.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/SocketRequestHandler.swift",
       "kind": "Dictionary",
-      "offset": 921,
+      "offset": 928,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/SocketRequestHandler.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/SocketRequestHandler.swift",
       "kind": "Dictionary",
-      "offset": 6316,
+      "offset": 6323,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/SocketRequestHandler.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/SocketRequestHandler.swift",
       "kind": "Dictionary",
-      "offset": 8218,
+      "offset": 8225,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/SocketRequestHandler.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/SocketRequestHandler.swift",
       "kind": "Dictionary",
-      "offset": 9187,
+      "offset": 9194,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Others\/VideoQuality.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Others\/VideoQuality.swift",
       "kind": "Dictionary",
       "offset": 294,
       "length": 961,
       "value": "[(\"sd\", [(\"low\", [(\"s\", 0), (\"t\", 2)]), (\"medium\", [(\"s\", 0), (\"t\", 2)]), (\"high\", [(\"s\", 1), (\"t\", 2)]), (\"s0t0\", [(\"s\", 0), (\"t\", 0)]), (\"s0t1\", [(\"s\", 0), (\"t\", 1)]), (\"s0t2\", [(\"s\", 0), (\"t\", 2)]), (\"s1t0\", [(\"s\", 1), (\"t\", 0)]), (\"s1t1\", [(\"s\", 1), (\"t\", 1)]), (\"s1t2\", [(\"s\", 1), (\"t\", 2)]), (\"s2t0\", [(\"s\", 2), (\"t\", 0)]), (\"s2t1\", [(\"s\", 2), (\"t\", 1)]), (\"s2t2\", [(\"s\", 2), (\"t\", 2)])]), (\"hd\", [(\"low\", [(\"s\", 0), (\"t\", 2)]), (\"medium\", [(\"s\", 1), (\"t\", 2)]), (\"high\", [(\"s\", 2), (\"t\", 2)]), (\"s0t0\", [(\"s\", 0), (\"t\", 0)]), (\"s0t1\", [(\"s\", 0), (\"t\", 1)]), (\"s0t2\", [(\"s\", 0), (\"t\", 2)]), (\"s1t0\", [(\"s\", 1), (\"t\", 0)]), (\"s1t1\", [(\"s\", 1), (\"t\", 1)]), (\"s1t2\", [(\"s\", 1), (\"t\", 2)]), (\"s2t0\", [(\"s\", 2), (\"t\", 0)]), (\"s2t1\", [(\"s\", 2), (\"t\", 1)]), (\"s2t2\", [(\"s\", 2), (\"t\", 2)])])]"
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/VideoSDK.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/VideoSDK.swift",
       "kind": "StringLiteral",
       "offset": 957,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/VideoSDK.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/VideoSDK.swift",
       "kind": "StringLiteral",
       "offset": 995,
       "length": 7,
       "value": "\"Guest\""
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/VideoSDK.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/VideoSDK.swift",
       "kind": "BooleanLiteral",
       "offset": 1031,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/VideoSDK.swift",
+      "filePath": "\/Users\/dhiwise\/Desktop\/work\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/VideoSDK.swift",
       "kind": "BooleanLiteral",
       "offset": 1067,
       "length": 4,

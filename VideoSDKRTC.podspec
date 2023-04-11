@@ -33,7 +33,7 @@ Video sdk enables opportunity to integrate immersive video experiences into your
   # s.frameworks = 'UIKit', 'MapKit'
   
   # output frameworks
-  s.vendored_frameworks = 'Frameworks/VideoSDKRTC.xcframework', 'Frameworks/Mediasoup.xcframework', 'Frameworks/WebRTC.xcframework', 'Frameworks/Starscream.xcframework'
+  s.vendored_frameworks = 'Frameworks/VideoSDKRTC.xcframework', 'Frameworks/Mediasoup.xcframework', 'Frameworks/WebRTC.xcframework', 'Frameworks/VideosdkWebSocket.xcframework'
   
   # default bulid settings
   s.xcconfig = {
