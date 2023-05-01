@@ -1080,6 +1080,36 @@
       },
       {
         "kind": "Import",
+        "name": "WebRTC",
+        "printedName": "WebRTC",
+        "declKind": "Import",
+        "moduleName": "VideoSDKRTC"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CustomRTCMediaStream",
+        "printedName": "CustomRTCMediaStream",
+        "declKind": "Class",
+        "usr": "s:11VideoSDKRTC20CustomRTCMediaStreamC",
+        "mangledName": "$s11VideoSDKRTC20CustomRTCMediaStreamC",
+        "moduleName": "VideoSDKRTC",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VideoSDKRTC",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -2107,21 +2137,21 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "WebRTC.RTCVideoTrack?",
+                "printedName": "VideoSDKRTC.CustomRTCMediaStream?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "RTCVideoTrack",
-                    "printedName": "WebRTC.RTCVideoTrack",
-                    "usr": "c:objc(cs)RTCVideoTrack"
+                    "name": "CustomRTCMediaStream",
+                    "printedName": "VideoSDKRTC.CustomRTCMediaStream",
+                    "usr": "s:11VideoSDKRTC20CustomRTCMediaStreamC"
                   }
                 ],
                 "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:11VideoSDKRTC7MeetingC06customA11MediaStreamSo13RTCVideoTrackCSgvp",
-            "mangledName": "$s11VideoSDKRTC7MeetingC06customA11MediaStreamSo13RTCVideoTrackCSgvp",
+            "usr": "s:11VideoSDKRTC7MeetingC06customA11MediaStreamAA014CustomRTCMediaF0CSgvp",
+            "mangledName": "$s11VideoSDKRTC7MeetingC06customA11MediaStreamAA014CustomRTCMediaF0CSgvp",
             "moduleName": "VideoSDKRTC",
             "declAttributes": [
               "HasInitialValue",
@@ -2139,82 +2169,21 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "WebRTC.RTCVideoTrack?",
+                    "printedName": "VideoSDKRTC.CustomRTCMediaStream?",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "RTCVideoTrack",
-                        "printedName": "WebRTC.RTCVideoTrack",
-                        "usr": "c:objc(cs)RTCVideoTrack"
+                        "name": "CustomRTCMediaStream",
+                        "printedName": "VideoSDKRTC.CustomRTCMediaStream",
+                        "usr": "s:11VideoSDKRTC20CustomRTCMediaStreamC"
                       }
                     ],
                     "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC7MeetingC06customA11MediaStreamSo13RTCVideoTrackCSgvg",
-                "mangledName": "$s11VideoSDKRTC7MeetingC06customA11MediaStreamSo13RTCVideoTrackCSgvg",
-                "moduleName": "VideoSDKRTC",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "encodings",
-            "printedName": "encodings",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "VideoSDKRTC.CustomVideoTrackConfig?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CustomVideoTrackConfig",
-                    "printedName": "VideoSDKRTC.CustomVideoTrackConfig",
-                    "usr": "s:11VideoSDKRTC06CustomA11TrackConfigO"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC7MeetingC9encodingsAA06CustomA11TrackConfigOSgvp",
-            "mangledName": "$s11VideoSDKRTC7MeetingC9encodingsAA06CustomA11TrackConfigOSgvp",
-            "moduleName": "VideoSDKRTC",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "SetterAccess",
-              "AccessControl"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "VideoSDKRTC.CustomVideoTrackConfig?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CustomVideoTrackConfig",
-                        "printedName": "VideoSDKRTC.CustomVideoTrackConfig",
-                        "usr": "s:11VideoSDKRTC06CustomA11TrackConfigO"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC7MeetingC9encodingsAA06CustomA11TrackConfigOSgvg",
-                "mangledName": "$s11VideoSDKRTC7MeetingC9encodingsAA06CustomA11TrackConfigOSgvg",
+                "usr": "s:11VideoSDKRTC7MeetingC06customA11MediaStreamAA014CustomRTCMediaF0CSgvg",
+                "mangledName": "$s11VideoSDKRTC7MeetingC06customA11MediaStreamAA014CustomRTCMediaF0CSgvg",
                 "moduleName": "VideoSDKRTC",
                 "implicit": true,
                 "accessorKind": "get"
@@ -2293,7 +2262,7 @@
           {
             "kind": "Function",
             "name": "enableWebcam",
-            "printedName": "enableWebcam(cameraPosition:customVideoStream:)",
+            "printedName": "enableWebcam(customVideoStream:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2302,20 +2271,14 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Position",
-                "printedName": "AVFoundation.AVCaptureDevice.Position",
-                "usr": "c:@E@AVCaptureDevicePosition"
-              },
-              {
-                "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "WebRTC.RTCVideoTrack?",
+                "printedName": "VideoSDKRTC.CustomRTCMediaStream?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "RTCVideoTrack",
-                    "printedName": "WebRTC.RTCVideoTrack",
-                    "usr": "c:objc(cs)RTCVideoTrack"
+                    "name": "CustomRTCMediaStream",
+                    "printedName": "VideoSDKRTC.CustomRTCMediaStream",
+                    "usr": "s:11VideoSDKRTC20CustomRTCMediaStreamC"
                   }
                 ],
                 "hasDefaultArg": true,
@@ -2323,8 +2286,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoSDKRTC7MeetingC12enableWebcam14cameraPosition06customA6StreamySo015AVCaptureDeviceG0V_So13RTCVideoTrackCSgtF",
-            "mangledName": "$s11VideoSDKRTC7MeetingC12enableWebcam14cameraPosition06customA6StreamySo015AVCaptureDeviceG0V_So13RTCVideoTrackCSgtF",
+            "usr": "s:11VideoSDKRTC7MeetingC12enableWebcam06customA6StreamyAA014CustomRTCMediaG0CSg_tF",
+            "mangledName": "$s11VideoSDKRTC7MeetingC12enableWebcam06customA6StreamyAA014CustomRTCMediaG0CSg_tF",
             "moduleName": "VideoSDKRTC",
             "declAttributes": [
               "RawDocComment"
@@ -5543,7 +5506,7 @@
           {
             "kind": "Function",
             "name": "initMeeting",
-            "printedName": "initMeeting(meetingId:participantId:participantName:micEnabled:webcamEnabled:customCameraVideoStream:encoding:)",
+            "printedName": "initMeeting(meetingId:participantId:participantName:micEnabled:webcamEnabled:customCameraVideoStream:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -5588,13 +5551,46 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "WebRTC.RTCVideoTrack?",
+                "printedName": "VideoSDKRTC.CustomRTCMediaStream?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "RTCVideoTrack",
-                    "printedName": "WebRTC.RTCVideoTrack",
-                    "usr": "c:objc(cs)RTCVideoTrack"
+                    "name": "CustomRTCMediaStream",
+                    "printedName": "VideoSDKRTC.CustomRTCMediaStream",
+                    "usr": "s:11VideoSDKRTC20CustomRTCMediaStreamC"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoSDKRTC0A3SDKC11initMeeting9meetingId011participantG00H4Name10micEnabled06webcamK0012customCameraA6StreamAA0E0CSS_S2SS2bAA014CustomRTCMediaO0CSgtFZ",
+            "mangledName": "$s11VideoSDKRTC0A3SDKC11initMeeting9meetingId011participantG00H4Name10micEnabled06webcamK0012customCameraA6StreamAA0E0CSS_S2SS2bAA014CustomRTCMediaO0CSgtFZ",
+            "moduleName": "VideoSDKRTC",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "createCameraVideoTrack",
+            "printedName": "createCameraVideoTrack(encoderConfig:facingMode:multiStream:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "VideoSDKRTC.CustomRTCMediaStream?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CustomRTCMediaStream",
+                    "printedName": "VideoSDKRTC.CustomRTCMediaStream",
+                    "usr": "s:11VideoSDKRTC20CustomRTCMediaStreamC"
                   }
                 ],
                 "usr": "s:Sq"
@@ -5611,56 +5607,43 @@
                     "usr": "s:11VideoSDKRTC06CustomA11TrackConfigO"
                   }
                 ],
+                "hasDefaultArg": true,
                 "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11VideoSDKRTC0A3SDKC11initMeeting9meetingId011participantG00H4Name10micEnabled06webcamK0012customCameraA6Stream8encodingAA0E0CSS_S2SS2bSo13RTCVideoTrackCSgAA06CustomaR6ConfigOSgtFZ",
-            "mangledName": "$s11VideoSDKRTC0A3SDKC11initMeeting9meetingId011participantG00H4Name10micEnabled06webcamK0012customCameraA6Stream8encodingAA0E0CSS_S2SS2bSo13RTCVideoTrackCSgAA06CustomaR6ConfigOSgtFZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "createCameraVideoStream",
-            "printedName": "createCameraVideoStream(encoderConfig:facingMode:)",
-            "children": [
+              },
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "WebRTC.RTCVideoTrack?",
+                "printedName": "AVFoundation.AVCaptureDevice.Position?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "RTCVideoTrack",
-                    "printedName": "WebRTC.RTCVideoTrack",
-                    "usr": "c:objc(cs)RTCVideoTrack"
+                    "name": "Position",
+                    "printedName": "AVFoundation.AVCaptureDevice.Position",
+                    "usr": "c:@E@AVCaptureDevicePosition"
                   }
                 ],
+                "hasDefaultArg": true,
                 "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
-                "name": "CustomVideoTrackConfig",
-                "printedName": "VideoSDKRTC.CustomVideoTrackConfig",
-                "usr": "s:11VideoSDKRTC06CustomA11TrackConfigO"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Position",
-                "printedName": "AVFoundation.AVCaptureDevice.Position",
-                "usr": "c:@E@AVCaptureDevicePosition"
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoSDKRTC0A3SDKC012createCameraA6Stream13encoderConfig10facingModeSo13RTCVideoTrackCSgAA06CustomalH0O_So23AVCaptureDevicePositionVtKFZ",
-            "mangledName": "$s11VideoSDKRTC0A3SDKC012createCameraA6Stream13encoderConfig10facingModeSo13RTCVideoTrackCSgAA06CustomalH0O_So23AVCaptureDevicePositionVtKFZ",
+            "usr": "s:11VideoSDKRTC0A3SDKC012createCameraA5Track13encoderConfig10facingMode11multiStreamAA014CustomRTCMediaL0CSgAA0mafH0OSg_So23AVCaptureDevicePositionVSgSbSgtKFZ",
+            "mangledName": "$s11VideoSDKRTC0A3SDKC012createCameraA5Track13encoderConfig10facingMode11multiStreamAA014CustomRTCMediaL0CSgAA0mafH0OSg_So23AVCaptureDevicePositionVSgSbSgtKFZ",
             "moduleName": "VideoSDKRTC",
             "static": true,
             "declAttributes": [
@@ -10763,35 +10746,35 @@
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/Meeting.swift",
       "kind": "BooleanLiteral",
-      "offset": 1012,
+      "offset": 951,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/Meeting.swift",
       "kind": "BooleanLiteral",
-      "offset": 1048,
+      "offset": 987,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/Meeting.swift",
       "kind": "StringLiteral",
-      "offset": 1730,
+      "offset": 1597,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/Meeting.swift",
       "kind": "BooleanLiteral",
-      "offset": 1768,
+      "offset": 1635,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/Meeting.swift",
       "kind": "BooleanLiteral",
-      "offset": 1811,
+      "offset": 1678,
       "length": 4,
       "value": "true"
     },
@@ -10868,7 +10851,7 @@
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/RoomClient.swift",
       "kind": "Dictionary",
-      "offset": 6908,
+      "offset": 6809,
       "length": 3,
       "value": "[]"
     },
@@ -10917,28 +10900,35 @@
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/VideoSDK.swift",
       "kind": "StringLiteral",
-      "offset": 971,
+      "offset": 1044,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/VideoSDK.swift",
       "kind": "StringLiteral",
-      "offset": 1009,
+      "offset": 1082,
       "length": 7,
       "value": "\"Guest\""
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/VideoSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 1045,
+      "offset": 1118,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/VideoSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 1081,
+      "offset": 1154,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/VideoSDK.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1909,
       "length": 4,
       "value": "true"
     }

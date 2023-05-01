@@ -29,6 +29,9 @@ public enum CustomVideoTrackConfig {
     get
   }
 }
+@_hasMissingDesignatedInitializers public class CustomRTCMediaStream {
+  @objc deinit
+}
 extension Foundation.Data {
   public func toJSONString() -> Swift.String
   public func toJSON() -> [Swift.String : Any]
@@ -97,10 +100,7 @@ public enum MediaType : Swift.Equatable {
   public var pubsub: VideoSDKRTC.PubSub {
     get
   }
-  public var customVideoMediaStream: WebRTC.RTCVideoTrack? {
-    get
-  }
-  public var encodings: VideoSDKRTC.CustomVideoTrackConfig? {
+  public var customVideoMediaStream: VideoSDKRTC.CustomRTCMediaStream? {
     get
   }
   @objc deinit
@@ -109,7 +109,7 @@ extension VideoSDKRTC.Meeting {
   public func join(cameraPosition: AVFoundation.AVCaptureDevice.Position)
   public func leave()
   public func end()
-  public func enableWebcam(cameraPosition: AVFoundation.AVCaptureDevice.Position, customVideoStream: WebRTC.RTCVideoTrack? = nil)
+  public func enableWebcam(customVideoStream: VideoSDKRTC.CustomRTCMediaStream? = nil)
   public func disableWebcam()
   public func switchWebcam()
   public func muteMic()
@@ -234,8 +234,8 @@ public enum VideoQuality : Swift.String, Swift.CaseIterable {
 }
 @_hasMissingDesignatedInitializers final public class VideoSDK {
   public static func config(token: Swift.String)
-  public static func initMeeting(meetingId: Swift.String, participantId: Swift.String = "", participantName: Swift.String = "Guest", micEnabled: Swift.Bool = true, webcamEnabled: Swift.Bool = true, customCameraVideoStream: WebRTC.RTCVideoTrack?, encoding: VideoSDKRTC.CustomVideoTrackConfig?) -> VideoSDKRTC.Meeting
-  public static func createCameraVideoStream(encoderConfig: VideoSDKRTC.CustomVideoTrackConfig, facingMode: AVFoundation.AVCaptureDevice.Position) throws -> WebRTC.RTCVideoTrack?
+  public static func initMeeting(meetingId: Swift.String, participantId: Swift.String = "", participantName: Swift.String = "Guest", micEnabled: Swift.Bool = true, webcamEnabled: Swift.Bool = true, customCameraVideoStream: VideoSDKRTC.CustomRTCMediaStream? = nil) -> VideoSDKRTC.Meeting
+  public static func createCameraVideoTrack(encoderConfig: VideoSDKRTC.CustomVideoTrackConfig? = .h360p_w640p, facingMode: AVFoundation.AVCaptureDevice.Position? = .front, multiStream: Swift.Bool? = true) throws -> VideoSDKRTC.CustomRTCMediaStream?
   @objc deinit
 }
 extension VideoSDKRTC.CameraPosition : Swift.Equatable {}
