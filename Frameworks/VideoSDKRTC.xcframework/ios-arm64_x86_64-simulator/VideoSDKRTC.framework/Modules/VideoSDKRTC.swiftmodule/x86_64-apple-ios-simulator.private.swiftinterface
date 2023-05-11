@@ -87,6 +87,72 @@ public enum MediaType : Swift.Equatable {
   case state(value: Mediasoup.MediaKind)
   public static func == (a: VideoSDKRTC.MediaType, b: VideoSDKRTC.MediaType) -> Swift.Bool
 }
+public enum MeetingState {
+  case CONNECTING, CONNECTED, CLOSING, CLOSED, CANCELLED
+  public static func == (a: VideoSDKRTC.MeetingState, b: VideoSDKRTC.MeetingState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum VideoSDKError : Swift.Int {
+  case UNKNOWN_ERROR
+  case INVALID_API_KEY
+  case INVALID_TOKEN
+  case INVALID_MEETING_ID
+  case INVALID_PARTICIPANT_ID
+  case DUPLICATE_PARTICIPANT
+  case ACCOUNT_DEACTIVATED
+  case ACCOUNT_DISCONTINUED
+  case INVALID_PERMISSIONS
+  case MAX_PARTCIPANT_REACHED
+  case MAX_SPEAKER_REACHED
+  case START_RECORDING_FAILED
+  case STOP_RECORDING_FAILED
+  case START_LIVESTREAM_FAILED
+  case STOP_LIVESTREAM_FAILED
+  case INVALID_LIVESTREAM_CONFIG
+  case START_HLS_FAILED
+  case STOP_HLS_FAILED
+  case RECORDING_FAILED
+  case LIVESTREAM_FAILED
+  case HLS_FAILED
+  case ERROR_GET_VIDEO_MEDIA
+  case ERROR_GET_AUDIO_MEDIA
+  case ERROR_GET_DISPLAY_MEDIA
+  case ERROR_GET_VIDEO_MEDIA_PERMISSION_DENIED
+  case ERROR_GET_AUDIO_MEDIA_PERMISSION_DENIED
+  case ERROR_GET_DISPLAY_MEDIA_PERMISSION_DENIED
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum HLSState : Swift.String {
+  case HLS_STARTED, HLS_STARTING, HLS_STOPPED, HLS_STOPPING, HLS_PLAYABLE
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum RecordingState : Swift.String {
+  case RECORDING_STARTED, RECORDING_STARTING, RECORDING_STOPPED, RECORDING_STOPPING
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum LiveStreamState : Swift.String {
+  case LIVESTREAM_STARTED, LIVESTREAM_STARTING, LIVESTREAM_STOPPED, LIVESTREAM_STOPPING
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 @_hasMissingDesignatedInitializers public class Meeting : Swift.Equatable {
   public var id: Swift.String {
     get
@@ -97,6 +163,10 @@ public enum MediaType : Swift.Equatable {
   public var participants: [Swift.String : VideoSDKRTC.Participant] {
     get
   }
+  public var hlsUrls: VideoSDKRTC.HLSUrl?
+  public var hlsState: VideoSDKRTC.HLSState
+  public var liveStreamState: VideoSDKRTC.LiveStreamState
+  public var recordingState: VideoSDKRTC.RecordingState
   public var pubsub: VideoSDKRTC.PubSub {
     get
   }
@@ -118,6 +188,8 @@ extension VideoSDKRTC.Meeting {
   public func stopRecording()
   public func startLivestream(outputs: [VideoSDKRTC.LivestreamOutput])
   public func stopLivestream()
+  public func startHLS(config: VideoSDKRTC.HLSConfig? = nil)
+  public func stopHLS()
 }
 extension VideoSDKRTC.Meeting {
   public func addEventListener(_ meetingEventListener: VideoSDKRTC.MeetingEventListener)
@@ -138,6 +210,12 @@ public protocol MeetingEventListener : AnyObject {
   func onSpeakerChanged(participantId: Swift.String?)
   func onMicRequested(participantId: Swift.String?, accept: @escaping () -> Swift.Void, reject: @escaping () -> Swift.Void)
   func onWebcamRequested(participantId: Swift.String?, accept: @escaping () -> Swift.Void, reject: @escaping () -> Swift.Void)
+  func onSocketError(message: Swift.String)
+  func onMeetingStateChanged(meetingState: VideoSDKRTC.MeetingState)
+  func onError(error: VideoSDKRTC.VideoSDKError)
+  func onHlsStateChanged(state: VideoSDKRTC.HLSState, hlsUrl: VideoSDKRTC.HLSUrl?)
+  func onLivestreamStateChanged(state: VideoSDKRTC.LiveStreamState)
+  func onRecordingStateChanged(state: VideoSDKRTC.RecordingState)
 }
 extension VideoSDKRTC.MeetingEventListener {
   public func onMeetingJoined()
@@ -151,6 +229,12 @@ extension VideoSDKRTC.MeetingEventListener {
   public func onSpeakerChanged(participantId: Swift.String?)
   public func onMicRequested(participantId: Swift.String?, accept: @escaping () -> Swift.Void, reject: @escaping () -> Swift.Void)
   public func onWebcamRequested(participantId: Swift.String?, accept: @escaping () -> Swift.Void, reject: @escaping () -> Swift.Void)
+  public func onSocketError(message: Swift.String)
+  public func onMeetingStateChanged(meetingState: VideoSDKRTC.MeetingState)
+  public func onError(error: VideoSDKRTC.VideoSDKError)
+  public func onHlsStateChanged(state: VideoSDKRTC.HLSState, hlsUrl: VideoSDKRTC.HLSUrl?)
+  public func onLivestreamStateChanged(state: VideoSDKRTC.LiveStreamState)
+  public func onRecordingStateChanged(state: VideoSDKRTC.RecordingState)
 }
 @_hasMissingDesignatedInitializers public class Participant : Swift.Equatable {
   public var id: Swift.String {
@@ -220,6 +304,65 @@ extension VideoSDKRTC.PubSub {
 public protocol PubSubMessageListener {
   func onMessageReceived(_ message: VideoSDKRTC.PubSubMessage)
 }
+public class HLSConfig {
+  public init(layout: VideoSDKRTC.HLSLayout, theme: VideoSDKRTC.HLSTheme, mode: VideoSDKRTC.HLSMode, quality: VideoSDKRTC.HLSQuality, orientation: VideoSDKRTC.HLSOrientation)
+  @objc deinit
+}
+public class HLSLayout {
+  public init(type: VideoSDKRTC.HLSLayoutGrid, priority: VideoSDKRTC.HLSLayoutPriority, gridSize: Swift.Int)
+  @objc deinit
+}
+public enum HLSLayoutPriority : Swift.String {
+  case SPEAKER, PIN
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum HLSLayoutGrid : Swift.String {
+  case GRID, SPOTLIGHT, SIDEBAR
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum HLSTheme : Swift.String {
+  case DEFAULT, LIGHT, DARK
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum HLSMode : Swift.String {
+  case video_and_audio, audio
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum HLSQuality : Swift.String {
+  case high, med, low
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum HLSOrientation : Swift.String {
+  case landscape, portrait
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class HLSUrl {
+  @objc deinit
+}
 public enum VideoQuality : Swift.String, Swift.CaseIterable {
   case high, medium, low
   public init?(rawValue: Swift.String)
@@ -243,6 +386,38 @@ extension VideoSDKRTC.CameraPosition : Swift.Hashable {}
 extension VideoSDKRTC.CameraPosition : Swift.RawRepresentable {}
 extension VideoSDKRTC.CustomVideoTrackConfig : Swift.Equatable {}
 extension VideoSDKRTC.CustomVideoTrackConfig : Swift.Hashable {}
+extension VideoSDKRTC.MeetingState : Swift.Equatable {}
+extension VideoSDKRTC.MeetingState : Swift.Hashable {}
+extension VideoSDKRTC.VideoSDKError : Swift.Equatable {}
+extension VideoSDKRTC.VideoSDKError : Swift.Hashable {}
+extension VideoSDKRTC.VideoSDKError : Swift.RawRepresentable {}
+extension VideoSDKRTC.HLSState : Swift.Equatable {}
+extension VideoSDKRTC.HLSState : Swift.Hashable {}
+extension VideoSDKRTC.HLSState : Swift.RawRepresentable {}
+extension VideoSDKRTC.RecordingState : Swift.Equatable {}
+extension VideoSDKRTC.RecordingState : Swift.Hashable {}
+extension VideoSDKRTC.RecordingState : Swift.RawRepresentable {}
+extension VideoSDKRTC.LiveStreamState : Swift.Equatable {}
+extension VideoSDKRTC.LiveStreamState : Swift.Hashable {}
+extension VideoSDKRTC.LiveStreamState : Swift.RawRepresentable {}
+extension VideoSDKRTC.HLSLayoutPriority : Swift.Equatable {}
+extension VideoSDKRTC.HLSLayoutPriority : Swift.Hashable {}
+extension VideoSDKRTC.HLSLayoutPriority : Swift.RawRepresentable {}
+extension VideoSDKRTC.HLSLayoutGrid : Swift.Equatable {}
+extension VideoSDKRTC.HLSLayoutGrid : Swift.Hashable {}
+extension VideoSDKRTC.HLSLayoutGrid : Swift.RawRepresentable {}
+extension VideoSDKRTC.HLSTheme : Swift.Equatable {}
+extension VideoSDKRTC.HLSTheme : Swift.Hashable {}
+extension VideoSDKRTC.HLSTheme : Swift.RawRepresentable {}
+extension VideoSDKRTC.HLSMode : Swift.Equatable {}
+extension VideoSDKRTC.HLSMode : Swift.Hashable {}
+extension VideoSDKRTC.HLSMode : Swift.RawRepresentable {}
+extension VideoSDKRTC.HLSQuality : Swift.Equatable {}
+extension VideoSDKRTC.HLSQuality : Swift.Hashable {}
+extension VideoSDKRTC.HLSQuality : Swift.RawRepresentable {}
+extension VideoSDKRTC.HLSOrientation : Swift.Equatable {}
+extension VideoSDKRTC.HLSOrientation : Swift.Hashable {}
+extension VideoSDKRTC.HLSOrientation : Swift.RawRepresentable {}
 extension VideoSDKRTC.VideoQuality : Swift.Equatable {}
 extension VideoSDKRTC.VideoQuality : Swift.Hashable {}
 extension VideoSDKRTC.VideoQuality : Swift.RawRepresentable {}
