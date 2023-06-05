@@ -2093,52 +2093,53 @@
             "moduleName": "VideoSDKRTC"
           },
           {
-            "kind": "Function",
-            "name": "==",
-            "printedName": "==(_:_:)",
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
+                "name": "Optional",
+                "printedName": "VideoSDKRTC.MeetingState?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MeetingState",
+                    "printedName": "VideoSDKRTC.MeetingState",
+                    "usr": "s:11VideoSDKRTC12MeetingStateO"
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
-                "name": "MeetingState",
-                "printedName": "VideoSDKRTC.MeetingState",
-                "usr": "s:11VideoSDKRTC12MeetingStateO"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "MeetingState",
-                "printedName": "VideoSDKRTC.MeetingState",
-                "usr": "s:11VideoSDKRTC12MeetingStateO"
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               }
             ],
-            "declKind": "Func",
-            "usr": "s:11VideoSDKRTC12MeetingStateO2eeoiySbAC_ACtFZ",
-            "mangledName": "$s11VideoSDKRTC12MeetingStateO2eeoiySbAC_ACtFZ",
+            "declKind": "Constructor",
+            "usr": "s:11VideoSDKRTC12MeetingStateO8rawValueACSgSS_tcfc",
+            "mangledName": "$s11VideoSDKRTC12MeetingStateO8rawValueACSgSS_tcfc",
             "moduleName": "VideoSDKRTC",
-            "static": true,
             "implicit": true,
-            "funcSelfKind": "NonMutating"
+            "init_kind": "Designated"
           },
           {
             "kind": "Var",
-            "name": "hashValue",
-            "printedName": "hashValue",
+            "name": "rawValue",
+            "printedName": "rawValue",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               }
             ],
             "declKind": "Var",
-            "usr": "s:11VideoSDKRTC12MeetingStateO9hashValueSivp",
-            "mangledName": "$s11VideoSDKRTC12MeetingStateO9hashValueSivp",
+            "usr": "s:11VideoSDKRTC12MeetingStateO8rawValueSSvp",
+            "mangledName": "$s11VideoSDKRTC12MeetingStateO8rawValueSSvp",
             "moduleName": "VideoSDKRTC",
             "implicit": true,
             "accessors": [
@@ -2149,44 +2150,19 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC12MeetingStateO9hashValueSivg",
-                "mangledName": "$s11VideoSDKRTC12MeetingStateO9hashValueSivg",
+                "usr": "s:11VideoSDKRTC12MeetingStateO8rawValueSSvg",
+                "mangledName": "$s11VideoSDKRTC12MeetingStateO8rawValueSSvg",
                 "moduleName": "VideoSDKRTC",
                 "implicit": true,
                 "accessorKind": "get"
               }
             ]
-          },
-          {
-            "kind": "Function",
-            "name": "hash",
-            "printedName": "hash(into:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Hasher",
-                "printedName": "Swift.Hasher",
-                "paramValueOwnership": "InOut",
-                "usr": "s:s6HasherV"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11VideoSDKRTC12MeetingStateO4hash4intoys6HasherVz_tF",
-            "mangledName": "$s11VideoSDKRTC12MeetingStateO4hash4intoys6HasherVz_tF",
-            "moduleName": "VideoSDKRTC",
-            "implicit": true,
-            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Enum",
@@ -2194,8 +2170,10 @@
         "mangledName": "$s11VideoSDKRTC12MeetingStateO",
         "moduleName": "VideoSDKRTC",
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "RawDocComment"
         ],
+        "enumRawTypeName": "String",
         "conformances": [
           {
             "kind": "Conformance",
@@ -2210,6 +2188,228 @@
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Mode",
+        "printedName": "Mode",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "CONFERENCE",
+            "printedName": "CONFERENCE",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VideoSDKRTC.Mode.Type) -> VideoSDKRTC.Mode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Mode",
+                    "printedName": "VideoSDKRTC.Mode",
+                    "usr": "s:11VideoSDKRTC4ModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VideoSDKRTC.Mode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Mode",
+                        "printedName": "VideoSDKRTC.Mode",
+                        "usr": "s:11VideoSDKRTC4ModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11VideoSDKRTC4ModeO10CONFERENCEyA2CmF",
+            "mangledName": "$s11VideoSDKRTC4ModeO10CONFERENCEyA2CmF",
+            "moduleName": "VideoSDKRTC"
+          },
+          {
+            "kind": "Var",
+            "name": "VIEWER",
+            "printedName": "VIEWER",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VideoSDKRTC.Mode.Type) -> VideoSDKRTC.Mode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Mode",
+                    "printedName": "VideoSDKRTC.Mode",
+                    "usr": "s:11VideoSDKRTC4ModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VideoSDKRTC.Mode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Mode",
+                        "printedName": "VideoSDKRTC.Mode",
+                        "usr": "s:11VideoSDKRTC4ModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11VideoSDKRTC4ModeO6VIEWERyA2CmF",
+            "mangledName": "$s11VideoSDKRTC4ModeO6VIEWERyA2CmF",
+            "moduleName": "VideoSDKRTC"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "VideoSDKRTC.Mode?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Mode",
+                    "printedName": "VideoSDKRTC.Mode",
+                    "usr": "s:11VideoSDKRTC4ModeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11VideoSDKRTC4ModeO8rawValueACSgSS_tcfc",
+            "mangledName": "$s11VideoSDKRTC4ModeO8rawValueACSgSS_tcfc",
+            "moduleName": "VideoSDKRTC",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11VideoSDKRTC4ModeO8rawValueSSvp",
+            "mangledName": "$s11VideoSDKRTC4ModeO8rawValueSSvp",
+            "moduleName": "VideoSDKRTC",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11VideoSDKRTC4ModeO8rawValueSSvg",
+                "mangledName": "$s11VideoSDKRTC4ModeO8rawValueSSvg",
+                "moduleName": "VideoSDKRTC",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:11VideoSDKRTC4ModeO",
+        "mangledName": "$s11VideoSDKRTC4ModeO",
+        "moduleName": "VideoSDKRTC",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
           }
         ]
       },
@@ -3304,7 +3504,8 @@
         "mangledName": "$s11VideoSDKRTC0A8SDKErrorO",
         "moduleName": "VideoSDKRTC",
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "RawDocComment"
         ],
         "enumRawTypeName": "Int",
         "conformances": [
@@ -3614,7 +3815,8 @@
         "mangledName": "$s11VideoSDKRTC8HLSStateO",
         "moduleName": "VideoSDKRTC",
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "RawDocComment"
         ],
         "enumRawTypeName": "String",
         "conformances": [
@@ -3887,7 +4089,8 @@
         "mangledName": "$s11VideoSDKRTC14RecordingStateO",
         "moduleName": "VideoSDKRTC",
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "RawDocComment"
         ],
         "enumRawTypeName": "String",
         "conformances": [
@@ -4160,7 +4363,8 @@
         "mangledName": "$s11VideoSDKRTC15LiveStreamStateO",
         "moduleName": "VideoSDKRTC",
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "RawDocComment"
         ],
         "enumRawTypeName": "String",
         "conformances": [
@@ -4389,6 +4593,80 @@
                 "declKind": "Accessor",
                 "usr": "s:11VideoSDKRTC7MeetingC12participantsSDySSAA11ParticipantCGvg",
                 "mangledName": "$s11VideoSDKRTC7MeetingC12participantsSDySSAA11ParticipantCGvg",
+                "moduleName": "VideoSDKRTC",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "pinnedParticipants",
+            "printedName": "pinnedParticipants",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : VideoSDKRTC.ParticipantPinState]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ParticipantPinState",
+                    "printedName": "VideoSDKRTC.ParticipantPinState",
+                    "usr": "s:11VideoSDKRTC19ParticipantPinStateV"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11VideoSDKRTC7MeetingC18pinnedParticipantsSDySSAA19ParticipantPinStateVGvp",
+            "mangledName": "$s11VideoSDKRTC7MeetingC18pinnedParticipantsSDySSAA19ParticipantPinStateVGvp",
+            "moduleName": "VideoSDKRTC",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : VideoSDKRTC.ParticipantPinState]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ParticipantPinState",
+                        "printedName": "VideoSDKRTC.ParticipantPinState",
+                        "usr": "s:11VideoSDKRTC19ParticipantPinStateV"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11VideoSDKRTC7MeetingC18pinnedParticipantsSDySSAA19ParticipantPinStateVGvg",
+                "mangledName": "$s11VideoSDKRTC7MeetingC18pinnedParticipantsSDySSAA19ParticipantPinStateVGvg",
                 "moduleName": "VideoSDKRTC",
                 "implicit": true,
                 "accessorKind": "get"
@@ -4839,7 +5117,8 @@
               "HasInitialValue",
               "HasStorage",
               "SetterAccess",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "hasStorage": true,
             "accessors": [
@@ -4866,6 +5145,68 @@
                 "declKind": "Accessor",
                 "usr": "s:11VideoSDKRTC7MeetingC06customA11MediaStreamAA014CustomRTCMediaF0CSgvg",
                 "mangledName": "$s11VideoSDKRTC7MeetingC06customA11MediaStreamAA014CustomRTCMediaF0CSgvg",
+                "moduleName": "VideoSDKRTC",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "meetingMode",
+            "printedName": "meetingMode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "VideoSDKRTC.Mode?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Mode",
+                    "printedName": "VideoSDKRTC.Mode",
+                    "usr": "s:11VideoSDKRTC4ModeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11VideoSDKRTC7MeetingC11meetingModeAA0E0OSgvp",
+            "mangledName": "$s11VideoSDKRTC7MeetingC11meetingModeAA0E0OSgvp",
+            "moduleName": "VideoSDKRTC",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "VideoSDKRTC.Mode?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Mode",
+                        "printedName": "VideoSDKRTC.Mode",
+                        "usr": "s:11VideoSDKRTC4ModeO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11VideoSDKRTC7MeetingC11meetingModeAA0E0OSgvg",
+                "mangledName": "$s11VideoSDKRTC7MeetingC11meetingModeAA0E0OSgvg",
                 "moduleName": "VideoSDKRTC",
                 "implicit": true,
                 "accessorKind": "get"
@@ -5212,6 +5553,30 @@
             "declKind": "Func",
             "usr": "s:11VideoSDKRTC7MeetingC7stopHLSyyF",
             "mangledName": "$s11VideoSDKRTC7MeetingC7stopHLSyyF",
+            "moduleName": "VideoSDKRTC",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "changeMode",
+            "printedName": "changeMode(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Mode",
+                "printedName": "VideoSDKRTC.Mode",
+                "usr": "s:11VideoSDKRTC4ModeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoSDKRTC7MeetingC10changeModeyyAA0E0OF",
+            "mangledName": "$s11VideoSDKRTC7MeetingC10changeModeyyAA0E0OF",
             "moduleName": "VideoSDKRTC",
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -5922,6 +6287,78 @@
           },
           {
             "kind": "Function",
+            "name": "onPinStateChanged",
+            "printedName": "onPinStateChanged(participantId:pinType:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PinType",
+                "printedName": "VideoSDKRTC.PinType",
+                "usr": "s:11VideoSDKRTC7PinTypeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoSDKRTC20MeetingEventListenerP17onPinStateChanged13participantId7pinTypeySS_AA0gM0OtF",
+            "mangledName": "$s11VideoSDKRTC20MeetingEventListenerP17onPinStateChanged13participantId7pinTypeySS_AA0gM0OtF",
+            "moduleName": "VideoSDKRTC",
+            "genericSig": "<τ_0_0 where τ_0_0 : VideoSDKRTC.MeetingEventListener>",
+            "sugared_genericSig": "<Self where Self : VideoSDKRTC.MeetingEventListener>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onParticipantModeChanged",
+            "printedName": "onParticipantModeChanged(participantId:mode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Mode",
+                "printedName": "VideoSDKRTC.Mode",
+                "usr": "s:11VideoSDKRTC4ModeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoSDKRTC20MeetingEventListenerP24onParticipantModeChanged13participantId4modeySS_AA0H0OtF",
+            "mangledName": "$s11VideoSDKRTC20MeetingEventListenerP24onParticipantModeChanged13participantId4modeySS_AA0H0OtF",
+            "moduleName": "VideoSDKRTC",
+            "genericSig": "<τ_0_0 where τ_0_0 : VideoSDKRTC.MeetingEventListener>",
+            "sugared_genericSig": "<Self where Self : VideoSDKRTC.MeetingEventListener>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "onMeetingJoined",
             "printedName": "onMeetingJoined()",
             "children": [
@@ -6431,6 +6868,70 @@
             "sugared_genericSig": "<Self where Self : VideoSDKRTC.MeetingEventListener>",
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onPinStateChanged",
+            "printedName": "onPinStateChanged(participantId:pinType:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PinType",
+                "printedName": "VideoSDKRTC.PinType",
+                "usr": "s:11VideoSDKRTC7PinTypeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoSDKRTC20MeetingEventListenerPAAE17onPinStateChanged13participantId7pinTypeySS_AA0gM0OtF",
+            "mangledName": "$s11VideoSDKRTC20MeetingEventListenerPAAE17onPinStateChanged13participantId7pinTypeySS_AA0gM0OtF",
+            "moduleName": "VideoSDKRTC",
+            "genericSig": "<τ_0_0 where τ_0_0 : VideoSDKRTC.MeetingEventListener>",
+            "sugared_genericSig": "<Self where Self : VideoSDKRTC.MeetingEventListener>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onParticipantModeChanged",
+            "printedName": "onParticipantModeChanged(participantId:mode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Mode",
+                "printedName": "VideoSDKRTC.Mode",
+                "usr": "s:11VideoSDKRTC4ModeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoSDKRTC20MeetingEventListenerPAAE24onParticipantModeChanged13participantId4modeySS_AA0H0OtF",
+            "mangledName": "$s11VideoSDKRTC20MeetingEventListenerPAAE24onParticipantModeChanged13participantId4modeySS_AA0H0OtF",
+            "moduleName": "VideoSDKRTC",
+            "genericSig": "<τ_0_0 where τ_0_0 : VideoSDKRTC.MeetingEventListener>",
+            "sugared_genericSig": "<Self where Self : VideoSDKRTC.MeetingEventListener>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
@@ -6751,6 +7252,176 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "pinState",
+            "printedName": "pinState",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ParticipantPinState",
+                "printedName": "VideoSDKRTC.ParticipantPinState",
+                "usr": "s:11VideoSDKRTC19ParticipantPinStateV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11VideoSDKRTC11ParticipantC8pinStateAA0c3PinE0Vvp",
+            "mangledName": "$s11VideoSDKRTC11ParticipantC8pinStateAA0c3PinE0Vvp",
+            "moduleName": "VideoSDKRTC",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ParticipantPinState",
+                    "printedName": "VideoSDKRTC.ParticipantPinState",
+                    "usr": "s:11VideoSDKRTC19ParticipantPinStateV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11VideoSDKRTC11ParticipantC8pinStateAA0c3PinE0Vvg",
+                "mangledName": "$s11VideoSDKRTC11ParticipantC8pinStateAA0c3PinE0Vvg",
+                "moduleName": "VideoSDKRTC",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ParticipantPinState",
+                    "printedName": "VideoSDKRTC.ParticipantPinState",
+                    "usr": "s:11VideoSDKRTC19ParticipantPinStateV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11VideoSDKRTC11ParticipantC8pinStateAA0c3PinE0Vvs",
+                "mangledName": "$s11VideoSDKRTC11ParticipantC8pinStateAA0c3PinE0Vvs",
+                "moduleName": "VideoSDKRTC",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11VideoSDKRTC11ParticipantC8pinStateAA0c3PinE0VvM",
+                "mangledName": "$s11VideoSDKRTC11ParticipantC8pinStateAA0c3PinE0VvM",
+                "moduleName": "VideoSDKRTC",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "mode",
+            "printedName": "mode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Mode",
+                "printedName": "VideoSDKRTC.Mode",
+                "usr": "s:11VideoSDKRTC4ModeO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11VideoSDKRTC11ParticipantC4modeAA4ModeOvp",
+            "mangledName": "$s11VideoSDKRTC11ParticipantC4modeAA4ModeOvp",
+            "moduleName": "VideoSDKRTC",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Mode",
+                    "printedName": "VideoSDKRTC.Mode",
+                    "usr": "s:11VideoSDKRTC4ModeO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11VideoSDKRTC11ParticipantC4modeAA4ModeOvg",
+                "mangledName": "$s11VideoSDKRTC11ParticipantC4modeAA4ModeOvg",
+                "moduleName": "VideoSDKRTC",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Mode",
+                    "printedName": "VideoSDKRTC.Mode",
+                    "usr": "s:11VideoSDKRTC4ModeO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11VideoSDKRTC11ParticipantC4modeAA4ModeOvs",
+                "mangledName": "$s11VideoSDKRTC11ParticipantC4modeAA4ModeOvs",
+                "moduleName": "VideoSDKRTC",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11VideoSDKRTC11ParticipantC4modeAA4ModeOvM",
+                "mangledName": "$s11VideoSDKRTC11ParticipantC4modeAA4ModeOvM",
+                "moduleName": "VideoSDKRTC",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Function",
             "name": "enableMic",
             "printedName": "enableMic()",
@@ -6852,6 +7523,54 @@
             "declAttributes": [
               "RawDocComment"
             ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "participantPinStateChanged",
+            "printedName": "participantPinStateChanged(pinState:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ParticipantPinState",
+                "printedName": "VideoSDKRTC.ParticipantPinState",
+                "usr": "s:11VideoSDKRTC19ParticipantPinStateV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoSDKRTC11ParticipantC26participantPinStateChanged03pinF0yAA0ceF0V_tF",
+            "mangledName": "$s11VideoSDKRTC11ParticipantC26participantPinStateChanged03pinF0yAA0ceF0V_tF",
+            "moduleName": "VideoSDKRTC",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "participantModeChanged",
+            "printedName": "participantModeChanged(mode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Mode",
+                "printedName": "VideoSDKRTC.Mode",
+                "usr": "s:11VideoSDKRTC4ModeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoSDKRTC11ParticipantC22participantModeChanged4modeyAA0E0O_tF",
+            "mangledName": "$s11VideoSDKRTC11ParticipantC22participantModeChanged4modeyAA0E0O_tF",
+            "moduleName": "VideoSDKRTC",
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
           },
@@ -6964,6 +7683,94 @@
             "declAttributes": [
               "RawDocComment"
             ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pin",
+            "printedName": "pin(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PinType",
+                "printedName": "VideoSDKRTC.PinType",
+                "hasDefaultArg": true,
+                "usr": "s:11VideoSDKRTC7PinTypeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoSDKRTC11ParticipantC3pinyySS_AA7PinTypeOtF",
+            "mangledName": "$s11VideoSDKRTC11ParticipantC3pinyySS_AA7PinTypeOtF",
+            "moduleName": "VideoSDKRTC",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "unpin",
+            "printedName": "unpin(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PinType",
+                "printedName": "VideoSDKRTC.PinType",
+                "hasDefaultArg": true,
+                "usr": "s:11VideoSDKRTC7PinTypeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoSDKRTC11ParticipantC5unpinyyAA7PinTypeOF",
+            "mangledName": "$s11VideoSDKRTC11ParticipantC5unpinyyAA7PinTypeOF",
+            "moduleName": "VideoSDKRTC",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setPinState",
+            "printedName": "setPinState(pinState:peerId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ParticipantPinState",
+                "printedName": "VideoSDKRTC.ParticipantPinState",
+                "usr": "s:11VideoSDKRTC19ParticipantPinStateV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoSDKRTC11ParticipantC11setPinState03pinF06peerIdyAA0ceF0V_SStF",
+            "mangledName": "$s11VideoSDKRTC11ParticipantC11setPinState03pinF06peerIdyAA0ceF0V_SStF",
+            "moduleName": "VideoSDKRTC",
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
           },
@@ -7244,6 +8051,337 @@
         "moduleName": "VideoSDKRTC",
         "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VideoSDKRTC",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PinType",
+        "printedName": "PinType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "SHARE_AND_CAM",
+            "printedName": "SHARE_AND_CAM",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VideoSDKRTC.PinType.Type) -> VideoSDKRTC.PinType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PinType",
+                    "printedName": "VideoSDKRTC.PinType",
+                    "usr": "s:11VideoSDKRTC7PinTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VideoSDKRTC.PinType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PinType",
+                        "printedName": "VideoSDKRTC.PinType",
+                        "usr": "s:11VideoSDKRTC7PinTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11VideoSDKRTC7PinTypeO13SHARE_AND_CAMyA2CmF",
+            "mangledName": "$s11VideoSDKRTC7PinTypeO13SHARE_AND_CAMyA2CmF",
+            "moduleName": "VideoSDKRTC"
+          },
+          {
+            "kind": "Var",
+            "name": "CAM",
+            "printedName": "CAM",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VideoSDKRTC.PinType.Type) -> VideoSDKRTC.PinType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PinType",
+                    "printedName": "VideoSDKRTC.PinType",
+                    "usr": "s:11VideoSDKRTC7PinTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VideoSDKRTC.PinType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PinType",
+                        "printedName": "VideoSDKRTC.PinType",
+                        "usr": "s:11VideoSDKRTC7PinTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11VideoSDKRTC7PinTypeO3CAMyA2CmF",
+            "mangledName": "$s11VideoSDKRTC7PinTypeO3CAMyA2CmF",
+            "moduleName": "VideoSDKRTC"
+          },
+          {
+            "kind": "Var",
+            "name": "SHARE",
+            "printedName": "SHARE",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VideoSDKRTC.PinType.Type) -> VideoSDKRTC.PinType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PinType",
+                    "printedName": "VideoSDKRTC.PinType",
+                    "usr": "s:11VideoSDKRTC7PinTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VideoSDKRTC.PinType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PinType",
+                        "printedName": "VideoSDKRTC.PinType",
+                        "usr": "s:11VideoSDKRTC7PinTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11VideoSDKRTC7PinTypeO5SHAREyA2CmF",
+            "mangledName": "$s11VideoSDKRTC7PinTypeO5SHAREyA2CmF",
+            "moduleName": "VideoSDKRTC"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "VideoSDKRTC.PinType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PinType",
+                    "printedName": "VideoSDKRTC.PinType",
+                    "usr": "s:11VideoSDKRTC7PinTypeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11VideoSDKRTC7PinTypeO8rawValueACSgSS_tcfc",
+            "mangledName": "$s11VideoSDKRTC7PinTypeO8rawValueACSgSS_tcfc",
+            "moduleName": "VideoSDKRTC",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11VideoSDKRTC7PinTypeO8rawValueSSvp",
+            "mangledName": "$s11VideoSDKRTC7PinTypeO8rawValueSSvp",
+            "moduleName": "VideoSDKRTC",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11VideoSDKRTC7PinTypeO8rawValueSSvg",
+                "mangledName": "$s11VideoSDKRTC7PinTypeO8rawValueSSvg",
+                "moduleName": "VideoSDKRTC",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:11VideoSDKRTC7PinTypeO",
+        "mangledName": "$s11VideoSDKRTC7PinTypeO",
+        "moduleName": "VideoSDKRTC",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ParticipantPinState",
+        "printedName": "ParticipantPinState",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ParticipantPinState",
+                "printedName": "VideoSDKRTC.ParticipantPinState",
+                "usr": "s:11VideoSDKRTC19ParticipantPinStateV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11VideoSDKRTC19ParticipantPinStateV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s11VideoSDKRTC19ParticipantPinStateV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "VideoSDKRTC",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoSDKRTC19ParticipantPinStateV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s11VideoSDKRTC19ParticipantPinStateV6encode2toys7Encoder_p_tKF",
+            "moduleName": "VideoSDKRTC",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11VideoSDKRTC19ParticipantPinStateV",
+        "mangledName": "$s11VideoSDKRTC19ParticipantPinStateV",
+        "moduleName": "VideoSDKRTC",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
         ]
       },
       {
@@ -10049,7 +11187,7 @@
           {
             "kind": "Function",
             "name": "initMeeting",
-            "printedName": "initMeeting(meetingId:participantId:participantName:micEnabled:webcamEnabled:customCameraVideoStream:)",
+            "printedName": "initMeeting(meetingId:participantId:participantName:micEnabled:webcamEnabled:customCameraVideoStream:mode:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -10105,11 +11243,26 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "VideoSDKRTC.Mode?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Mode",
+                    "printedName": "VideoSDKRTC.Mode",
+                    "usr": "s:11VideoSDKRTC4ModeO"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoSDKRTC0A3SDKC11initMeeting9meetingId011participantG00H4Name10micEnabled06webcamK0012customCameraA6StreamAA0E0CSS_S2SS2bAA014CustomRTCMediaO0CSgtFZ",
-            "mangledName": "$s11VideoSDKRTC0A3SDKC11initMeeting9meetingId011participantG00H4Name10micEnabled06webcamK0012customCameraA6StreamAA0E0CSS_S2SS2bAA014CustomRTCMediaO0CSgtFZ",
+            "usr": "s:11VideoSDKRTC0A3SDKC11initMeeting9meetingId011participantG00H4Name10micEnabled06webcamK0012customCameraA6Stream4modeAA0E0CSS_S2SS2bAA014CustomRTCMediaO0CSgAA4ModeOSgtFZ",
+            "mangledName": "$s11VideoSDKRTC0A3SDKC11initMeeting9meetingId011participantG00H4Name10micEnabled06webcamK0012customCameraA6Stream4modeAA0E0CSS_S2SS2bAA014CustomRTCMediaO0CSgAA4ModeOSgtFZ",
             "moduleName": "VideoSDKRTC",
             "static": true,
             "declAttributes": [
@@ -12451,6 +13604,20 @@
     "json_format_version": 8
   },
   "ConstValues": [
+    {
+      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/ActionEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 1339,
+      "length": 26,
+      "value": "\"participant-mode-changed\""
+    },
+    {
+      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/ActionEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 1339,
+      "length": 26,
+      "value": "\"participant-mode-changed\""
+    },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Others\/CameraPosition.swift",
       "kind": "IntegerLiteral",
@@ -15281,610 +16448,638 @@
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 203,
+      "length": 12,
+      "value": "\"CONNECTING\""
+    },
+    {
+      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 203,
+      "length": 12,
+      "value": "\"CONNECTING\""
+    },
+    {
+      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 336,
+      "length": 12,
+      "value": "\"CONFERENCE\""
+    },
+    {
+      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 336,
+      "length": 12,
+      "value": "\"CONFERENCE\""
+    },
+    {
+      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 284,
+      "offset": 470,
       "length": 4,
       "value": "4000"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 316,
+      "offset": 502,
       "length": 4,
       "value": "4001"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 346,
+      "offset": 532,
       "length": 4,
       "value": "4002"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 381,
+      "offset": 567,
       "length": 4,
       "value": "4003"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 420,
+      "offset": 606,
       "length": 4,
       "value": "4004"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 458,
+      "offset": 644,
       "length": 4,
       "value": "4005"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 494,
+      "offset": 680,
       "length": 4,
       "value": "4006"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 531,
+      "offset": 717,
       "length": 4,
       "value": "4007"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 567,
+      "offset": 753,
       "length": 4,
       "value": "4008"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 606,
+      "offset": 792,
       "length": 4,
       "value": "4009"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 642,
+      "offset": 828,
       "length": 4,
       "value": "4010"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 681,
+      "offset": 867,
       "length": 4,
       "value": "4011"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 719,
+      "offset": 905,
       "length": 4,
       "value": "4012"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 759,
+      "offset": 945,
       "length": 4,
       "value": "4013"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 798,
+      "offset": 984,
       "length": 4,
       "value": "4014"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 840,
+      "offset": 1026,
       "length": 4,
       "value": "4015"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 873,
+      "offset": 1059,
       "length": 4,
       "value": "4016"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 905,
+      "offset": 1091,
       "length": 4,
       "value": "4017"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 969,
+      "offset": 1155,
       "length": 4,
       "value": "5001"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 1003,
+      "offset": 1189,
       "length": 4,
       "value": "5002"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 1030,
+      "offset": 1216,
       "length": 4,
       "value": "5003"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 1087,
+      "offset": 1273,
       "length": 4,
       "value": "3011"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 1125,
+      "offset": 1311,
       "length": 4,
       "value": "3012"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 1165,
+      "offset": 1351,
       "length": 4,
       "value": "3013"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 1221,
+      "offset": 1407,
       "length": 4,
       "value": "3014"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 1277,
+      "offset": 1463,
       "length": 4,
       "value": "3015"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 1335,
+      "offset": 1521,
       "length": 4,
       "value": "3016"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 284,
+      "offset": 470,
       "length": 4,
       "value": "4000"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 316,
+      "offset": 502,
       "length": 4,
       "value": "4001"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 346,
+      "offset": 532,
       "length": 4,
       "value": "4002"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 381,
+      "offset": 567,
       "length": 4,
       "value": "4003"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 420,
+      "offset": 606,
       "length": 4,
       "value": "4004"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 458,
+      "offset": 644,
       "length": 4,
       "value": "4005"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 494,
+      "offset": 680,
       "length": 4,
       "value": "4006"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 531,
+      "offset": 717,
       "length": 4,
       "value": "4007"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 567,
+      "offset": 753,
       "length": 4,
       "value": "4008"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 606,
+      "offset": 792,
       "length": 4,
       "value": "4009"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 642,
+      "offset": 828,
       "length": 4,
       "value": "4010"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 681,
+      "offset": 867,
       "length": 4,
       "value": "4011"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 719,
+      "offset": 905,
       "length": 4,
       "value": "4012"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 759,
+      "offset": 945,
       "length": 4,
       "value": "4013"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 798,
+      "offset": 984,
       "length": 4,
       "value": "4014"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 840,
+      "offset": 1026,
       "length": 4,
       "value": "4015"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 873,
+      "offset": 1059,
       "length": 4,
       "value": "4016"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 905,
+      "offset": 1091,
       "length": 4,
       "value": "4017"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 969,
+      "offset": 1155,
       "length": 4,
       "value": "5001"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 1003,
+      "offset": 1189,
       "length": 4,
       "value": "5002"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 1030,
+      "offset": 1216,
       "length": 4,
       "value": "5003"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 1087,
+      "offset": 1273,
       "length": 4,
       "value": "3011"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 1125,
+      "offset": 1311,
       "length": 4,
       "value": "3012"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 1165,
+      "offset": 1351,
       "length": 4,
       "value": "3013"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 1221,
+      "offset": 1407,
       "length": 4,
       "value": "3014"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 1277,
+      "offset": 1463,
       "length": 4,
       "value": "3015"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 1335,
+      "offset": 1521,
       "length": 4,
       "value": "3016"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 284,
+      "offset": 470,
       "length": 4,
       "value": "4000"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 316,
+      "offset": 502,
       "length": 4,
       "value": "4001"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 346,
+      "offset": 532,
       "length": 4,
       "value": "4002"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 381,
+      "offset": 567,
       "length": 4,
       "value": "4003"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 420,
+      "offset": 606,
       "length": 4,
       "value": "4004"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 458,
+      "offset": 644,
       "length": 4,
       "value": "4005"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 494,
+      "offset": 680,
       "length": 4,
       "value": "4006"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 531,
+      "offset": 717,
       "length": 4,
       "value": "4007"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 567,
+      "offset": 753,
       "length": 4,
       "value": "4008"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 606,
+      "offset": 792,
       "length": 4,
       "value": "4009"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 642,
+      "offset": 828,
       "length": 4,
       "value": "4010"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 681,
+      "offset": 867,
       "length": 4,
       "value": "4011"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 719,
+      "offset": 905,
       "length": 4,
       "value": "4012"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 759,
+      "offset": 945,
       "length": 4,
       "value": "4013"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 798,
+      "offset": 984,
       "length": 4,
       "value": "4014"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 840,
+      "offset": 1026,
       "length": 4,
       "value": "4015"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 873,
+      "offset": 1059,
       "length": 4,
       "value": "4016"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 905,
+      "offset": 1091,
       "length": 4,
       "value": "4017"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 969,
+      "offset": 1155,
       "length": 4,
       "value": "5001"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 1003,
+      "offset": 1189,
       "length": 4,
       "value": "5002"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 1030,
+      "offset": 1216,
       "length": 4,
       "value": "5003"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 1087,
+      "offset": 1273,
       "length": 4,
       "value": "3011"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 1125,
+      "offset": 1311,
       "length": 4,
       "value": "3012"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 1165,
+      "offset": 1351,
       "length": 4,
       "value": "3013"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 1221,
+      "offset": 1407,
       "length": 4,
       "value": "3014"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 1277,
+      "offset": 1463,
       "length": 4,
       "value": "3015"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 1335,
+      "offset": 1521,
       "length": 4,
       "value": "3016"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 1398,
+      "offset": 1610,
       "length": 13,
       "value": "\"HLS_STARTED\""
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 1398,
+      "offset": 1610,
       "length": 13,
       "value": "\"HLS_STARTED\""
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 1536,
+      "offset": 1780,
       "length": 19,
       "value": "\"RECORDING_STARTED\""
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 1536,
+      "offset": 1780,
       "length": 19,
       "value": "\"RECORDING_STARTED\""
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 1686,
+      "offset": 1963,
       "length": 20,
       "value": "\"LIVESTREAM_STARTED\""
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 1686,
+      "offset": 1963,
       "length": 20,
       "value": "\"LIVESTREAM_STARTED\""
     },
@@ -15897,36 +17092,43 @@
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/Meeting.swift",
+      "kind": "Dictionary",
+      "offset": 723,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/Meeting.swift",
       "kind": "BooleanLiteral",
-      "offset": 1340,
+      "offset": 1613,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/Meeting.swift",
       "kind": "BooleanLiteral",
-      "offset": 1376,
+      "offset": 1649,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/Meeting.swift",
       "kind": "StringLiteral",
-      "offset": 1986,
+      "offset": 2375,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/Meeting.swift",
       "kind": "BooleanLiteral",
-      "offset": 2024,
+      "offset": 2413,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/Meeting.swift",
       "kind": "BooleanLiteral",
-      "offset": 2067,
+      "offset": 2456,
       "length": 4,
       "value": "true"
     },
@@ -15940,9 +17142,37 @@
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/Participant.swift",
       "kind": "Dictionary",
-      "offset": 1025,
+      "offset": 1174,
       "length": 3,
       "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/Participant.swift",
+      "kind": "StringLiteral",
+      "offset": 4748,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/Participant.swift",
+      "kind": "StringLiteral",
+      "offset": 5942,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/ParticipantPinState.swift",
+      "kind": "BooleanLiteral",
+      "offset": 298,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/ParticipantPinState.swift",
+      "kind": "BooleanLiteral",
+      "offset": 319,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/Classes\/PubSub.swift",
@@ -16171,35 +17401,70 @@
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/RoomClient.swift",
       "kind": "BooleanLiteral",
-      "offset": 935,
+      "offset": 941,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/RoomClient.swift",
       "kind": "Dictionary",
-      "offset": 1591,
+      "offset": 1596,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/RoomClient.swift",
       "kind": "Dictionary",
-      "offset": 1635,
+      "offset": 1640,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/RoomClient.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1827,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/RoomClient.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1865,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/RoomClient.swift",
       "kind": "StringLiteral",
-      "offset": 766,
+      "offset": 772,
       "length": 10,
       "value": "\"VideoSDKRTC.RoomClient\""
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/RoomClient.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3591,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/RoomClient.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7633,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/RoomClient.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7659,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/RoomClient.swift",
       "kind": "Dictionary",
-      "offset": 7331,
+      "offset": 9927,
       "length": 3,
       "value": "[]"
     },
@@ -16220,21 +17485,21 @@
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/SocketRequestHandler.swift",
       "kind": "Dictionary",
-      "offset": 6972,
+      "offset": 7304,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/SocketRequestHandler.swift",
       "kind": "Dictionary",
-      "offset": 8652,
+      "offset": 9579,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/Client\/SocketRequestHandler.swift",
       "kind": "Dictionary",
-      "offset": 9621,
+      "offset": 10548,
       "length": 3,
       "value": "[]"
     },
@@ -16276,7 +17541,7 @@
     {
       "filePath": "\/Users\/parth\/Documents\/Zujo\/Parth\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/VideoSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 2011,
+      "offset": 2092,
       "length": 4,
       "value": "true"
     }

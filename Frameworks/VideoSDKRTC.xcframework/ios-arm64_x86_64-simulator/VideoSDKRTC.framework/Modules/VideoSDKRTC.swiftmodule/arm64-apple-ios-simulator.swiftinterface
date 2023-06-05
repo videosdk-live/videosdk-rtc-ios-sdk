@@ -87,11 +87,19 @@ public enum MediaType : Swift.Equatable {
   case state(value: Mediasoup.MediaKind)
   public static func == (a: VideoSDKRTC.MediaType, b: VideoSDKRTC.MediaType) -> Swift.Bool
 }
-public enum MeetingState {
+public enum MeetingState : Swift.String {
   case CONNECTING, CONNECTED, CLOSING, CLOSED, CANCELLED
-  public static func == (a: VideoSDKRTC.MeetingState, b: VideoSDKRTC.MeetingState) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum Mode : Swift.String {
+  case CONFERENCE, VIEWER
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
     get
   }
 }
@@ -163,6 +171,9 @@ public enum LiveStreamState : Swift.String {
   public var participants: [Swift.String : VideoSDKRTC.Participant] {
     get
   }
+  public var pinnedParticipants: [Swift.String : VideoSDKRTC.ParticipantPinState] {
+    get
+  }
   public var hlsUrls: VideoSDKRTC.HLSUrl?
   public var hlsState: VideoSDKRTC.HLSState
   public var liveStreamState: VideoSDKRTC.LiveStreamState
@@ -171,6 +182,9 @@ public enum LiveStreamState : Swift.String {
     get
   }
   public var customVideoMediaStream: VideoSDKRTC.CustomRTCMediaStream? {
+    get
+  }
+  public var meetingMode: VideoSDKRTC.Mode? {
     get
   }
   @objc deinit
@@ -190,6 +204,7 @@ extension VideoSDKRTC.Meeting {
   public func stopLivestream()
   public func startHLS(config: VideoSDKRTC.HLSConfig? = nil)
   public func stopHLS()
+  public func changeMode(_ mode: VideoSDKRTC.Mode)
 }
 extension VideoSDKRTC.Meeting {
   public func addEventListener(_ meetingEventListener: VideoSDKRTC.MeetingEventListener)
@@ -216,6 +231,8 @@ public protocol MeetingEventListener : AnyObject {
   func onHlsStateChanged(state: VideoSDKRTC.HLSState, hlsUrl: VideoSDKRTC.HLSUrl?)
   func onLivestreamStateChanged(state: VideoSDKRTC.LiveStreamState)
   func onRecordingStateChanged(state: VideoSDKRTC.RecordingState)
+  func onPinStateChanged(participantId: Swift.String, pinType: VideoSDKRTC.PinType)
+  func onParticipantModeChanged(participantId: Swift.String, mode: VideoSDKRTC.Mode)
 }
 extension VideoSDKRTC.MeetingEventListener {
   public func onMeetingJoined()
@@ -235,6 +252,8 @@ extension VideoSDKRTC.MeetingEventListener {
   public func onHlsStateChanged(state: VideoSDKRTC.HLSState, hlsUrl: VideoSDKRTC.HLSUrl?)
   public func onLivestreamStateChanged(state: VideoSDKRTC.LiveStreamState)
   public func onRecordingStateChanged(state: VideoSDKRTC.RecordingState)
+  public func onPinStateChanged(participantId: Swift.String, pinType: VideoSDKRTC.PinType)
+  public func onParticipantModeChanged(participantId: Swift.String, mode: VideoSDKRTC.Mode)
 }
 @_hasMissingDesignatedInitializers public class Participant : Swift.Equatable {
   public var id: Swift.String {
@@ -252,6 +271,8 @@ extension VideoSDKRTC.MeetingEventListener {
   public var streams: [Swift.String : VideoSDKRTC.MediaStream] {
     get
   }
+  public var pinState: VideoSDKRTC.ParticipantPinState
+  public var mode: VideoSDKRTC.Mode
   @objc deinit
 }
 extension VideoSDKRTC.Participant {
@@ -260,6 +281,8 @@ extension VideoSDKRTC.Participant {
   public func enableWebcam()
   public func disableWebcam()
   public func remove()
+  public func participantPinStateChanged(pinState: VideoSDKRTC.ParticipantPinState)
+  public func participantModeChanged(mode: VideoSDKRTC.Mode)
 }
 extension VideoSDKRTC.Participant {
   public func addStream(_ stream: VideoSDKRTC.MediaStream)
@@ -267,6 +290,9 @@ extension VideoSDKRTC.Participant {
   public func removeStream(_ streamId: Swift.String) -> VideoSDKRTC.MediaStream?
   public func removeAllStreams()
   public func setQuality(_ quality: VideoSDKRTC.VideoQuality)
+  public func pin(_ peerId: Swift.String = "", _ pinType: VideoSDKRTC.PinType = .SHARE_AND_CAM)
+  public func unpin(_ pinType: VideoSDKRTC.PinType = .SHARE_AND_CAM)
+  public func setPinState(pinState: VideoSDKRTC.ParticipantPinState, peerId: Swift.String = "")
 }
 extension VideoSDKRTC.Participant {
   public func addEventListener(_ listener: VideoSDKRTC.ParticipantEventListener)
@@ -282,6 +308,18 @@ public protocol ParticipantEventListener {
 extension VideoSDKRTC.ParticipantEventListener {
   public func onStreamEnabled(_ stream: VideoSDKRTC.MediaStream, forParticipant participant: VideoSDKRTC.Participant)
   public func onStreamDisabled(_ stream: VideoSDKRTC.MediaStream, forParticipant participant: VideoSDKRTC.Participant)
+}
+public enum PinType : Swift.String {
+  case SHARE_AND_CAM, CAM, SHARE
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct ParticipantPinState : Swift.Codable {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
 }
 @_hasMissingDesignatedInitializers public class PubSub {
   @objc deinit
@@ -377,7 +415,7 @@ public enum VideoQuality : Swift.String, Swift.CaseIterable {
 }
 @_hasMissingDesignatedInitializers final public class VideoSDK {
   public static func config(token: Swift.String)
-  public static func initMeeting(meetingId: Swift.String, participantId: Swift.String = "", participantName: Swift.String = "Guest", micEnabled: Swift.Bool = true, webcamEnabled: Swift.Bool = true, customCameraVideoStream: VideoSDKRTC.CustomRTCMediaStream? = nil) -> VideoSDKRTC.Meeting
+  public static func initMeeting(meetingId: Swift.String, participantId: Swift.String = "", participantName: Swift.String = "Guest", micEnabled: Swift.Bool = true, webcamEnabled: Swift.Bool = true, customCameraVideoStream: VideoSDKRTC.CustomRTCMediaStream? = nil, mode: VideoSDKRTC.Mode? = .CONFERENCE) -> VideoSDKRTC.Meeting
   public static func createCameraVideoTrack(encoderConfig: VideoSDKRTC.CustomVideoTrackConfig? = .h360p_w640p, facingMode: AVFoundation.AVCaptureDevice.Position? = .front, multiStream: Swift.Bool? = true) throws -> VideoSDKRTC.CustomRTCMediaStream?
   @objc deinit
 }
@@ -388,6 +426,10 @@ extension VideoSDKRTC.CustomVideoTrackConfig : Swift.Equatable {}
 extension VideoSDKRTC.CustomVideoTrackConfig : Swift.Hashable {}
 extension VideoSDKRTC.MeetingState : Swift.Equatable {}
 extension VideoSDKRTC.MeetingState : Swift.Hashable {}
+extension VideoSDKRTC.MeetingState : Swift.RawRepresentable {}
+extension VideoSDKRTC.Mode : Swift.Equatable {}
+extension VideoSDKRTC.Mode : Swift.Hashable {}
+extension VideoSDKRTC.Mode : Swift.RawRepresentable {}
 extension VideoSDKRTC.VideoSDKError : Swift.Equatable {}
 extension VideoSDKRTC.VideoSDKError : Swift.Hashable {}
 extension VideoSDKRTC.VideoSDKError : Swift.RawRepresentable {}
@@ -400,6 +442,9 @@ extension VideoSDKRTC.RecordingState : Swift.RawRepresentable {}
 extension VideoSDKRTC.LiveStreamState : Swift.Equatable {}
 extension VideoSDKRTC.LiveStreamState : Swift.Hashable {}
 extension VideoSDKRTC.LiveStreamState : Swift.RawRepresentable {}
+extension VideoSDKRTC.PinType : Swift.Equatable {}
+extension VideoSDKRTC.PinType : Swift.Hashable {}
+extension VideoSDKRTC.PinType : Swift.RawRepresentable {}
 extension VideoSDKRTC.HLSLayoutPriority : Swift.Equatable {}
 extension VideoSDKRTC.HLSLayoutPriority : Swift.Hashable {}
 extension VideoSDKRTC.HLSLayoutPriority : Swift.RawRepresentable {}
