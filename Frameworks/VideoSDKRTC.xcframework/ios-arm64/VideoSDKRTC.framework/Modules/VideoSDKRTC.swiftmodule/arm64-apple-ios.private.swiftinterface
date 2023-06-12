@@ -283,6 +283,8 @@ extension VideoSDKRTC.Participant {
   public func remove()
   public func participantPinStateChanged(pinState: VideoSDKRTC.ParticipantPinState)
   public func participantModeChanged(mode: VideoSDKRTC.Mode)
+  public func getAudioStats() -> [Swift.String : Any]?
+  public func getVideoStats() -> [Swift.String : Any]?
 }
 extension VideoSDKRTC.Participant {
   public func addStream(_ stream: VideoSDKRTC.MediaStream)
