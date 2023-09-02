@@ -14,47 +14,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		nd6xVuMrMxGN8Wjl90O7681iREA=
+		dYcTOVX9sziiihMOuPcdnufEZco=
 		</data>
 		<key>Modules/VideoSDKRTC.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		XN2IbZB0z6wjUxxdCNa6E+vsueM=
+		aVxn62kHLOeYdGi0Oa+dol7yYXI=
 		</data>
 		<key>Modules/VideoSDKRTC.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		mtKHusTz/A402HII4piI+tTSHcE=
+		tUDRvlolqNEJ1eUa3XlxL1p4aho=
 		</data>
 		<key>Modules/VideoSDKRTC.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		5hs6nitvDejSy6gr90nT5CEhKoI=
+		dDkD2SJGcp6VcZ02zD69f5Zurj8=
 		</data>
 		<key>Modules/VideoSDKRTC.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		mtKHusTz/A402HII4piI+tTSHcE=
+		tUDRvlolqNEJ1eUa3XlxL1p4aho=
 		</data>
 		<key>Modules/VideoSDKRTC.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		pjOoT5CkRrMulVlgwFNvOVHl7nM=
+		U5izgYwp2lj0F0i1R5RsVfEsTFM=
 		</data>
 		<key>Modules/VideoSDKRTC.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		XN2IbZB0z6wjUxxdCNa6E+vsueM=
+		aVxn62kHLOeYdGi0Oa+dol7yYXI=
 		</data>
 		<key>Modules/VideoSDKRTC.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		qFRRr+4XSesT4fpKHeVW6cqCUqQ=
+		XSd6ZU3y7zfv/3IyceIVw3fRQkQ=
 		</data>
 		<key>Modules/VideoSDKRTC.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		rWezaGikVFsTd11KyLiUzr74AFI=
+		lVICjq/ttzV4CrdvXmI/aZWujKw=
 		</data>
 		<key>Modules/VideoSDKRTC.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		qFRRr+4XSesT4fpKHeVW6cqCUqQ=
+		XSd6ZU3y7zfv/3IyceIVw3fRQkQ=
 		</data>
 		<key>Modules/VideoSDKRTC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		6Cl9smwWr7M7oRIpDMzJaucYRE4=
+		jcgXE1oxgHW5NdOIT2YNTbjHFY8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -81,70 +81,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			l1VC49hWQn2FAZAFfmxPlEZ7fPIJpElFSFuQpKS9F2M=
+			SHsNGLRjeYIciaA4/1UJIBD/OI7I/zsfs4vdu2HQUy4=
 			</data>
 		</dict>
 		<key>Modules/VideoSDKRTC.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zgQ6zZIQqn3jkRgCWEzpUx1KF/XXm1RNt96Fh/qxZHk=
+			XY4kuYITUZg2h+FCDFOX3Z0gQIOtTR2n9a6Tkq64Jco=
 			</data>
 		</dict>
 		<key>Modules/VideoSDKRTC.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/Qp78bTAM1p00Yh0HMihhiM09SjCBVHyC8h2J2slnxg=
+			jLlP16XCyNRNXxwNABaOitZ6XfIPxFuGSfoXqWv2+CA=
 			</data>
 		</dict>
 		<key>Modules/VideoSDKRTC.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zgQ6zZIQqn3jkRgCWEzpUx1KF/XXm1RNt96Fh/qxZHk=
+			XY4kuYITUZg2h+FCDFOX3Z0gQIOtTR2n9a6Tkq64Jco=
 			</data>
 		</dict>
 		<key>Modules/VideoSDKRTC.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			P3dB9J4CikxVpQDX5pyQRfoRdngTLIFWOc9Q0uSCO9g=
+			5P+X0FCw56fF1TiL9043qIikE7EKsA4vhKunMO12ZQY=
 			</data>
 		</dict>
 		<key>Modules/VideoSDKRTC.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			l1VC49hWQn2FAZAFfmxPlEZ7fPIJpElFSFuQpKS9F2M=
+			SHsNGLRjeYIciaA4/1UJIBD/OI7I/zsfs4vdu2HQUy4=
 			</data>
 		</dict>
 		<key>Modules/VideoSDKRTC.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BOo+XLdLsrHqFSIkquGjYuoEV40dLmdHNYLWXxFkUXE=
+			wFFHLwypKR/yMie9mo9jNR/0GdcYmwZSO7zyfttKLYg=
 			</data>
 		</dict>
 		<key>Modules/VideoSDKRTC.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QqkWnrrIWgxbdGw1vcPTML9BumHdPYhwDZ0Sz1Fkoc4=
+			p+/fK7WJ36nseiJQBPlRBWmshiKZPrGNOn2LPvphYxs=
 			</data>
 		</dict>
 		<key>Modules/VideoSDKRTC.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BOo+XLdLsrHqFSIkquGjYuoEV40dLmdHNYLWXxFkUXE=
+			wFFHLwypKR/yMie9mo9jNR/0GdcYmwZSO7zyfttKLYg=
 			</data>
 		</dict>
 		<key>Modules/VideoSDKRTC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UScPmvFimzKDOccDyOP0ZOatWl6x3bGrU7fiHYj8Q2M=
+			CCK9uZv6dXnHHjWIBT4o0UfHtjLZ3ekOqlZiKg9B6t8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
