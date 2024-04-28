@@ -758,6 +758,9 @@ public enum CustomVideoTrackConfig {
     get
   }
 }
+public struct noiseConfig {
+  public init(noiseSupression: Swift.Bool?, echoCancellation: Swift.Bool?, autoGainControl: Swift.Bool?, highPassFilter: Swift.Bool?)
+}
 @_hasMissingDesignatedInitializers public class DefaultAggregation : VideoSDKRTC.Aggregation {
   public static var instance: VideoSDKRTC.DefaultAggregation {
     get
@@ -4489,9 +4492,13 @@ public enum MediaType : Swift.Equatable {
   public var customVideoMediaStream: VideoSDKRTC.CustomRTCMediaStream? {
     get
   }
+  public var customAudioMediaStream: VideoSDKRTC.CustomRTCMediaStream? {
+    get
+  }
   public var meetingMode: VideoSDKRTC.Mode? {
     get
   }
+  public var signalingBaseUrl: Swift.String?
   @objc deinit
 }
 extension VideoSDKRTC.Meeting {
@@ -4502,7 +4509,7 @@ extension VideoSDKRTC.Meeting {
   public func disableWebcam()
   public func switchWebcam()
   public func muteMic()
-  public func unmuteMic()
+  public func unmuteMic(customAudioStream: VideoSDKRTC.CustomRTCMediaStream? = nil)
   public func startRecording(webhookUrl: Swift.String, awsDirPath: Swift.String? = nil, config: VideoSDKRTC.RecordingConfig? = nil)
   public func stopRecording()
   public func startLivestream(outputs: [VideoSDKRTC.LivestreamOutput])
@@ -4520,7 +4527,6 @@ extension VideoSDKRTC.Meeting {
   #endif
   public func changeMic(selectedDevice: Swift.String)
   public func getMics() -> [(deviceName: Swift.String, deviceType: Swift.String)]
-  public func removeOberver()
 }
 extension VideoSDKRTC.Meeting {
   public func addEventListener(_ meetingEventListener: any VideoSDKRTC.MeetingEventListener)
@@ -8420,8 +8426,9 @@ public enum VideoQuality : Swift.String, Swift.CaseIterable {
 }
 @_hasMissingDesignatedInitializers final public class VideoSDK {
   public static func config(token: Swift.String)
-  public static func initMeeting(meetingId: Swift.String, participantId: Swift.String = "", participantName: Swift.String = "Guest", micEnabled: Swift.Bool = true, webcamEnabled: Swift.Bool = true, customCameraVideoStream: VideoSDKRTC.CustomRTCMediaStream? = nil, mode: VideoSDKRTC.Mode? = .CONFERENCE) -> VideoSDKRTC.Meeting
+  public static func initMeeting(meetingId: Swift.String, participantId: Swift.String = "", participantName: Swift.String = "Guest", micEnabled: Swift.Bool = true, webcamEnabled: Swift.Bool = true, customCameraVideoStream: VideoSDKRTC.CustomRTCMediaStream? = nil, customAudioTrack: VideoSDKRTC.CustomRTCMediaStream? = nil, mode: VideoSDKRTC.Mode? = .CONFERENCE, signalingBaseUrl: Swift.String? = nil) -> VideoSDKRTC.Meeting
   public static func createCameraVideoTrack(encoderConfig: VideoSDKRTC.CustomVideoTrackConfig? = .h360p_w640p, facingMode: AVFoundation.AVCaptureDevice.Position? = .front, multiStream: Swift.Bool? = true) throws -> VideoSDKRTC.CustomRTCMediaStream?
+  public static func createAudioTrack(noiseConfig: VideoSDKRTC.noiseConfig?) throws -> VideoSDKRTC.CustomRTCMediaStream?
   @objc deinit
 }
 extension VideoSDKRTC.VideoSDK {
