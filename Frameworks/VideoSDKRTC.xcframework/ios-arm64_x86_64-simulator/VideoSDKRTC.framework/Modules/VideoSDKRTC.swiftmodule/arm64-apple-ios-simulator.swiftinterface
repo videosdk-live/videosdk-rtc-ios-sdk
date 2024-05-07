@@ -3753,6 +3753,27 @@ public enum ConfigOrientation : Swift.String {
     get
   }
 }
+public class TranscriptionConfig {
+  public var webHookUrl: Swift.String
+  public var summary: VideoSDKRTC.SummaryConfig?
+  public init(webHookUrl: Swift.String? = nil, summary: VideoSDKRTC.SummaryConfig? = nil)
+  public func toJson() -> [Swift.String : Any]
+  @objc deinit
+}
+public class PostTranscriptionConfig {
+  public var enabled: Swift.Bool
+  public var summary: VideoSDKRTC.SummaryConfig?
+  public init(enabled: Swift.Bool, summary: VideoSDKRTC.SummaryConfig? = nil)
+  public func toJson() -> [Swift.String : Any]
+  @objc deinit
+}
+public class SummaryConfig {
+  public var enabled: Swift.Bool
+  public var prompt: Swift.String
+  public init(enabled: Swift.Bool, prompt: Swift.String)
+  public func toJson() -> [Swift.String : Any]
+  @objc deinit
+}
 public protocol IdGenerator {
   func generateSpanId() -> VideoSDKRTC.SpanId
   func generateTraceId() -> VideoSDKRTC.TraceId
@@ -4486,6 +4507,7 @@ public enum MediaType : Swift.Equatable {
   public var hlsState: VideoSDKRTC.HLSState
   public var liveStreamState: VideoSDKRTC.LiveStreamState
   public var recordingState: VideoSDKRTC.RecordingState
+  public var transcriptionState: VideoSDKRTC.TranscriptionState
   public var pubsub: VideoSDKRTC.PubSub {
     get
   }
@@ -4510,12 +4532,14 @@ extension VideoSDKRTC.Meeting {
   public func switchWebcam()
   public func muteMic()
   public func unmuteMic(customAudioStream: VideoSDKRTC.CustomRTCMediaStream? = nil)
-  public func startRecording(webhookUrl: Swift.String, awsDirPath: Swift.String? = nil, config: VideoSDKRTC.RecordingConfig? = nil)
+  public func startRecording(webhookUrl: Swift.String, awsDirPath: Swift.String? = nil, config: VideoSDKRTC.RecordingConfig? = nil, transcription: VideoSDKRTC.PostTranscriptionConfig? = nil)
   public func stopRecording()
   public func startLivestream(outputs: [VideoSDKRTC.LivestreamOutput])
   public func stopLivestream()
-  public func startHLS(config: VideoSDKRTC.HLSConfig? = nil)
+  public func startHLS(config: VideoSDKRTC.HLSConfig? = nil, transcription: VideoSDKRTC.PostTranscriptionConfig? = nil)
   public func stopHLS()
+  public func startTranscription(config: VideoSDKRTC.TranscriptionConfig? = nil)
+  public func stopTranscription()
   public func changeMode(_ mode: VideoSDKRTC.Mode)
   #if compiler(>=5.3) && $AsyncAwait
   @available(iOS 13.0.0, *)
@@ -4552,6 +4576,8 @@ public protocol MeetingEventListener : AnyObject {
   func onError(error: VideoSDKRTC.VideoSDKError)
   func onHlsStateChanged(state: VideoSDKRTC.HLSState, hlsUrl: VideoSDKRTC.HLSUrl?)
   func onLivestreamStateChanged(state: VideoSDKRTC.LiveStreamState)
+  func onTranscriptionStateChanged(state: VideoSDKRTC.TranscriptionState)
+  func onTranscriptionText(_ data: VideoSDKRTC.TranscriptionText)
   func onRecordingStateChanged(state: VideoSDKRTC.RecordingState)
   func onPinStateChanged(participantId: Swift.String, pinType: VideoSDKRTC.PinType)
   func onParticipantModeChanged(participantId: Swift.String, mode: VideoSDKRTC.Mode)
@@ -4575,6 +4601,8 @@ extension VideoSDKRTC.MeetingEventListener {
   public func onHlsStateChanged(state: VideoSDKRTC.HLSState, hlsUrl: VideoSDKRTC.HLSUrl?)
   public func onLivestreamStateChanged(state: VideoSDKRTC.LiveStreamState)
   public func onRecordingStateChanged(state: VideoSDKRTC.RecordingState)
+  public func onTranscriptionStateChanged(state: VideoSDKRTC.TranscriptionState)
+  public func onTranscriptionText(_ data: VideoSDKRTC.TranscriptionText)
   public func onPinStateChanged(participantId: Swift.String, pinType: VideoSDKRTC.PinType)
   public func onParticipantModeChanged(participantId: Swift.String, mode: VideoSDKRTC.Mode)
   public func onMicChanged(selectedDevice: Swift.String)
@@ -4614,9 +4642,20 @@ public enum VideoSDKError : Swift.Int {
   case INVALID_LIVESTREAM_CONFIG
   case START_HLS_FAILED
   case STOP_HLS_FAILED
+  case PREV_RECORDING_PROCESSING
+  case PREV_RTMP_RECORDING_PROCESSING
+  case PREV_HLS_STREAMING_PROCESSING
+  case MAX_SPEAKER_LIMIT_REACHED_ON_ORGANIZATION
+  case MAX_VIEWER_LIMIT_REACHED_ON_ORGANIZATION
+  case MAX_RECORDING_LIMIT_REACHED_ON_ORGANIZATION
+  case MAX_HLS_LIMIT_REACHED_ON_ORGANIZATION
+  case MAX_LIVESTREAM_LIMIT_REACHED_ON_ORGANIZATION
+  case START_TRANSCRIPTION_FAILED
+  case STOP_TRANSCRIPTION_FAILED
   case RECORDING_FAILED
   case LIVESTREAM_FAILED
   case HLS_FAILED
+  case TRANSCRIPTION_FAILED
   case ERROR_GET_VIDEO_MEDIA
   case ERROR_GET_AUDIO_MEDIA
   case ERROR_GET_DISPLAY_MEDIA
@@ -4647,6 +4686,14 @@ public enum RecordingState : Swift.String {
 }
 public enum LiveStreamState : Swift.String {
   case LIVESTREAM_STARTED, LIVESTREAM_STARTING, LIVESTREAM_STOPPED, LIVESTREAM_STOPPING
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum TranscriptionState : Swift.String {
+  case TRANSCRIPTION_STARTING, TRANSCRIPTION_STARTED, TRANSCRIPTION_STOPPING, TRANSCRIPTION_STOPPED
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -5770,6 +5817,7 @@ extension VideoSDKRTC.Participant {
   public func participantModeChanged(mode: VideoSDKRTC.Mode)
   public func getAudioStats() -> [Swift.String : Any]?
   public func getVideoStats() -> [Swift.String : Any]?
+  public func getShareStats() -> [Swift.String : Any]?
 }
 extension VideoSDKRTC.Participant {
   public func addStream(_ stream: VideoSDKRTC.MediaStream)
@@ -8190,6 +8238,14 @@ public struct TraceState : Swift.Equatable, Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+@objc @_hasMissingDesignatedInitializers public class TranscriptionText : ObjectiveC.NSObject {
+  public var participantId: Swift.String
+  public var participantName: Swift.String
+  public var text: Swift.String
+  public var timestamp: Swift.Int
+  public var type: Swift.String
+  @objc deinit
+}
 public enum Google_Protobuf_Syntax : VideoSDKRTC.Enum {
   public typealias RawValue = Swift.Int
   case proto2
@@ -8783,6 +8839,9 @@ extension VideoSDKRTC.RecordingState : Swift.RawRepresentable {}
 extension VideoSDKRTC.LiveStreamState : Swift.Equatable {}
 extension VideoSDKRTC.LiveStreamState : Swift.Hashable {}
 extension VideoSDKRTC.LiveStreamState : Swift.RawRepresentable {}
+extension VideoSDKRTC.TranscriptionState : Swift.Equatable {}
+extension VideoSDKRTC.TranscriptionState : Swift.Hashable {}
+extension VideoSDKRTC.TranscriptionState : Swift.RawRepresentable {}
 extension VideoSDKRTC.MetricExporterResultCode : Swift.Equatable {}
 extension VideoSDKRTC.MetricExporterResultCode : Swift.Hashable {}
 extension VideoSDKRTC.OpenTelemetryContextKeys : Swift.Equatable {}
