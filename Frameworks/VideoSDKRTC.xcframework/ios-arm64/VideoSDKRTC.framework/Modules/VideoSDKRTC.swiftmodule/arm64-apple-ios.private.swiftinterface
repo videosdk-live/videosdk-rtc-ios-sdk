@@ -1,9 +1,12 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
 // swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name VideoSDKRTC
 // swift-module-flags-ignorable: -enable-bare-slash-regex
+import ARKit
 import AVFoundation
 import AVKit
+import CoreImage.CIFilterBuiltins
+import CoreImage
 import CoreMedia
 import Darwin
 import Dispatch
@@ -705,6 +708,15 @@ extension VideoSDKRTC.Opentelemetry_Proto_Common_V1_InstrumentationScope : Video
   public var hashValue: Swift.Int {
     get
   }
+}
+public protocol VideoSDKVideoProcessor {
+  func onFrameReceived(frame: WebRTC.RTCVideoFrame) -> WebRTC.RTCVideoFrame?
+}
+public class VideoSDKBackgroundProcessor : VideoSDKRTC.VideoSDKVideoProcessor {
+  public init(backgroundSource: Foundation.URL)
+  public func onFrameReceived(frame: WebRTC.RTCVideoFrame) -> WebRTC.RTCVideoFrame?
+  public func changeBackground(backgroundSource: Foundation.URL)
+  @objc deinit
 }
 public struct CommonAdapter {
   public static func toProtoAttribute(key: Swift.String, attributeValue: VideoSDKRTC.AttributeValue) -> VideoSDKRTC.Opentelemetry_Proto_Common_V1_KeyValue
@@ -4520,7 +4532,13 @@ public enum MediaType : Swift.Equatable {
   public var meetingMode: VideoSDKRTC.Mode? {
     get
   }
-  public var signalingBaseUrl: Swift.String?
+  public var preferredProtocol: VideoSDKRTC.PreferredProtocol {
+    get
+  }
+  public var signalingBaseUrl: Swift.String? {
+    get
+  }
+  public var capturedImage: CoreImage.CIImage?
   @objc deinit
 }
 extension VideoSDKRTC.Meeting {
@@ -4558,6 +4576,11 @@ extension VideoSDKRTC.Meeting {
 }
 extension VideoSDKRTC.Meeting {
   public static func == (lhs: VideoSDKRTC.Meeting, rhs: VideoSDKRTC.Meeting) -> Swift.Bool
+}
+extension VideoSDKRTC.Meeting {
+  public func uploadBase64File(base64Data: Swift.String, token: Swift.String, fileName: Swift.String, completion: @escaping (Swift.String?) -> Swift.Void)
+  public func fetchBase64File(url: Swift.String, token: Swift.String, completion: @escaping (Swift.String?) -> Swift.Void)
+  public func setVideoProcessor(processor: (any VideoSDKRTC.VideoSDKVideoProcessor)?)
 }
 public protocol MeetingEventListener : AnyObject {
   func onMeetingJoined()
@@ -4694,6 +4717,14 @@ public enum LiveStreamState : Swift.String {
 }
 public enum TranscriptionState : Swift.String {
   case TRANSCRIPTION_STARTING, TRANSCRIPTION_STARTED, TRANSCRIPTION_STOPPING, TRANSCRIPTION_STOPPED
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum PreferredProtocol : Swift.String {
+  case UDP_OVER_TCP, UDP_ONLY, TCP_ONLY
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -5818,6 +5849,7 @@ extension VideoSDKRTC.Participant {
   public func getAudioStats() -> [Swift.String : Any]?
   public func getVideoStats() -> [Swift.String : Any]?
   public func getShareStats() -> [Swift.String : Any]?
+  public func captureImage(height: CoreFoundation.CGFloat? = nil, width: CoreFoundation.CGFloat? = nil, completion: @escaping (Swift.String?) -> Swift.Void)
 }
 extension VideoSDKRTC.Participant {
   public func addStream(_ stream: VideoSDKRTC.MediaStream)
@@ -8482,7 +8514,7 @@ public enum VideoQuality : Swift.String, Swift.CaseIterable {
 }
 @_hasMissingDesignatedInitializers final public class VideoSDK {
   public static func config(token: Swift.String)
-  public static func initMeeting(meetingId: Swift.String, participantId: Swift.String = "", participantName: Swift.String = "Guest", micEnabled: Swift.Bool = true, webcamEnabled: Swift.Bool = true, customCameraVideoStream: VideoSDKRTC.CustomRTCMediaStream? = nil, customAudioTrack: VideoSDKRTC.CustomRTCMediaStream? = nil, mode: VideoSDKRTC.Mode? = .CONFERENCE, signalingBaseUrl: Swift.String? = nil) -> VideoSDKRTC.Meeting
+  public static func initMeeting(meetingId: Swift.String, participantId: Swift.String = "", participantName: Swift.String = "Guest", micEnabled: Swift.Bool = true, webcamEnabled: Swift.Bool = true, customCameraVideoStream: VideoSDKRTC.CustomRTCMediaStream? = nil, customAudioTrack: VideoSDKRTC.CustomRTCMediaStream? = nil, mode: VideoSDKRTC.Mode? = .CONFERENCE, preferredProtocol: VideoSDKRTC.PreferredProtocol? = PreferredProtocol.UDP_OVER_TCP, signalingBaseUrl: Swift.String? = nil) -> VideoSDKRTC.Meeting
   public static func createCameraVideoTrack(encoderConfig: VideoSDKRTC.CustomVideoTrackConfig? = .h360p_w640p, facingMode: AVFoundation.AVCaptureDevice.Position? = .front, multiStream: Swift.Bool? = true) throws -> VideoSDKRTC.CustomRTCMediaStream?
   public static func createAudioTrack(noiseConfig: VideoSDKRTC.noiseConfig?) throws -> VideoSDKRTC.CustomRTCMediaStream?
   @objc deinit
@@ -8842,6 +8874,9 @@ extension VideoSDKRTC.LiveStreamState : Swift.RawRepresentable {}
 extension VideoSDKRTC.TranscriptionState : Swift.Equatable {}
 extension VideoSDKRTC.TranscriptionState : Swift.Hashable {}
 extension VideoSDKRTC.TranscriptionState : Swift.RawRepresentable {}
+extension VideoSDKRTC.PreferredProtocol : Swift.Equatable {}
+extension VideoSDKRTC.PreferredProtocol : Swift.Hashable {}
+extension VideoSDKRTC.PreferredProtocol : Swift.RawRepresentable {}
 extension VideoSDKRTC.MetricExporterResultCode : Swift.Equatable {}
 extension VideoSDKRTC.MetricExporterResultCode : Swift.Hashable {}
 extension VideoSDKRTC.OpenTelemetryContextKeys : Swift.Equatable {}
