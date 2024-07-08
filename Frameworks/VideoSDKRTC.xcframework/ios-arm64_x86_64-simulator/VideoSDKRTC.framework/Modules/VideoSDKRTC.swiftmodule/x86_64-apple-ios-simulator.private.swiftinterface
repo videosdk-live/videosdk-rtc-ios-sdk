@@ -4731,6 +4731,14 @@ public enum PreferredProtocol : Swift.String {
     get
   }
 }
+public enum PreferredCodec : Swift.String {
+  case H264, VP8
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 public protocol Message : VideoSDKRTC._MessageBase {
   init()
   static var protoMessageName: Swift.String { get }
@@ -8515,7 +8523,7 @@ public enum VideoQuality : Swift.String, Swift.CaseIterable {
 @_hasMissingDesignatedInitializers final public class VideoSDK {
   public static func config(token: Swift.String)
   public static func initMeeting(meetingId: Swift.String, participantId: Swift.String = "", participantName: Swift.String = "Guest", micEnabled: Swift.Bool = true, webcamEnabled: Swift.Bool = true, customCameraVideoStream: VideoSDKRTC.CustomRTCMediaStream? = nil, customAudioTrack: VideoSDKRTC.CustomRTCMediaStream? = nil, mode: VideoSDKRTC.Mode? = .CONFERENCE, preferredProtocol: VideoSDKRTC.PreferredProtocol? = PreferredProtocol.UDP_OVER_TCP, signalingBaseUrl: Swift.String? = nil) -> VideoSDKRTC.Meeting
-  public static func createCameraVideoTrack(encoderConfig: VideoSDKRTC.CustomVideoTrackConfig? = .h360p_w640p, facingMode: AVFoundation.AVCaptureDevice.Position? = .front, multiStream: Swift.Bool? = true) throws -> VideoSDKRTC.CustomRTCMediaStream?
+  public static func createCameraVideoTrack(encoderConfig: VideoSDKRTC.CustomVideoTrackConfig? = .h360p_w640p, facingMode: AVFoundation.AVCaptureDevice.Position? = .front, multiStream: Swift.Bool? = true, codec: VideoSDKRTC.PreferredCodec? = .VP8) throws -> VideoSDKRTC.CustomRTCMediaStream?
   public static func createAudioTrack(noiseConfig: VideoSDKRTC.noiseConfig?) throws -> VideoSDKRTC.CustomRTCMediaStream?
   @objc deinit
 }
@@ -8877,6 +8885,9 @@ extension VideoSDKRTC.TranscriptionState : Swift.RawRepresentable {}
 extension VideoSDKRTC.PreferredProtocol : Swift.Equatable {}
 extension VideoSDKRTC.PreferredProtocol : Swift.Hashable {}
 extension VideoSDKRTC.PreferredProtocol : Swift.RawRepresentable {}
+extension VideoSDKRTC.PreferredCodec : Swift.Equatable {}
+extension VideoSDKRTC.PreferredCodec : Swift.Hashable {}
+extension VideoSDKRTC.PreferredCodec : Swift.RawRepresentable {}
 extension VideoSDKRTC.MetricExporterResultCode : Swift.Equatable {}
 extension VideoSDKRTC.MetricExporterResultCode : Swift.Hashable {}
 extension VideoSDKRTC.OpenTelemetryContextKeys : Swift.Equatable {}
