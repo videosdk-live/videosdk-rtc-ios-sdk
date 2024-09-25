@@ -23,6 +23,8 @@ Video sdk enables opportunity to integrate immersive video experiences into your
 
   s.swift_version = '5.0'
   s.ios.deployment_target = '12.0'
+  s.dependency 'Socket.IO-Client-Swift', '16.1.0'
+
   #s.source_files = 'VideoSDK/**/*'
   
   # s.resource_bundles = {
