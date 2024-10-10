@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
-// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name VideoSDKRTC
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name VideoSDKRTC
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import ARKit
 import AVFoundation
 import AVKit
@@ -242,7 +242,6 @@ extension VideoSDKRTC.ArrayWithCapacity : Swift.MutableCollection {
   public func isEmpty() -> Swift.Bool
   @objc deinit
 }
-#if compiler(>=5.3) && $RethrowsProtocol
 @available(macOS 10.15, iOS 13.0, watchOS 6.0, tvOS 13.0, *)
 extension _Concurrency.AsyncSequence where Self.Element == Swift.UInt8 {
   @inlinable public func binaryProtobufDelimitedMessages<M>(of messageType: M.Type = M.self, extensions: (any VideoSDKRTC.ExtensionMap)? = nil, partial: Swift.Bool = false, options: VideoSDKRTC.BinaryDecodingOptions = BinaryDecodingOptions()) -> VideoSDKRTC.AsyncMessageSequence<Self, M> where M : VideoSDKRTC.Message {
@@ -254,8 +253,6 @@ extension _Concurrency.AsyncSequence where Self.Element == Swift.UInt8 {
     )
   }
 }
-#endif
-#if compiler(>=5.3) && $RethrowsProtocol
 @available(macOS 10.15, iOS 13.0, watchOS 6.0, tvOS 13.0, *)
 public struct AsyncMessageSequence<Base, M> : _Concurrency.AsyncSequence where Base : _Concurrency.AsyncSequence, M : VideoSDKRTC.Message, Base.Element == Swift.UInt8 {
   public typealias Element = M
@@ -269,7 +266,6 @@ public struct AsyncMessageSequence<Base, M> : _Concurrency.AsyncSequence where B
     internal let partial: Swift.Bool
     @usableFromInline
     internal let options: VideoSDKRTC.BinaryDecodingOptions
-    #if compiler(>=5.3) && $AsyncAwait
     @inlinable internal mutating func nextVarInt() async throws -> Swift.UInt64? {
       var messageSize: UInt64 = 0
       var shift: UInt64 = 0
@@ -286,18 +282,14 @@ public struct AsyncMessageSequence<Base, M> : _Concurrency.AsyncSequence where B
         }
       }
       if (shift > 0) {
-        // The stream has ended inside a varint.
+         
         iterator = nil
         throw BinaryDelimited.Error.truncated
       }
-      return nil // End of stream reached.
+      return nil  
     }
-    #endif
-    #if compiler(>=5.3) && $AsyncAwait
     @usableFromInline
     internal mutating func readBytes(_ size: Swift.Int) async throws -> [Swift.UInt8]
-    #endif
-    #if compiler(>=5.3) && $AsyncAwait
     @inlinable public mutating func next() async throws -> M? {
       guard let messageSize = try await nextVarInt() else {
         iterator = nil
@@ -323,22 +315,31 @@ public struct AsyncMessageSequence<Base, M> : _Concurrency.AsyncSequence where B
         options: options
       )
     }
-    #endif
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
     public typealias Element = M
+    #if compiler(>=5.3) && $AssociatedTypeImplements
+    @available(iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, macOS 15.0, *)
+    @_implements(_Concurrency.AsyncIteratorProtocol, Failure) public typealias __AsyncIteratorProtocol_Failure = any Swift.Error
+    #else
+    @available(iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, macOS 15.0, *)
+    public typealias __AsyncIteratorProtocol_Failure = any Swift.Error
+    #endif
   }
   public func makeAsyncIterator() -> VideoSDKRTC.AsyncMessageSequence<Base, M>.AsyncIterator
+  #if compiler(>=5.3) && $AssociatedTypeImplements
+  @available(iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, macOS 15.0, *)
+  @_implements(_Concurrency.AsyncSequence, Failure) public typealias __AsyncSequence_Failure = any Swift.Error
+  #else
+  @available(iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, macOS 15.0, *)
+  public typealias __AsyncSequence_Failure = any Swift.Error
+  #endif
 }
-#endif
-#if compiler(>=5.3) && $RethrowsProtocol
 @available(macOS 10.15, iOS 13.0, watchOS 6.0, tvOS 13.0, *)
 extension VideoSDKRTC.AsyncMessageSequence : Swift.Sendable where Base : Swift.Sendable {
 }
-#endif
-#if compiler(>=5.3) && $RethrowsProtocol
 @available(*, unavailable)
 extension VideoSDKRTC.AsyncMessageSequence.AsyncIterator : Swift.Sendable {
 }
-#endif
 public protocol AttributeProcessorProtocol {
   func process(incoming: [Swift.String : VideoSDKRTC.AttributeValue]) -> [Swift.String : VideoSDKRTC.AttributeValue]
 }
@@ -1019,7 +1020,7 @@ public struct Google_Protobuf_ExtensionRangeOptions : VideoSDKRTC.ExtensibleMess
       get
     }
     public typealias AllCases = [VideoSDKRTC.Google_Protobuf_ExtensionRangeOptions.VerificationState]
-    public static var allCases: [VideoSDKRTC.Google_Protobuf_ExtensionRangeOptions.VerificationState] {
+    nonisolated public static var allCases: [VideoSDKRTC.Google_Protobuf_ExtensionRangeOptions.VerificationState] {
       get
     }
   }
@@ -1186,7 +1187,7 @@ public struct Google_Protobuf_FieldDescriptorProto {
       get
     }
     public typealias AllCases = [VideoSDKRTC.Google_Protobuf_FieldDescriptorProto.TypeEnum]
-    public static var allCases: [VideoSDKRTC.Google_Protobuf_FieldDescriptorProto.TypeEnum] {
+    nonisolated public static var allCases: [VideoSDKRTC.Google_Protobuf_FieldDescriptorProto.TypeEnum] {
       get
     }
   }
@@ -1201,7 +1202,7 @@ public struct Google_Protobuf_FieldDescriptorProto {
       get
     }
     public typealias AllCases = [VideoSDKRTC.Google_Protobuf_FieldDescriptorProto.Label]
-    public static var allCases: [VideoSDKRTC.Google_Protobuf_FieldDescriptorProto.Label] {
+    nonisolated public static var allCases: [VideoSDKRTC.Google_Protobuf_FieldDescriptorProto.Label] {
       get
     }
   }
@@ -1556,7 +1557,7 @@ public struct Google_Protobuf_FileOptions : VideoSDKRTC.ExtensibleMessage {
       get
     }
     public typealias AllCases = [VideoSDKRTC.Google_Protobuf_FileOptions.OptimizeMode]
-    public static var allCases: [VideoSDKRTC.Google_Protobuf_FileOptions.OptimizeMode] {
+    nonisolated public static var allCases: [VideoSDKRTC.Google_Protobuf_FileOptions.OptimizeMode] {
       get
     }
   }
@@ -1713,7 +1714,7 @@ public struct Google_Protobuf_FieldOptions : VideoSDKRTC.ExtensibleMessage {
       get
     }
     public typealias AllCases = [VideoSDKRTC.Google_Protobuf_FieldOptions.CType]
-    public static var allCases: [VideoSDKRTC.Google_Protobuf_FieldOptions.CType] {
+    nonisolated public static var allCases: [VideoSDKRTC.Google_Protobuf_FieldOptions.CType] {
       get
     }
   }
@@ -1728,7 +1729,7 @@ public struct Google_Protobuf_FieldOptions : VideoSDKRTC.ExtensibleMessage {
       get
     }
     public typealias AllCases = [VideoSDKRTC.Google_Protobuf_FieldOptions.JSType]
-    public static var allCases: [VideoSDKRTC.Google_Protobuf_FieldOptions.JSType] {
+    nonisolated public static var allCases: [VideoSDKRTC.Google_Protobuf_FieldOptions.JSType] {
       get
     }
   }
@@ -1743,7 +1744,7 @@ public struct Google_Protobuf_FieldOptions : VideoSDKRTC.ExtensibleMessage {
       get
     }
     public typealias AllCases = [VideoSDKRTC.Google_Protobuf_FieldOptions.OptionRetention]
-    public static var allCases: [VideoSDKRTC.Google_Protobuf_FieldOptions.OptionRetention] {
+    nonisolated public static var allCases: [VideoSDKRTC.Google_Protobuf_FieldOptions.OptionRetention] {
       get
     }
   }
@@ -1765,7 +1766,7 @@ public struct Google_Protobuf_FieldOptions : VideoSDKRTC.ExtensibleMessage {
       get
     }
     public typealias AllCases = [VideoSDKRTC.Google_Protobuf_FieldOptions.OptionTargetType]
-    public static var allCases: [VideoSDKRTC.Google_Protobuf_FieldOptions.OptionTargetType] {
+    nonisolated public static var allCases: [VideoSDKRTC.Google_Protobuf_FieldOptions.OptionTargetType] {
       get
     }
   }
@@ -1934,7 +1935,7 @@ public struct Google_Protobuf_MethodOptions : VideoSDKRTC.ExtensibleMessage {
       get
     }
     public typealias AllCases = [VideoSDKRTC.Google_Protobuf_MethodOptions.IdempotencyLevel]
-    public static var allCases: [VideoSDKRTC.Google_Protobuf_MethodOptions.IdempotencyLevel] {
+    nonisolated public static var allCases: [VideoSDKRTC.Google_Protobuf_MethodOptions.IdempotencyLevel] {
       get
     }
   }
@@ -2084,7 +2085,7 @@ public struct Google_Protobuf_FeatureSet : VideoSDKRTC.ExtensibleMessage {
       get
     }
     public typealias AllCases = [VideoSDKRTC.Google_Protobuf_FeatureSet.FieldPresence]
-    public static var allCases: [VideoSDKRTC.Google_Protobuf_FeatureSet.FieldPresence] {
+    nonisolated public static var allCases: [VideoSDKRTC.Google_Protobuf_FeatureSet.FieldPresence] {
       get
     }
   }
@@ -2099,7 +2100,7 @@ public struct Google_Protobuf_FeatureSet : VideoSDKRTC.ExtensibleMessage {
       get
     }
     public typealias AllCases = [VideoSDKRTC.Google_Protobuf_FeatureSet.EnumType]
-    public static var allCases: [VideoSDKRTC.Google_Protobuf_FeatureSet.EnumType] {
+    nonisolated public static var allCases: [VideoSDKRTC.Google_Protobuf_FeatureSet.EnumType] {
       get
     }
   }
@@ -2114,7 +2115,7 @@ public struct Google_Protobuf_FeatureSet : VideoSDKRTC.ExtensibleMessage {
       get
     }
     public typealias AllCases = [VideoSDKRTC.Google_Protobuf_FeatureSet.RepeatedFieldEncoding]
-    public static var allCases: [VideoSDKRTC.Google_Protobuf_FeatureSet.RepeatedFieldEncoding] {
+    nonisolated public static var allCases: [VideoSDKRTC.Google_Protobuf_FeatureSet.RepeatedFieldEncoding] {
       get
     }
   }
@@ -2130,7 +2131,7 @@ public struct Google_Protobuf_FeatureSet : VideoSDKRTC.ExtensibleMessage {
       get
     }
     public typealias AllCases = [VideoSDKRTC.Google_Protobuf_FeatureSet.StringFieldValidation]
-    public static var allCases: [VideoSDKRTC.Google_Protobuf_FeatureSet.StringFieldValidation] {
+    nonisolated public static var allCases: [VideoSDKRTC.Google_Protobuf_FeatureSet.StringFieldValidation] {
       get
     }
   }
@@ -2145,7 +2146,7 @@ public struct Google_Protobuf_FeatureSet : VideoSDKRTC.ExtensibleMessage {
       get
     }
     public typealias AllCases = [VideoSDKRTC.Google_Protobuf_FeatureSet.MessageEncoding]
-    public static var allCases: [VideoSDKRTC.Google_Protobuf_FeatureSet.MessageEncoding] {
+    nonisolated public static var allCases: [VideoSDKRTC.Google_Protobuf_FeatureSet.MessageEncoding] {
       get
     }
   }
@@ -2160,7 +2161,7 @@ public struct Google_Protobuf_FeatureSet : VideoSDKRTC.ExtensibleMessage {
       get
     }
     public typealias AllCases = [VideoSDKRTC.Google_Protobuf_FeatureSet.JsonFormat]
-    public static var allCases: [VideoSDKRTC.Google_Protobuf_FeatureSet.JsonFormat] {
+    nonisolated public static var allCases: [VideoSDKRTC.Google_Protobuf_FeatureSet.JsonFormat] {
       get
     }
   }
@@ -2244,7 +2245,7 @@ public struct Google_Protobuf_GeneratedCodeInfo {
         get
       }
       public typealias AllCases = [VideoSDKRTC.Google_Protobuf_GeneratedCodeInfo.Annotation.Semantic]
-      public static var allCases: [VideoSDKRTC.Google_Protobuf_GeneratedCodeInfo.Annotation.Semantic] {
+      nonisolated public static var allCases: [VideoSDKRTC.Google_Protobuf_GeneratedCodeInfo.Annotation.Semantic] {
         get
       }
     }
@@ -3847,7 +3848,7 @@ public enum InstrumentType : Swift.CaseIterable {
   public static func == (a: VideoSDKRTC.InstrumentType, b: VideoSDKRTC.InstrumentType) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public typealias AllCases = [VideoSDKRTC.InstrumentType]
-  public static var allCases: [VideoSDKRTC.InstrumentType] {
+  nonisolated public static var allCases: [VideoSDKRTC.InstrumentType] {
     get
   }
   public var hashValue: Swift.Int {
@@ -4550,14 +4551,10 @@ extension VideoSDKRTC.Meeting {
   public func startTranscription(config: VideoSDKRTC.TranscriptionConfig? = nil)
   public func stopTranscription()
   public func changeMode(_ mode: VideoSDKRTC.Mode)
-  #if compiler(>=5.3) && $AsyncAwait
   @available(iOS 13.0.0, *)
   public func enableScreenShare() async
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   @available(iOS 13.0.0, *)
   public func disableScreenShare() async
-  #endif
   public func changeMic(selectedDevice: Swift.String)
   public func getMics() -> [(deviceName: Swift.String, deviceType: Swift.String)]
 }
@@ -5941,12 +5938,8 @@ public struct ProxyMeter : VideoSDKRTC.Meter {
 }
 extension VideoSDKRTC.PubSub {
   public func publish(topic: Swift.String, message: Swift.String, options: [Swift.String : Any] = [:])
-  #if compiler(>=5.3) && $AsyncAwait
   public func subscribe(topic: Swift.String, forListener listener: any VideoSDKRTC.PubSubMessageListener) async
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func unsubscribe(topic: Swift.String, forListener listener: any VideoSDKRTC.PubSubMessageListener) async
-  #endif
   public func getMessagesForTopic(_ topic: Swift.String) -> [VideoSDKRTC.PubSubMessage]
 }
 @objc @_hasMissingDesignatedInitializers public class PubSubMessage : ObjectiveC.NSObject {
@@ -8508,7 +8501,7 @@ public enum VideoQuality : Swift.String, Swift.CaseIterable {
   public init?(rawValue: Swift.String)
   public typealias AllCases = [VideoSDKRTC.VideoQuality]
   public typealias RawValue = Swift.String
-  public static var allCases: [VideoSDKRTC.VideoQuality] {
+  nonisolated public static var allCases: [VideoSDKRTC.VideoQuality] {
     get
   }
   public var rawValue: Swift.String {
