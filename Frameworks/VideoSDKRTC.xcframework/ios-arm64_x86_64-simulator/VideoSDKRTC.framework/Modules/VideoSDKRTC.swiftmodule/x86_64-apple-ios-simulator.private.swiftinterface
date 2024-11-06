@@ -4563,6 +4563,10 @@ extension VideoSDKRTC.Meeting {
   public func removeEventListener(_ meetingEventListener: any VideoSDKRTC.MeetingEventListener)
 }
 extension VideoSDKRTC.Meeting {
+  public func startWhiteboard()
+  public func stopWhiteboard()
+}
+extension VideoSDKRTC.Meeting {
   public static func == (lhs: VideoSDKRTC.Meeting, rhs: VideoSDKRTC.Meeting) -> Swift.Bool
 }
 extension VideoSDKRTC.Meeting {
@@ -4593,6 +4597,8 @@ public protocol MeetingEventListener : AnyObject {
   func onPinStateChanged(participantId: Swift.String, pinType: VideoSDKRTC.PinType)
   func onParticipantModeChanged(participantId: Swift.String, mode: VideoSDKRTC.Mode)
   func onMicChanged(selectedDevice: Swift.String)
+  func onWhiteboardStarted(url: Foundation.URL)
+  func onWhiteboardStopped()
 }
 extension VideoSDKRTC.MeetingEventListener {
   public func onMeetingJoined()
@@ -4617,6 +4623,8 @@ extension VideoSDKRTC.MeetingEventListener {
   public func onPinStateChanged(participantId: Swift.String, pinType: VideoSDKRTC.PinType)
   public func onParticipantModeChanged(participantId: Swift.String, mode: VideoSDKRTC.Mode)
   public func onMicChanged(selectedDevice: Swift.String)
+  public func onWhiteboardStarted(url: Foundation.URL)
+  public func onWhiteboardStopped()
 }
 public enum MeetingState : Swift.String {
   case CONNECTING, CONNECTED, CLOSING, CLOSED, CANCELLED, RECONNECTING
@@ -4721,6 +4729,14 @@ public enum PreferredProtocol : Swift.String {
 }
 public enum PreferredCodec : Swift.String {
   case H264, VP8
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum WhiteBoardState : Swift.String {
+  case WHITEBOARD_STARTED, WHITEBOARD_STOPPED
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -8885,6 +8901,9 @@ extension VideoSDKRTC.PreferredProtocol : Swift.RawRepresentable {}
 extension VideoSDKRTC.PreferredCodec : Swift.Equatable {}
 extension VideoSDKRTC.PreferredCodec : Swift.Hashable {}
 extension VideoSDKRTC.PreferredCodec : Swift.RawRepresentable {}
+extension VideoSDKRTC.WhiteBoardState : Swift.Equatable {}
+extension VideoSDKRTC.WhiteBoardState : Swift.Hashable {}
+extension VideoSDKRTC.WhiteBoardState : Swift.RawRepresentable {}
 extension VideoSDKRTC.MetricExporterResultCode : Swift.Equatable {}
 extension VideoSDKRTC.MetricExporterResultCode : Swift.Hashable {}
 extension VideoSDKRTC.OpenTelemetryContextKeys : Swift.Equatable {}
