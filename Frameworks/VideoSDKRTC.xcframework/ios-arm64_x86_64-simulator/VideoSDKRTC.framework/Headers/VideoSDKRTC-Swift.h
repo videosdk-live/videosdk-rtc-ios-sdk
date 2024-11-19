@@ -303,6 +303,20 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 #if defined(__OBJC__)
 
+SWIFT_CLASS("_TtC11VideoSDKRTC16CharacterMessage")
+@interface CharacterMessage : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC11VideoSDKRTC20CharacterStateChange")
+@interface CharacterStateChange : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC11VideoSDKRTC13PubSubMessage")
 @interface PubSubMessage : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -628,6 +642,20 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 #if defined(__OBJC__)
+
+SWIFT_CLASS("_TtC11VideoSDKRTC16CharacterMessage")
+@interface CharacterMessage : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC11VideoSDKRTC20CharacterStateChange")
+@interface CharacterStateChange : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 
 SWIFT_CLASS("_TtC11VideoSDKRTC13PubSubMessage")
 @interface PubSubMessage : NSObject
