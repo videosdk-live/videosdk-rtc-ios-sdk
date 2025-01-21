@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
 // swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name VideoSDKRTC
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import ARKit
@@ -865,7 +865,7 @@ public struct NoopCounterMetric<T> : VideoSDKRTC.CounterMetric {
   @objc deinit
 }
 public enum CustomVideoTrackConfig {
-  case h90p_w160p, h180p_w320p, h216p_w384p, h360p_w640p, h540p_w960p, h720p_w1280p, h1080p_w1920p, h1440p_w2560p, h2160p_w3840p, h120p_w160p, h180p_w240p, h240p_w320p, h360p_w480p, h480p_w640p, h540p_w720p, h720p_w960p, h1080p_w1440p, h1440p_w1920p
+  case h90p_w160p, h180p_w320p, h216p_w384p, h360p_w640p, h540p_w960p, h720p_w1280p, h1080p_w1920p, h2160p_w3840p, h120p_w160p, h180p_w240p, h240p_w320p, h360p_w480p, h480p_w640p, h1080p_w1440p, h1440p_w1920p
   public static func == (a: VideoSDKRTC.CustomVideoTrackConfig, b: VideoSDKRTC.CustomVideoTrackConfig) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
@@ -4663,7 +4663,7 @@ extension VideoSDKRTC.Meeting {
   public func stopHLS()
   public func startTranscription(config: VideoSDKRTC.TranscriptionConfig? = nil)
   public func stopTranscription()
-  public func changeMode(_ mode: VideoSDKRTC.Mode)
+  public func changeMode(_ mode: VideoSDKRTC.Mode) async
   @available(iOS 13.0.0, *)
   public func enableScreenShare() async
   @available(iOS 13.0.0, *)
@@ -4757,7 +4757,13 @@ public enum MeetingState : Swift.String {
   }
 }
 public enum Mode : Swift.String {
-  case CONFERENCE, VIEWER
+  @available(*, deprecated, message: "Use SEND_AND_RECV instead.")
+  case CONFERENCE
+  @available(*, deprecated, message: "Use SIGNALLING_ONLY instead.")
+  case VIEWER
+  case SEND_AND_RECV
+  case SIGNALLING_ONLY
+  case RECV_ONLY
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -8652,7 +8658,7 @@ public enum VideoQuality : Swift.String, Swift.CaseIterable {
 }
 @_hasMissingDesignatedInitializers final public class VideoSDK {
   public static func config(token: Swift.String)
-  public static func initMeeting(meetingId: Swift.String, participantId: Swift.String = "", participantName: Swift.String = "Guest", micEnabled: Swift.Bool = true, webcamEnabled: Swift.Bool = true, customCameraVideoStream: VideoSDKRTC.CustomRTCMediaStream? = nil, customAudioTrack: VideoSDKRTC.CustomRTCMediaStream? = nil, mode: VideoSDKRTC.Mode? = .CONFERENCE, preferredProtocol: VideoSDKRTC.PreferredProtocol? = PreferredProtocol.UDP_OVER_TCP, signalingBaseUrl: Swift.String? = nil, metaData: [Swift.String : Any]? = [:]) -> VideoSDKRTC.Meeting
+  public static func initMeeting(meetingId: Swift.String, participantId: Swift.String = "", participantName: Swift.String = "Guest", micEnabled: Swift.Bool = true, webcamEnabled: Swift.Bool = true, customCameraVideoStream: VideoSDKRTC.CustomRTCMediaStream? = nil, customAudioTrack: VideoSDKRTC.CustomRTCMediaStream? = nil, multiStream: Swift.Bool? = true, mode: VideoSDKRTC.Mode? = .SEND_AND_RECV, preferredProtocol: VideoSDKRTC.PreferredProtocol? = PreferredProtocol.UDP_OVER_TCP, signalingBaseUrl: Swift.String? = nil, metaData: [Swift.String : Any]? = [:]) -> VideoSDKRTC.Meeting
   public static func createCameraVideoTrack(encoderConfig: VideoSDKRTC.CustomVideoTrackConfig? = .h360p_w640p, facingMode: AVFoundation.AVCaptureDevice.Position? = .front, multiStream: Swift.Bool? = true, codec: VideoSDKRTC.PreferredCodec? = .VP8) throws -> VideoSDKRTC.CustomRTCMediaStream?
   public static func createAudioTrack(noiseConfig: VideoSDKRTC.noiseConfig?) throws -> VideoSDKRTC.CustomRTCMediaStream?
   @objc deinit
