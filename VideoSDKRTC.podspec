@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'VideoSDKRTC'
   s.version          = '2.1.7'
-  s.summary          = 'Interactive Video API Experiences for Develoeprs.'
+  s.summary          = 'Interactive Video API Experiences for Developers.'
 
   s.description      = <<-DESC
 Video sdk enables opportunity to integrate immersive video experiences into your application.
