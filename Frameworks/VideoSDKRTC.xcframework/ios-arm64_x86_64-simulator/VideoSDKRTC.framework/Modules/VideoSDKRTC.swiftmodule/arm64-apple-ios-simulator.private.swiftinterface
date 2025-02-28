@@ -6,6 +6,7 @@ import ARKit
 import AVFoundation
 import AVKit
 import CoreImage.CIFilterBuiltins
+import CallKit
 import CoreImage
 import CoreMedia
 import Darwin
@@ -4713,6 +4714,7 @@ public protocol MeetingEventListener : AnyObject {
   func onMicChanged(selectedDevice: Swift.String)
   func onWhiteboardStarted(url: Foundation.URL)
   func onWhiteboardStopped()
+  func onExternalCallStarted()
   func onCharacterJoined(character: VideoSDKRTC.AICharacter)
   func onCharacterLeft(character: VideoSDKRTC.AICharacter)
   func onCharacterMessage(message: VideoSDKRTC.CharacterMessage)
@@ -4743,6 +4745,7 @@ extension VideoSDKRTC.MeetingEventListener {
   public func onMicChanged(selectedDevice: Swift.String)
   public func onWhiteboardStarted(url: Foundation.URL)
   public func onWhiteboardStopped()
+  public func onExternalCallStarted()
   public func onCharacterJoined(character: VideoSDKRTC.AICharacter)
   public func onCharacterLeft(character: VideoSDKRTC.AICharacter)
   public func onCharacterMessage(message: VideoSDKRTC.CharacterMessage)
