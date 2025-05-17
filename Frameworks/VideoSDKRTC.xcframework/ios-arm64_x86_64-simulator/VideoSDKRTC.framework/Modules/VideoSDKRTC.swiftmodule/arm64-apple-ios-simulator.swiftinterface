@@ -4712,6 +4712,20 @@ extension VideoSDKRTC.Meeting {
   public func resumeAllStreams(_ kind: Swift.String? = nil)
 }
 extension VideoSDKRTC.Meeting {
+  public func switchToMeeting(meetingId: Swift.String, token: Swift.String)
+}
+extension VideoSDKRTC.Meeting {
+  public func requestMediaRelay(meetingId: Swift.String, token: Swift.String, kinds: [Swift.String]? = nil)
+  public func handleRelayRequestResponse(decision: Swift.String, peerId: Swift.String, meetingId: Swift.String)
+  public func stopMediaRelay(meetingId: Swift.String)
+  public func enableRelayMedia(meetingId: Swift.String, kind: Swift.String)
+  public func disableRelayMedia(meetingId: Swift.String, kind: Swift.String)
+}
+extension VideoSDKRTC.Meeting {
+  public func enableAdaptiveSubscription()
+  public func disableAdaptiveSubscription()
+}
+extension VideoSDKRTC.Meeting {
   public func setAttributes(_ name: Swift.String, _ version: Swift.String)
   public func getAttributes() -> [Swift.String : Any]
 }
@@ -4754,6 +4768,13 @@ public protocol MeetingEventListener : AnyObject {
   func onExternalCallHangup(callType: Swift.String)
   func onPausedAllStreams(kind: Swift.String)
   func onResumedAllStreams(kind: Swift.String)
+  func onEntryResponded(id: Swift.String, decision: Swift.String)
+  func onEntryRequested(id: Swift.String, name: Swift.String, allow: @escaping () -> Swift.Void, deny: @escaping () -> Swift.Void)
+  func onMediaRelayRequestReceived(participantId: Swift.String, meetingId: Swift.String, displayName: Swift.String, accept: @escaping () -> Swift.Void, reject: @escaping () -> Swift.Void)
+  func onMediaRelayRequestResponse(decision: Swift.String, decidedBy: Swift.String, meetingId: Swift.String)
+  func onMediaRelayStarted(meetingId: Swift.String)
+  func onMediaRelayStopped(meetingId: Swift.String)
+  func onMediaRealyError(meetingId: Swift.String, error: Swift.String)
   func onCharacterJoined(character: VideoSDKRTC.AICharacter)
   func onCharacterLeft(character: VideoSDKRTC.AICharacter)
   func onCharacterMessage(message: VideoSDKRTC.CharacterMessage)
@@ -4790,6 +4811,13 @@ extension VideoSDKRTC.MeetingEventListener {
   public func onExternalCallHangup(callType: Swift.String)
   public func onPausedAllStreams(kind: Swift.String)
   public func onResumedAllStreams(kind: Swift.String)
+  public func onEntryResponded(id: Swift.String, decision: Swift.String)
+  public func onEntryRequested(id: Swift.String, name: Swift.String, allow: @escaping () -> Swift.Void, deny: @escaping () -> Swift.Void)
+  public func onMediaRelayRequestReceived(participantId: Swift.String, meetingId: Swift.String, displayName: Swift.String, accept: @escaping () -> Swift.Void, reject: @escaping () -> Swift.Void)
+  public func onMediaRelayRequestResponse(decision: Swift.String, decidedBy: Swift.String, meetingId: Swift.String)
+  public func onMediaRelayStarted(meetingId: Swift.String)
+  public func onMediaRelayStopped(meetingId: Swift.String)
+  public func onMediaRealyError(meetingId: Swift.String, error: Swift.String)
   public func onCharacterJoined(character: VideoSDKRTC.AICharacter)
   public func onCharacterLeft(character: VideoSDKRTC.AICharacter)
   public func onCharacterMessage(message: VideoSDKRTC.CharacterMessage)
@@ -6059,6 +6087,8 @@ extension VideoSDKRTC.Participant {
   public func unpin(_ pinType: VideoSDKRTC.PinType = .SHARE_AND_CAM)
   public func setPinState(pinState: VideoSDKRTC.ParticipantPinState, peerId: Swift.String = "")
   public func e2eeStateChanged(forParticipant: VideoSDKRTC.Participant, state: VideoSDKRTC.E2EEState, StreamID: Swift.String)
+  public func handleParticipantPause(data: [Swift.String : Any])
+  public func handleParticipantResume(data: [Swift.String : Any])
 }
 extension VideoSDKRTC.Participant {
   public func addEventListener(_ listener: any VideoSDKRTC.ParticipantEventListener)
@@ -6071,11 +6101,15 @@ public protocol ParticipantEventListener {
   func onStreamEnabled(_ stream: VideoSDKRTC.MediaStream, forParticipant participant: VideoSDKRTC.Participant)
   func onStreamDisabled(_ stream: VideoSDKRTC.MediaStream, forParticipant participant: VideoSDKRTC.Participant)
   func e2eeStateChanged(forParticipant participant: VideoSDKRTC.Participant, state: VideoSDKRTC.E2EEState, _ stream: VideoSDKRTC.MediaStream)
+  func onStreamPaused(kind: Swift.String, reason: Swift.String)
+  func onStreamResumed(kind: Swift.String, reason: Swift.String)
 }
 extension VideoSDKRTC.ParticipantEventListener {
   public func onStreamEnabled(_ stream: VideoSDKRTC.MediaStream, forParticipant participant: VideoSDKRTC.Participant)
   public func onStreamDisabled(_ stream: VideoSDKRTC.MediaStream, forParticipant participant: VideoSDKRTC.Participant)
   public func e2eeStateChanged(forParticipant participant: VideoSDKRTC.Participant, state: VideoSDKRTC.E2EEState, _ stream: VideoSDKRTC.MediaStream)
+  public func onStreamPaused(kind: Swift.String, reason: Swift.String)
+  public func onStreamResumed(kind: Swift.String, reason: Swift.String)
 }
 public enum PinType : Swift.String {
   case SHARE_AND_CAM, CAM, SHARE
