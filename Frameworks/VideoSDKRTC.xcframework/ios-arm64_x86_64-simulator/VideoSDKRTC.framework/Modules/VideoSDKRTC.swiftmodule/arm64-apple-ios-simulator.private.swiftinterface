@@ -4045,6 +4045,30 @@ public struct JSONEncodingOptions : Swift.Sendable {
   public var preserveProtoFieldNames: Swift.Bool
   public init()
 }
+public let defaultRatchetSalt: Swift.String
+public let defaultMagicBytes: Swift.String
+public let defaultRatchetWindowSize: Swift.Int32
+public let defaultFailureTolerance: Swift.Int32
+public let defaultKeyRingSize: Swift.Int32
+public let defaultDiscardFrameWhenCryptorNotReady: Swift.Bool
+@objc final public class KeyProviderOptions : ObjectiveC.NSObject, Swift.Sendable {
+  final public let sharedKey: Swift.Bool
+  final public let ratchetSalt: Foundation.Data
+  final public let ratchetWindowSize: Swift.Int32
+  final public let uncryptedMagicBytes: Foundation.Data
+  final public let failureTolerance: Swift.Int32
+  final public let keyRingSize: Swift.Int32
+  final public let discardFrameWhenCryptorNotReady: Swift.Bool
+  public init(sharedKey: Swift.Bool = true, ratchetSalt: Foundation.Data = defaultRatchetSalt.data(using: .utf8)!, ratchetWindowSize: Swift.Int32 = defaultRatchetWindowSize, uncryptedMagicBytes: Foundation.Data = defaultMagicBytes.data(using: .utf8)!, failureTolerance: Swift.Int32 = defaultFailureTolerance, keyRingSize: Swift.Int32 = defaultKeyRingSize, discardFrameWhenCryptorNotReady: Swift.Bool = defaultDiscardFrameWhenCryptorNotReady)
+  @objc deinit
+}
+final public class BaseKeyProvider {
+  public init(discardFrameWhenCryptorNotReady: Swift.Bool = false)
+  final public func setSharedKey(_ key: Swift.String) throws
+  final public func exportSharedKey() -> Foundation.Data?
+  final public func ratchetSharedKey() -> Foundation.Data?
+  @objc deinit
+}
 @_hasMissingDesignatedInitializers open class LabelSet : Swift.Hashable {
   public var labels: [Swift.String : Swift.String] {
     get
@@ -4079,30 +4103,6 @@ public struct LivestreamOutput : Swift.Codable {
   public init(url: Swift.String, streamKey: Swift.String)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
-}
-public let defaultRatchetSalt: Swift.String
-public let defaultMagicBytes: Swift.String
-public let defaultRatchetWindowSize: Swift.Int32
-public let defaultFailureTolerance: Swift.Int32
-public let defaultKeyRingSize: Swift.Int32
-public let defaultDiscardFrameWhenCryptorNotReady: Swift.Bool
-@objc final public class KeyProviderOptions : ObjectiveC.NSObject, Swift.Sendable {
-  final public let sharedKey: Swift.Bool
-  final public let ratchetSalt: Foundation.Data
-  final public let ratchetWindowSize: Swift.Int32
-  final public let uncryptedMagicBytes: Foundation.Data
-  final public let failureTolerance: Swift.Int32
-  final public let keyRingSize: Swift.Int32
-  final public let discardFrameWhenCryptorNotReady: Swift.Bool
-  public init(sharedKey: Swift.Bool = true, ratchetSalt: Foundation.Data = defaultRatchetSalt.data(using: .utf8)!, ratchetWindowSize: Swift.Int32 = defaultRatchetWindowSize, uncryptedMagicBytes: Foundation.Data = defaultMagicBytes.data(using: .utf8)!, failureTolerance: Swift.Int32 = defaultFailureTolerance, keyRingSize: Swift.Int32 = defaultKeyRingSize, discardFrameWhenCryptorNotReady: Swift.Bool = defaultDiscardFrameWhenCryptorNotReady)
-  @objc deinit
-}
-final public class BaseKeyProvider {
-  public init(discardFrameWhenCryptorNotReady: Swift.Bool = false)
-  final public func setSharedKey(_ key: Swift.String) throws
-  final public func exportSharedKey() -> Foundation.Data?
-  final public func ratchetSharedKey() -> Foundation.Data?
-  @objc deinit
 }
 public protocol Logger {
   func eventBuilder(name: Swift.String) -> any VideoSDKRTC.EventBuilder
@@ -4642,6 +4642,9 @@ public enum MediaType : Swift.Equatable {
   public var recordingState: VideoSDKRTC.RecordingState
   public var transcriptionState: VideoSDKRTC.TranscriptionState
   public var pubsub: VideoSDKRTC.PubSub {
+    get
+  }
+  public var realtimeStore: VideoSDKRTC.RealtimeStore {
     get
   }
   public var customVideoMediaStream: VideoSDKRTC.CustomRTCMediaStream? {
@@ -6265,6 +6268,30 @@ public protocol ReadableSpan : VideoSDKRTC.Span {
   func toSpanData() -> VideoSDKRTC.SpanData
   var hasEnded: Swift.Bool { get }
   var latency: Foundation.TimeInterval { get }
+}
+@_hasMissingDesignatedInitializers public class RealtimeStore {
+  @objc deinit
+}
+extension VideoSDKRTC.RealtimeStore {
+  public func set(key: Swift.String, value: Swift.String?) async throws
+  public func get(key: Swift.String) async throws -> Swift.String?
+  public func observe(key: Swift.String, forListener listener: any VideoSDKRTC.RealtimeStoreEventListener) async throws
+  public func stopObserving(key: Swift.String, forListener listener: any VideoSDKRTC.RealtimeStoreEventListener) async throws
+}
+public enum RealtimeStoreError : Swift.Error, Foundation.LocalizedError {
+  case operationFailed(Swift.String)
+  case keyNotFound
+  case invalidKey
+  case valueTooLarge
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+public protocol RealtimeStoreEventListener : AnyObject {
+  func onValueChanged(key: Swift.String, value: Swift.String?, updatedBy: Swift.String)
+}
+extension VideoSDKRTC.RealtimeStoreEventListener {
+  public func onValueChanged(key: Swift.String, value: Swift.String?, updatedBy: Swift.String)
 }
 @_hasMissingDesignatedInitializers public class RecordEventsReadableSpan : VideoSDKRTC.ReadableSpan {
   public var isRecording: Swift.Bool
