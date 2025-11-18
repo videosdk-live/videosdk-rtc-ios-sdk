@@ -856,7 +856,7 @@ public struct NoopCounterMetric<T> : VideoSDKRTC.CounterMetric {
   @objc deinit
 }
 public enum CustomVideoTrackConfig {
-  case h90p_w160p, h180p_w320p, h216p_w384p, h360p_w640p, h540p_w960p, h720p_w1280p, h1080p_w1920p, h2160p_w3840p, h120p_w160p, h180p_w240p, h240p_w320p, h360p_w480p, h480p_w640p, h1080p_w1440p, h1440p_w1920p
+  case h90p_w160p, h180p_w320p, h360p_w640p, h540p_w960p, h720p_w1280p, h1080p_w1920p, h120p_w160p, h180p_w240p, h240p_w320p, h360p_w480p, h480p_w640p, h720p_w960p, h1080p_w1440p
   public static func == (a: VideoSDKRTC.CustomVideoTrackConfig, b: VideoSDKRTC.CustomVideoTrackConfig) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
@@ -4947,6 +4947,14 @@ public enum E2EEState : Swift.String {
     get
   }
 }
+public enum BitrateMode : Swift.String {
+  case HIGH_QUALITY, BALANCED, BANDWIDTH_OPTIMIZED
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 public protocol Message : VideoSDKRTC._MessageBase {
   init()
   static var protoMessageName: Swift.String { get }
@@ -8767,10 +8775,11 @@ public enum VideoQuality : Swift.String, Swift.CaseIterable {
 }
 @_hasMissingDesignatedInitializers final public class VideoSDK {
   public static var baseKeyProvider: VideoSDKRTC.BaseKeyProvider?
+  public static var bitrateMode: VideoSDKRTC.BitrateMode
   public static func config(token: Swift.String)
   public static func initMeeting(meetingId: Swift.String, participantId: Swift.String = "", participantName: Swift.String = "Guest", micEnabled: Swift.Bool = true, webcamEnabled: Swift.Bool = true, customCameraVideoStream: VideoSDKRTC.CustomRTCMediaStream? = nil, customAudioTrack: VideoSDKRTC.CustomRTCMediaStream? = nil, multiStream: Swift.Bool? = true, mode: VideoSDKRTC.Mode? = .SEND_AND_RECV, preferredProtocol: VideoSDKRTC.PreferredProtocol? = PreferredProtocol.UDP_OVER_TCP, signalingBaseUrl: Swift.String? = nil, metaData: [Swift.String : Any]? = [:], secureKey: Swift.String? = nil) -> VideoSDKRTC.Meeting
   public static func setKeyProvider(_ baseKeyProvider: VideoSDKRTC.BaseKeyProvider) throws
-  public static func createCameraVideoTrack(encoderConfig: VideoSDKRTC.CustomVideoTrackConfig? = .h360p_w640p, facingMode: AVFoundation.AVCaptureDevice.Position? = .front, multiStream: Swift.Bool? = true, codec: VideoSDKRTC.PreferredCodec? = .VP8) throws -> VideoSDKRTC.CustomRTCMediaStream?
+  public static func createCameraVideoTrack(encoderConfig: VideoSDKRTC.CustomVideoTrackConfig? = .h360p_w640p, facingMode: AVFoundation.AVCaptureDevice.Position? = .front, multiStream: Swift.Bool? = true, codec: VideoSDKRTC.PreferredCodec? = .VP8, bitrateMode: VideoSDKRTC.BitrateMode? = BitrateMode.BALANCED) throws -> VideoSDKRTC.CustomRTCMediaStream?
   public static func createAudioTrack(noiseConfig: VideoSDKRTC.noiseConfig?) throws -> VideoSDKRTC.CustomRTCMediaStream?
   @objc deinit
 }
@@ -9156,6 +9165,9 @@ extension VideoSDKRTC.WhiteBoardState : Swift.RawRepresentable {}
 extension VideoSDKRTC.E2EEState : Swift.Equatable {}
 extension VideoSDKRTC.E2EEState : Swift.Hashable {}
 extension VideoSDKRTC.E2EEState : Swift.RawRepresentable {}
+extension VideoSDKRTC.BitrateMode : Swift.Equatable {}
+extension VideoSDKRTC.BitrateMode : Swift.Hashable {}
+extension VideoSDKRTC.BitrateMode : Swift.RawRepresentable {}
 extension VideoSDKRTC.MetricExporterResultCode : Swift.Equatable {}
 extension VideoSDKRTC.MetricExporterResultCode : Swift.Hashable {}
 extension VideoSDKRTC.OpenTelemetryContextKeys : Swift.Equatable {}
