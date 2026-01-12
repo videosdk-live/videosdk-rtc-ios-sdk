@@ -157,6 +157,7 @@ extension VideoSDKRTC.AICharacter {
 extension VideoSDKRTC.AICharacter {
   public func addEventListener(_ characterEventListener: any VideoSDKRTC.CharacterEventListener)
   public func removeEventListener(_ characterEventListener: any VideoSDKRTC.CharacterEventListener)
+  public func removeAllEventListeners()
 }
 public struct Google_Protobuf_Any {
   public var typeURL: Swift.String {
@@ -3980,6 +3981,7 @@ public class HLSConfig {
   public var orientation: VideoSDKRTC.ConfigOrientation
   public init(layout: VideoSDKRTC.ConfigLayout, theme: VideoSDKRTC.ConfigTheme, mode: VideoSDKRTC.ConfigMode, quality: VideoSDKRTC.ConfigQuality, orientation: VideoSDKRTC.ConfigOrientation)
   public func toJson() -> [Swift.String : Any]
+  public func toJsonString() -> Swift.String
   @objc deinit
 }
 public class RecordingConfig {
@@ -3990,6 +3992,7 @@ public class RecordingConfig {
   public var orientation: VideoSDKRTC.ConfigOrientation
   public init(layout: VideoSDKRTC.ConfigLayout, theme: VideoSDKRTC.ConfigTheme, mode: VideoSDKRTC.ConfigMode, quality: VideoSDKRTC.ConfigQuality, orientation: VideoSDKRTC.ConfigOrientation)
   public func toJson() -> [Swift.String : Any]
+  public func toJsonString() -> Swift.String
   @objc deinit
 }
 public class HLSUrl {
@@ -4000,6 +4003,7 @@ public class HLSUrl {
   public init(downstreamUrl: Swift.String? = nil, playbackHlsUrl: Swift.String? = nil, livestreamUrl: Swift.String? = nil)
   #endif
   public func toJson() -> [Swift.String : Any]
+  public func toJsonString() -> Swift.String
   @objc deinit
 }
 public class ConfigLayout {
@@ -4008,10 +4012,12 @@ public class ConfigLayout {
   public var gridSize: Swift.Int
   public init(type: VideoSDKRTC.ConfigLayoutGrid, priority: VideoSDKRTC.ConfigLayoutPriority, gridSize: Swift.Int)
   public func toJson() -> [Swift.String : Any]
+  public func toJsonString() -> Swift.String
   @objc deinit
 }
 public enum ConfigLayoutPriority : Swift.String {
-  case SPEAKER, PIN
+  case SPEAKER
+  case PIN
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
   #endif
@@ -4021,7 +4027,9 @@ public enum ConfigLayoutPriority : Swift.String {
   }
 }
 public enum ConfigLayoutGrid : Swift.String {
-  case GRID, SPOTLIGHT, SIDEBAR
+  case GRID
+  case SPOTLIGHT
+  case SIDEBAR
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
   #endif
@@ -4031,7 +4039,9 @@ public enum ConfigLayoutGrid : Swift.String {
   }
 }
 public enum ConfigTheme : Swift.String {
-  case DEFAULT, LIGHT, DARK
+  case DEFAULT
+  case LIGHT
+  case DARK
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
   #endif
@@ -4041,7 +4051,8 @@ public enum ConfigTheme : Swift.String {
   }
 }
 public enum ConfigMode : Swift.String {
-  case video_and_audio, audio
+  case video_and_audio
+  case audio
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
   #endif
@@ -4051,7 +4062,8 @@ public enum ConfigMode : Swift.String {
   }
 }
 public enum ConfigQuality : Swift.String {
-  case high, med, low
+  case high
+  case med, low
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
   #endif
@@ -4061,7 +4073,8 @@ public enum ConfigQuality : Swift.String {
   }
 }
 public enum ConfigOrientation : Swift.String {
-  case landscape, portrait
+  case landscape
+  case portrait
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
   #endif
@@ -4077,6 +4090,7 @@ public class TranscriptionConfig {
   public init(webHookUrl: Swift.String? = nil, summary: VideoSDKRTC.SummaryConfig? = nil)
   #endif
   public func toJson() -> [Swift.String : Any]
+  public func toJsonString() -> Swift.String
   @objc deinit
 }
 public class PostTranscriptionConfig {
@@ -4086,6 +4100,7 @@ public class PostTranscriptionConfig {
   public init(enabled: Swift.Bool, summary: VideoSDKRTC.SummaryConfig? = nil)
   #endif
   public func toJson() -> [Swift.String : Any]
+  public func toJsonString() -> Swift.String
   @objc deinit
 }
 public class SummaryConfig {
@@ -4093,6 +4108,7 @@ public class SummaryConfig {
   public var prompt: Swift.String
   public init(enabled: Swift.Bool, prompt: Swift.String)
   public func toJson() -> [Swift.String : Any]
+  public func toJsonString() -> Swift.String
   @objc deinit
 }
 public protocol IdGenerator {
@@ -4818,6 +4834,14 @@ public enum authorisationStatus {
 public protocol AuthorisationDelegate : AnyObject {
   func handlePermission()
 }
+public enum MediaStreamEventType {
+  case state
+  public static func == (a: VideoSDKRTC.MediaStreamEventType, b: VideoSDKRTC.MediaStreamEventType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 @_hasMissingDesignatedInitializers public class MediaStream : Swift.Equatable {
   public var id: Swift.String {
     get
@@ -4839,6 +4863,12 @@ public protocol AuthorisationDelegate : AnyObject {
 extension VideoSDKRTC.MediaStream {
   public func pause()
   public func resume()
+  public var isPaused: Swift.Bool {
+    get
+  }
+  @discardableResult
+  public func on(_ event: VideoSDKRTC.MediaStreamEventType, listener: @escaping (VideoSDKRTC.StreamState) -> Swift.Void) -> Foundation.UUID
+  public func off(_ event: VideoSDKRTC.MediaStreamEventType, listenerId: Foundation.UUID)
   public func handleStreamStateChanged(state: VideoSDKRTC.StreamState, streamId: Swift.String)
 }
 extension VideoSDKRTC.MediaStream {
@@ -4901,13 +4931,17 @@ extension VideoSDKRTC.Meeting {
   public func leave(reason: VideoSDKRTC.LeaveReason = .manualLeaveCalled)
   public func end()
   #if compiler(>=5.3) && $NonescapableTypes
-  public func enableWebcam(customVideoStream: VideoSDKRTC.CustomRTCMediaStream? = nil)
+  public func enableWebcam(customVideoStream: VideoSDKRTC.CustomRTCMediaStream? = nil, parentSpan: (any VideoSDKRTC.Span)? = nil)
   #endif
-  public func disableWebcam()
-  public func switchWebcam()
-  public func muteMic()
   #if compiler(>=5.3) && $NonescapableTypes
-  public func unmuteMic(customAudioStream: VideoSDKRTC.CustomRTCMediaStream? = nil)
+  public func disableWebcam(parentSpan: (any VideoSDKRTC.Span)? = nil)
+  #endif
+  public func switchWebcam()
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func muteMic(parentSpan: (any VideoSDKRTC.Span)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func unmuteMic(customAudioStream: VideoSDKRTC.CustomRTCMediaStream? = nil, parentSpan: (any VideoSDKRTC.Span)? = nil)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   public func startRecording(webhookUrl: Swift.String, awsDirPath: Swift.String? = nil, config: VideoSDKRTC.RecordingConfig? = nil, transcription: VideoSDKRTC.PostTranscriptionConfig? = nil)
@@ -4935,6 +4969,7 @@ extension VideoSDKRTC.Meeting {
 extension VideoSDKRTC.Meeting {
   public func addEventListener(_ meetingEventListener: any VideoSDKRTC.MeetingEventListener)
   public func removeEventListener(_ meetingEventListener: any VideoSDKRTC.MeetingEventListener)
+  public func removeAllEventListeners()
 }
 extension VideoSDKRTC.Meeting {
   public func startWhiteboard()
@@ -4949,7 +4984,7 @@ extension VideoSDKRTC.Meeting {
   #endif
 }
 extension VideoSDKRTC.Meeting {
-  public func switchTo(meetingId: Swift.String, token: Swift.String)
+  public func switchTo(meetingId: Swift.String, token: Swift.String, mode: VideoSDKRTC.Mode)
 }
 extension VideoSDKRTC.Meeting {
   #if compiler(>=5.3) && $NonescapableTypes
@@ -5091,7 +5126,7 @@ extension VideoSDKRTC.MeetingEventListener {
   public func onQualityLimitation(type: VideoSDKRTC.QualityLimitationType, state: VideoSDKRTC.QualityLimitationState, timestamp: Swift.String)
 }
 public enum MeetingState : Swift.String {
-  case CONNECTING, CONNECTED, DISCONNECTED, RECONNECTING
+  case CONNECTING, CONNECTED, DISCONNECTED, RECONNECTING, FAILED
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
   #endif
@@ -5135,31 +5170,51 @@ public enum VideoSDKError : Swift.Int {
   case INVALID_LIVESTREAM_CONFIG
   case START_HLS_FAILED
   case STOP_HLS_FAILED
-  case PREV_RECORDING_PROCESSING
-  case PREV_RTMP_RECORDING_PROCESSING
-  case PREV_HLS_STREAMING_PROCESSING
-  case MAX_SPEAKER_LIMIT_REACHED_ON_ORGANIZATION
-  case MAX_VIEWER_LIMIT_REACHED_ON_ORGANIZATION
-  case MAX_RECORDING_LIMIT_REACHED_ON_ORGANIZATION
-  case MAX_HLS_LIMIT_REACHED_ON_ORGANIZATION
-  case MAX_LIVESTREAM_LIMIT_REACHED_ON_ORGANIZATION
   case START_TRANSCRIPTION_FAILED
   case STOP_TRANSCRIPTION_FAILED
+  case START_TRANSLATION_FAILED
+  case STOP_TRANSLATION_FAILED
+  case CHANGE_TRANSLATION_LANGUAGE_FAILED
   case RECORDING_FAILED
   case LIVESTREAM_FAILED
   case HLS_FAILED
   case TRANSCRIPTION_FAILED
+  case TRANSLATION_FAILED
   case ERROR_GET_VIDEO_MEDIA
   case ERROR_GET_AUDIO_MEDIA
   case ERROR_GET_DISPLAY_MEDIA
   case ERROR_GET_VIDEO_MEDIA_PERMISSION_DENIED
   case ERROR_GET_AUDIO_MEDIA_PERMISSION_DENIED
   case ERROR_GET_DISPLAY_MEDIA_PERMISSION_DENIED
+  case ERROR_CAMERA_ACCESS_DENIED_OR_DISMISSED
+  case ERROR_MICROPHONE_ACCESS_DENIED_OR_DISMISSED
+  case ERROR_CAMERA_PERMISSION_DENIED_BY_OS
+  case ERROR_MICROPHONE_PERMISSION_DENIED_BY_OS
+  case ERROR_CAMERA_NOT_FOUND
+  case ERROR_MICROPHONE_NOT_FOUND
+  case ERROR_CAMERA_IN_USE
+  case ERROR_MICROPHONE_IN_USE
+  case ERROR_CAMERA_PERMISSION_OR_AUTOPLAY_ISSUE
+  case ERROR_VIDEO_SOURCE_INITIATION_FAILED
+  case ERROR_WEBCAM_TRACK_ENDED
+  case ERROR_MICROPHONE_TRACK_ENDED
+  case ERROR_INVALID_CUSTOM_VIDEO_TRACK
+  case ERROR_INVALID_CUSTOM_AUDIO_TRACK
+  case ERROR_CUSTOM_VIDEO_TRACK_ENDED
+  case ERROR_CUSTOM_AUDIO_TRACK_ENDED
+  case ERROR_CAMERA_ACCESS_UNAVAILABLE
+  case ERROR_MICROPHONE_ACCESS_UNAVAILABLE
+  case ERROR_ACTION_PERFORMED_BEFORE_MEETING_JOINED
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
   #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
+    get
+  }
+}
+extension VideoSDKRTC.VideoSDKError {
+  public var message: Swift.String {
     get
   }
 }
@@ -6505,7 +6560,7 @@ extension VideoSDKRTC.Participant {
   public func enableWebcam()
   public func disableWebcam()
   public func remove()
-  public func participantPinStateChanged(pinState: VideoSDKRTC.ParticipantPinState)
+  public func participantPinStateChanged(pinState: VideoSDKRTC.ParticipantPinState) async
   public func participantModeChanged(mode: VideoSDKRTC.Mode)
   #if compiler(>=5.3) && $NonescapableTypes
   public func getAudioStats() -> Any?
@@ -6539,6 +6594,7 @@ extension VideoSDKRTC.Participant {
 extension VideoSDKRTC.Participant {
   public func addEventListener(_ listener: any VideoSDKRTC.ParticipantEventListener)
   public func removeEventListener(_ listener: any VideoSDKRTC.ParticipantEventListener)
+  public func removeAllEventListeners()
 }
 extension VideoSDKRTC.Participant {
   public static func == (lhs: VideoSDKRTC.Participant, rhs: VideoSDKRTC.Participant) -> Swift.Bool
@@ -6568,6 +6624,7 @@ public enum PinType : Swift.String {
   }
 }
 public struct ParticipantPinState : Swift.Codable {
+  public func toString() -> Swift.String
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
 }
@@ -9738,6 +9795,8 @@ extension VideoSDKRTC.JSONEncodingError : Swift.Equatable {}
 extension VideoSDKRTC.JSONEncodingError : Swift.Hashable {}
 extension VideoSDKRTC.authorisationStatus : Swift.Equatable {}
 extension VideoSDKRTC.authorisationStatus : Swift.Hashable {}
+extension VideoSDKRTC.MediaStreamEventType : Swift.Equatable {}
+extension VideoSDKRTC.MediaStreamEventType : Swift.Hashable {}
 extension VideoSDKRTC.MeetingState : Swift.Equatable {}
 extension VideoSDKRTC.MeetingState : Swift.Hashable {}
 extension VideoSDKRTC.MeetingState : Swift.RawRepresentable {}
