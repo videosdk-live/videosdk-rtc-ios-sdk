@@ -915,7 +915,7 @@ extension VideoSDKRTC.Opentelemetry_Proto_Common_V1_InstrumentationScope : Video
   @_documentation(visibility: internal) public init(videoTrack: WebRTC.RTCVideoTrack? = nil, multiStream: Swift.Bool? = nil, audioTrack: WebRTC.RTCAudioTrack? = nil, videoCodec: VideoSDKRTC.PreferredCodec? = .VP8, bitrateMode: VideoSDKRTC.BitrateMode? = BitrateMode.BALANCED, maxLayer: VideoSDKRTC.EncodingLayer? = EncodingLayer.MAX_LAYER_3)
   #endif
   @_documentation(visibility: internal) public func toJson() -> [Swift.String : Any]
-  @_documentation(visibility: internal) public func toJsonString() -> Swift.String
+  @_documentation(visibility: internal) public func toJsonString(forAudio: Swift.Bool = false) -> Swift.String
   @objc deinit
 }
 public enum CustomVideoTrackConfig {
@@ -946,6 +946,7 @@ public struct NoiseConfig {
   #if compiler(>=5.3) && $NonescapableTypes
   @_documentation(visibility: internal) public init(noiseSupression: Swift.Bool?, echoCancellation: Swift.Bool?, autoGainControl: Swift.Bool?, highPassFilter: Swift.Bool?)
   #endif
+  @_documentation(visibility: internal) public func toJsonString() -> Swift.String
 }
 @_hasMissingDesignatedInitializers @_documentation(visibility: internal) public class DefaultAggregation : VideoSDKRTC.Aggregation {
   public static var instance: VideoSDKRTC.DefaultAggregation {
@@ -2981,6 +2982,19 @@ extension VideoSDKRTC.Google_Protobuf_GeneratedCodeInfo.Annotation.Semantic : Vi
   public func toMetricData(resource: VideoSDKRTC.Resource, scope: VideoSDKRTC.InstrumentationScopeInfo, descriptor: VideoSDKRTC.MetricDescriptor, points: [VideoSDKRTC.PointData], temporality: VideoSDKRTC.AggregationTemporality) -> VideoSDKRTC.StableMetricData
   @objc deinit
 }
+public enum LogLevel {
+  case none
+  case error
+  case warn
+  case info
+  case debug
+  case all
+  public static func == (a: VideoSDKRTC.LogLevel, b: VideoSDKRTC.LogLevel) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 @_documentation(visibility: internal) public protocol DoubleGaugeBuilder : AnyObject {
   func ofLongs() -> any VideoSDKRTC.LongGaugeBuilder
   func buildWithCallback(_ callback: @escaping (any VideoSDKRTC.ObservableDoubleMeasurement) -> Swift.Void) -> any VideoSDKRTC.ObservableDoubleGauge
@@ -4919,6 +4933,7 @@ public enum MediaType : Swift.Equatable {
   public var hlsUrls: VideoSDKRTC.HLSUrl?
   public var hlsState: VideoSDKRTC.HLSState
   public var liveStreamState: VideoSDKRTC.LiveStreamState
+  public var activePresenterId: Swift.String?
   public var recordingState: VideoSDKRTC.RecordingState
   public var transcriptionState: VideoSDKRTC.TranscriptionState
   public var pubsub: VideoSDKRTC.PubSub {
@@ -5030,7 +5045,7 @@ extension VideoSDKRTC.Meeting {
   public func fetchBase64File(url: Swift.String, token: Swift.String, completion: @escaping (Swift.String?) -> Swift.Void)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @_documentation(visibility: internal) public func setVideoProcessor(processor: (any VideoSDKRTC.VideoSDKVideoProcessor)?)
+  public func setVideoProcessor(processor: (any VideoSDKRTC.VideoSDKVideoProcessor)?)
   #endif
 }
 public protocol MeetingEventListener {
@@ -5041,7 +5056,7 @@ public protocol MeetingEventListener {
   func onParticipantLeft(_ participant: VideoSDKRTC.Participant)
   func onParticipantLeft(_ participant: VideoSDKRTC.Participant, reason: VideoSDKRTC.LeaveReason)
   func onRecordingStarted()
-  func onRecordingStoppped()
+  func onRecordingStopped()
   func onLivestreamStarted()
   func onLivestreamStopped()
   #if compiler(>=5.3) && $NonescapableTypes
@@ -5080,12 +5095,15 @@ public protocol MeetingEventListener {
   func onMediaRelayRequestResponse(decision: Swift.String, decidedBy: Swift.String, meetingId: Swift.String)
   func onMediaRelayStarted(meetingId: Swift.String)
   func onMediaRelayStopped(meetingId: Swift.String)
-  func onMediaRealyError(meetingId: Swift.String, error: Swift.String)
+  func onMediaRelayError(meetingId: Swift.String, error: Swift.String)
   @_documentation(visibility: internal) func onCharacterJoined(character: VideoSDKRTC.AICharacter)
   @_documentation(visibility: internal) func onCharacterLeft(character: VideoSDKRTC.AICharacter)
   @_documentation(visibility: internal) func onCharacterMessage(message: VideoSDKRTC.CharacterMessage)
   @_documentation(visibility: internal) func onCharacterStateChanged(characterStateChange: VideoSDKRTC.CharacterStateChange)
   func onQualityLimitation(type: VideoSDKRTC.QualityLimitationType, state: VideoSDKRTC.QualityLimitationState, timestamp: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onPresenterChanged(activePresenterId: Swift.String?)
+  #endif
 }
 extension VideoSDKRTC.MeetingEventListener {
   public func onMeetingJoined()
@@ -5095,7 +5113,7 @@ extension VideoSDKRTC.MeetingEventListener {
   public func onParticipantLeft(_ participant: VideoSDKRTC.Participant)
   public func onParticipantLeft(_ participant: VideoSDKRTC.Participant, reason: VideoSDKRTC.LeaveReason)
   public func onRecordingStarted()
-  public func onRecordingStoppped()
+  public func onRecordingStopped()
   public func onLivestreamStarted()
   public func onLivestreamStopped()
   #if compiler(>=5.3) && $NonescapableTypes
@@ -5134,12 +5152,15 @@ extension VideoSDKRTC.MeetingEventListener {
   public func onMediaRelayRequestResponse(decision: Swift.String, decidedBy: Swift.String, meetingId: Swift.String)
   public func onMediaRelayStarted(meetingId: Swift.String)
   public func onMediaRelayStopped(meetingId: Swift.String)
-  public func onMediaRealyError(meetingId: Swift.String, error: Swift.String)
+  public func onMediaRelayError(meetingId: Swift.String, error: Swift.String)
   @_documentation(visibility: internal) public func onCharacterJoined(character: VideoSDKRTC.AICharacter)
   @_documentation(visibility: internal) public func onCharacterLeft(character: VideoSDKRTC.AICharacter)
   @_documentation(visibility: internal) public func onCharacterMessage(message: VideoSDKRTC.CharacterMessage)
   @_documentation(visibility: internal) public func onCharacterStateChanged(characterStateChange: VideoSDKRTC.CharacterStateChange)
   public func onQualityLimitation(type: VideoSDKRTC.QualityLimitationType, state: VideoSDKRTC.QualityLimitationState, timestamp: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func onPresenterChanged(activePresenterId: Swift.String?)
+  #endif
 }
 public enum MeetingState : Swift.String {
   case CONNECTING
@@ -6599,7 +6620,7 @@ extension VideoSDKRTC.Participant {
   public func enableWebcam()
   public func disableWebcam()
   public func remove()
-  @_documentation(visibility: internal) public func participantPinStateChanged(pinState: VideoSDKRTC.ParticipantPinState) async
+  @_documentation(visibility: internal) public func participantPinStateChanged(pinState: VideoSDKRTC.ParticipantPinState, isPin: Swift.Bool = false) async
   @_documentation(visibility: internal) public func participantModeChanged(mode: VideoSDKRTC.Mode)
   #if compiler(>=5.3) && $NonescapableTypes
   public func getAudioStats() -> Any?
@@ -6622,13 +6643,14 @@ extension VideoSDKRTC.Participant {
   #endif
   @_documentation(visibility: internal) public func removeAllStreams()
   public func setQuality(_ quality: VideoSDKRTC.VideoQuality)
-  public func pin(_ peerId: Swift.String = "", _ pinType: VideoSDKRTC.PinType = .SHARE_AND_CAM)
+  public func pin(_ pinType: VideoSDKRTC.PinType = .SHARE_AND_CAM)
   public func unpin(_ pinType: VideoSDKRTC.PinType = .SHARE_AND_CAM)
-  @_documentation(visibility: internal) public func setPinState(pinState: VideoSDKRTC.ParticipantPinState, peerId: Swift.String = "")
-  @_documentation(visibility: internal) public func e2eeStateChanged(forParticipant: VideoSDKRTC.Participant, state: VideoSDKRTC.E2EEState, StreamID: Swift.String)
+  @_documentation(visibility: internal) public func setPinState(pinState: VideoSDKRTC.ParticipantPinState, peerId: Swift.String = "", isPin: Swift.Bool = false)
+  @_documentation(visibility: internal) public func e2eeStateChanged(forParticipant: VideoSDKRTC.Participant, state: VideoSDKRTC.E2EEState, streamID: Swift.String)
   @_documentation(visibility: internal) public func handleParticipantPause(data: [Swift.String : Any])
   @_documentation(visibility: internal) public func handleParticipantResume(data: [Swift.String : Any])
   @_documentation(visibility: internal) public func handleStreamStateChanged(state: VideoSDKRTC.StreamState, peerId: Swift.String, streamId: Swift.String)
+  @_documentation(visibility: internal) public func handleMediaStatusChanged(peerId: Swift.String, kind: Swift.String, newStatus: Swift.Bool)
 }
 extension VideoSDKRTC.Participant {
   public func addEventListener(_ listener: any VideoSDKRTC.ParticipantEventListener)
@@ -6644,6 +6666,7 @@ public protocol ParticipantEventListener {
   func e2eeStateChanged(forParticipant participant: VideoSDKRTC.Participant, state: VideoSDKRTC.E2EEState, _ stream: VideoSDKRTC.MediaStream)
   func onStreamPaused(kind: Swift.String, reason: Swift.String)
   func onStreamResumed(kind: Swift.String, reason: Swift.String)
+  func onMediaStatusChanged(peerId: Swift.String, kind: VideoSDKRTC.MediaType, newStatus: Swift.Bool)
 }
 extension VideoSDKRTC.ParticipantEventListener {
   public func onStreamEnabled(_ stream: VideoSDKRTC.MediaStream, forParticipant participant: VideoSDKRTC.Participant)
@@ -6651,6 +6674,7 @@ extension VideoSDKRTC.ParticipantEventListener {
   public func e2eeStateChanged(forParticipant participant: VideoSDKRTC.Participant, state: VideoSDKRTC.E2EEState, _ stream: VideoSDKRTC.MediaStream)
   public func onStreamPaused(kind: Swift.String, reason: Swift.String)
   public func onStreamResumed(kind: Swift.String, reason: Swift.String)
+  public func onMediaStatusChanged(peerId: Swift.String, kind: VideoSDKRTC.MediaType, newStatus: Swift.Bool)
 }
 public enum PinType : Swift.String {
   case SHARE_AND_CAM
@@ -9477,7 +9501,7 @@ public enum VideoQuality : Swift.String, Swift.CaseIterable {
   #endif
   public static func setKeyProvider(_ baseKeyProvider: VideoSDKRTC.BaseKeyProvider) throws
   #if compiler(>=5.3) && $NonescapableTypes
-  public static func createCameraVideoTrack(encoderConfig: VideoSDKRTC.CustomVideoTrackConfig? = .h360p_w640p, facingMode: AVFoundation.AVCaptureDevice.Position? = .front, multiStream: Swift.Bool? = true, codec: VideoSDKRTC.PreferredCodec? = .VP8, bitrateMode: VideoSDKRTC.BitrateMode? = .BALANCED, maxLayer: VideoSDKRTC.EncodingLayer? = .MAX_LAYER_3) throws -> VideoSDKRTC.CustomRTCMediaStream?
+  public static func createCameraVideoTrack(encoderConfig: VideoSDKRTC.CustomVideoTrackConfig? = .h720p_w1280p, facingMode: AVFoundation.AVCaptureDevice.Position? = .front, multiStream: Swift.Bool? = true, codec: VideoSDKRTC.PreferredCodec? = .VP8, bitrateMode: VideoSDKRTC.BitrateMode? = .BALANCED, maxLayer: VideoSDKRTC.EncodingLayer? = .MAX_LAYER_3) throws -> VideoSDKRTC.CustomRTCMediaStream?
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   public static func createAudioTrack(noiseConfig: VideoSDKRTC.NoiseConfig?) throws -> VideoSDKRTC.CustomRTCMediaStream?
@@ -9491,6 +9515,7 @@ extension VideoSDKRTC.VideoSDK {
   public static func getVideoPermission()
   public static func getCameras() -> [Swift.String]
   public static func getAudioDevices() -> [Swift.String]
+  public static func setLogLevel(level: VideoSDKRTC.LogLevel = .info)
 }
 @_documentation(visibility: internal) public protocol VideoSDKVideoProcessor {
   #if compiler(>=5.3) && $NonescapableTypes
@@ -9811,6 +9836,8 @@ extension VideoSDKRTC.CharacterState : Swift.Hashable {}
 extension VideoSDKRTC.CharacterState : Swift.RawRepresentable {}
 extension VideoSDKRTC.CustomVideoTrackConfig : Swift.Equatable {}
 extension VideoSDKRTC.CustomVideoTrackConfig : Swift.Hashable {}
+extension VideoSDKRTC.LogLevel : Swift.Equatable {}
+extension VideoSDKRTC.LogLevel : Swift.Hashable {}
 extension VideoSDKRTC.EmptyMetricStorage : VideoSDKRTC.MetricStorage {}
 extension VideoSDKRTC.EmptyMetricStorage : VideoSDKRTC.WritableMetricStorage {}
 extension VideoSDKRTC.ExportResult : Swift.Equatable {}
