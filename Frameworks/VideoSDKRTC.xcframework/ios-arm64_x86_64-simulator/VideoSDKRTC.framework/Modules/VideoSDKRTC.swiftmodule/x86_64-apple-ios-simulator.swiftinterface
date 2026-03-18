@@ -64,6 +64,47 @@ import os
     get
   }
 }
+@_hasMissingDesignatedInitializers public class AgentParticipant : VideoSDKRTC.Participant {
+  override public var isAgent: Swift.Bool {
+    get
+  }
+  final public let agentId: Swift.String?
+  public var agentState: VideoSDKRTC.AgentState {
+    get
+  }
+  override public func pin(_ pinType: VideoSDKRTC.PinType = .SHARE_AND_CAM)
+  override public func unpin(_ pinType: VideoSDKRTC.PinType = .SHARE_AND_CAM)
+  override public func remove()
+  #if compiler(>=5.3) && $NonescapableTypes
+  override public func getAudioStats() -> Any?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  override public func getVideoStats() -> Any?
+  #endif
+  override public func addEventListener(_ listener: any VideoSDKRTC.ParticipantEventListener)
+  override public func removeEventListener(_ listener: any VideoSDKRTC.ParticipantEventListener)
+  override public func removeAllEventListeners()
+  @_documentation(visibility: internal) override public func enableMic() throws
+  @_documentation(visibility: internal) override public func disableMic() throws
+  @_documentation(visibility: internal) override public func enableWebcam() throws
+  @_documentation(visibility: internal) override public func disableWebcam() throws
+  @_documentation(visibility: internal) override public func setQuality(_ quality: VideoSDKRTC.VideoQuality) throws
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_documentation(visibility: internal) override public func captureImage(height: CoreFoundation.CGFloat? = nil, width: CoreFoundation.CGFloat? = nil, completion: @escaping (Swift.String?) -> Swift.Void) throws
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_documentation(visibility: internal) override public func getShareStats() throws -> Any?
+  #endif
+  @objc deinit
+}
+public enum AgentParticipantError : Swift.Error, Foundation.LocalizedError {
+  case unsupportedMethod(Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_documentation(visibility: internal) public var errorDescription: Swift.String? {
+    get
+  }
+  #endif
+}
 @_documentation(visibility: internal) public enum AggregationType : Swift.String, Swift.Codable {
   case intGauge
   case doubleGauge
@@ -2999,6 +3040,13 @@ public enum LogLevel {
   func ofLongs() -> any VideoSDKRTC.LongGaugeBuilder
   func buildWithCallback(_ callback: @escaping (any VideoSDKRTC.ObservableDoubleMeasurement) -> Swift.Void) -> any VideoSDKRTC.ObservableDoubleGauge
 }
+public class TranscriptionSegment {
+  final public let text: Swift.String
+  final public let timestamp: Swift.Int
+  @_documentation(visibility: internal) public init(text: Swift.String, timestamp: Swift.Int)
+  @_documentation(visibility: internal) public init(dictionary: [Swift.String : Any])
+  @objc deinit
+}
 @_hasMissingDesignatedInitializers @_documentation(visibility: internal) public class DoubleGaugeBuilderSdk : VideoSDKRTC.DoubleGaugeBuilder {
   public func ofLongs() -> any VideoSDKRTC.LongGaugeBuilder
   public func buildWithCallback(_ callback: @escaping (any VideoSDKRTC.ObservableDoubleMeasurement) -> Swift.Void) -> any VideoSDKRTC.ObservableDoubleGauge
@@ -3148,6 +3196,19 @@ extension VideoSDKRTC.Google_Protobuf_Empty : VideoSDKRTC.Message, VideoSDKRTC._
   #endif
   public static func < (lhs: VideoSDKRTC.Entry, rhs: VideoSDKRTC.Entry) -> Swift.Bool
   public static func == (a: VideoSDKRTC.Entry, b: VideoSDKRTC.Entry) -> Swift.Bool
+}
+public enum AgentState : Swift.String {
+  case IDLE
+  case LISTENING
+  case THINKING
+  case SPEAKING
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
 }
 @_documentation(visibility: internal) public struct EntryKey : Swift.Equatable, Swift.Comparable, Swift.Hashable {
   public var name: Swift.String {
@@ -5100,7 +5161,7 @@ public protocol MeetingEventListener {
   @_documentation(visibility: internal) func onCharacterLeft(character: VideoSDKRTC.AICharacter)
   @_documentation(visibility: internal) func onCharacterMessage(message: VideoSDKRTC.CharacterMessage)
   @_documentation(visibility: internal) func onCharacterStateChanged(characterStateChange: VideoSDKRTC.CharacterStateChange)
-  func onQualityLimitation(type: VideoSDKRTC.QualityLimitationType, state: VideoSDKRTC.QualityLimitationState, timestamp: Swift.String)
+  func onQualityLimitation(type: VideoSDKRTC.QualityLimitationType, state: VideoSDKRTC.QualityLimitationState, timestamp: Swift.Int)
   #if compiler(>=5.3) && $NonescapableTypes
   func onPresenterChanged(activePresenterId: Swift.String?)
   #endif
@@ -6612,16 +6673,14 @@ public struct _NameMap : Swift.ExpressibleByDictionaryLiteral {
   public var metaData: [Swift.String : Any]? {
     get
   }
-  @objc deinit
-}
-extension VideoSDKRTC.Participant {
-  public func enableMic()
-  public func disableMic()
-  public func enableWebcam()
-  public func disableWebcam()
+  public var isAgent: Swift.Bool {
+    get
+  }
+  public func enableMic() throws
+  public func disableMic() throws
+  public func enableWebcam() throws
+  public func disableWebcam() throws
   public func remove()
-  @_documentation(visibility: internal) public func participantPinStateChanged(pinState: VideoSDKRTC.ParticipantPinState, isPin: Swift.Bool = false) async
-  @_documentation(visibility: internal) public func participantModeChanged(mode: VideoSDKRTC.Mode)
   #if compiler(>=5.3) && $NonescapableTypes
   public func getAudioStats() -> Any?
   #endif
@@ -6629,35 +6688,34 @@ extension VideoSDKRTC.Participant {
   public func getVideoStats() -> Any?
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  public func getShareStats() -> Any?
+  public func getShareStats() throws -> Any?
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  public func captureImage(height: CoreFoundation.CGFloat? = nil, width: CoreFoundation.CGFloat? = nil, completion: @escaping (Swift.String?) -> Swift.Void)
+  public func captureImage(height: CoreFoundation.CGFloat? = nil, width: CoreFoundation.CGFloat? = nil, completion: @escaping (Swift.String?) -> Swift.Void) throws
   #endif
+  public func setQuality(_ quality: VideoSDKRTC.VideoQuality) throws
+  public func pin(_ pinType: VideoSDKRTC.PinType = .SHARE_AND_CAM)
+  public func unpin(_ pinType: VideoSDKRTC.PinType = .SHARE_AND_CAM)
+  public func addEventListener(_ listener: any VideoSDKRTC.ParticipantEventListener)
+  public func removeEventListener(_ listener: any VideoSDKRTC.ParticipantEventListener)
+  public func removeAllEventListeners()
+  @objc deinit
 }
 extension VideoSDKRTC.Participant {
+  @_documentation(visibility: internal) public func participantPinStateChanged(pinState: VideoSDKRTC.ParticipantPinState, isPin: Swift.Bool = false) async
+  @_documentation(visibility: internal) public func participantModeChanged(mode: VideoSDKRTC.Mode)
   @_documentation(visibility: internal) public func addStream(_ stream: VideoSDKRTC.MediaStream)
   #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
   @_documentation(visibility: internal) public func removeStream(_ streamId: Swift.String) -> VideoSDKRTC.MediaStream?
   #endif
   @_documentation(visibility: internal) public func removeAllStreams()
-  public func setQuality(_ quality: VideoSDKRTC.VideoQuality)
-  public func pin(_ pinType: VideoSDKRTC.PinType = .SHARE_AND_CAM)
-  public func unpin(_ pinType: VideoSDKRTC.PinType = .SHARE_AND_CAM)
   @_documentation(visibility: internal) public func setPinState(pinState: VideoSDKRTC.ParticipantPinState, peerId: Swift.String = "", isPin: Swift.Bool = false)
   @_documentation(visibility: internal) public func e2eeStateChanged(forParticipant: VideoSDKRTC.Participant, state: VideoSDKRTC.E2EEState, streamID: Swift.String)
   @_documentation(visibility: internal) public func handleParticipantPause(data: [Swift.String : Any])
   @_documentation(visibility: internal) public func handleParticipantResume(data: [Swift.String : Any])
   @_documentation(visibility: internal) public func handleStreamStateChanged(state: VideoSDKRTC.StreamState, peerId: Swift.String, streamId: Swift.String)
   @_documentation(visibility: internal) public func handleMediaStatusChanged(peerId: Swift.String, kind: Swift.String, newStatus: Swift.Bool)
-}
-extension VideoSDKRTC.Participant {
-  public func addEventListener(_ listener: any VideoSDKRTC.ParticipantEventListener)
-  public func removeEventListener(_ listener: any VideoSDKRTC.ParticipantEventListener)
-  public func removeAllEventListeners()
-}
-extension VideoSDKRTC.Participant {
   @_documentation(visibility: internal) public static func == (lhs: VideoSDKRTC.Participant, rhs: VideoSDKRTC.Participant) -> Swift.Bool
 }
 public protocol ParticipantEventListener {
@@ -6667,6 +6725,10 @@ public protocol ParticipantEventListener {
   func onStreamPaused(kind: Swift.String, reason: Swift.String)
   func onStreamResumed(kind: Swift.String, reason: Swift.String)
   func onMediaStatusChanged(peerId: Swift.String, kind: VideoSDKRTC.MediaType, newStatus: Swift.Bool)
+  func onAgentStateChanged(_ state: VideoSDKRTC.AgentState, forParticipant participant: VideoSDKRTC.Participant)
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onAgentTranscriptionReceived(_ segment: VideoSDKRTC.TranscriptionSegment, forParticipant participant: VideoSDKRTC.Participant?)
+  #endif
 }
 extension VideoSDKRTC.ParticipantEventListener {
   public func onStreamEnabled(_ stream: VideoSDKRTC.MediaStream, forParticipant participant: VideoSDKRTC.Participant)
@@ -6675,6 +6737,10 @@ extension VideoSDKRTC.ParticipantEventListener {
   public func onStreamPaused(kind: Swift.String, reason: Swift.String)
   public func onStreamResumed(kind: Swift.String, reason: Swift.String)
   public func onMediaStatusChanged(peerId: Swift.String, kind: VideoSDKRTC.MediaType, newStatus: Swift.Bool)
+  public func onAgentStateChanged(_ state: VideoSDKRTC.AgentState, forParticipant participant: VideoSDKRTC.Participant)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func onAgentTranscriptionReceived(_ segment: VideoSDKRTC.TranscriptionSegment, forParticipant participant: VideoSDKRTC.Participant?)
+  #endif
 }
 public enum PinType : Swift.String {
   case SHARE_AND_CAM
@@ -9840,6 +9906,9 @@ extension VideoSDKRTC.LogLevel : Swift.Equatable {}
 extension VideoSDKRTC.LogLevel : Swift.Hashable {}
 extension VideoSDKRTC.EmptyMetricStorage : VideoSDKRTC.MetricStorage {}
 extension VideoSDKRTC.EmptyMetricStorage : VideoSDKRTC.WritableMetricStorage {}
+extension VideoSDKRTC.AgentState : Swift.Equatable {}
+extension VideoSDKRTC.AgentState : Swift.Hashable {}
+extension VideoSDKRTC.AgentState : Swift.RawRepresentable {}
 extension VideoSDKRTC.ExportResult : Swift.Equatable {}
 extension VideoSDKRTC.ExportResult : Swift.Hashable {}
 extension VideoSDKRTC.ConfigLayoutPriority : Swift.Equatable {}
