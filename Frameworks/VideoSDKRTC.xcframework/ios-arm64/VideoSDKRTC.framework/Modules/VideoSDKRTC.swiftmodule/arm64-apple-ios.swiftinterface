@@ -4391,7 +4391,7 @@ final public class KeyProviderOptions {
   final public let failureTolerance: Swift.Int32
   final public let keyRingSize: Swift.Int32
   final public let discardFrameWhenCryptorNotReady: Swift.Bool
-  @_documentation(visibility: internal) public init(sharedKey: Swift.Bool = true, ratchetSalt: Foundation.Data = defaultRatchetSalt.data(using: .utf8)!, ratchetWindowSize: Swift.Int32 = defaultRatchetWindowSize, uncryptedMagicBytes: Foundation.Data = defaultMagicBytes.data(using: .utf8)!, failureTolerance: Swift.Int32 = defaultFailureTolerance, keyRingSize: Swift.Int32 = defaultKeyRingSize, discardFrameWhenCryptorNotReady: Swift.Bool = defaultDiscardFrameWhenCryptorNotReady)
+  @_documentation(visibility: internal) public init(sharedKey: Swift.Bool = true, ratchetSalt: Foundation.Data = Data(defaultRatchetSalt.utf8), ratchetWindowSize: Swift.Int32 = defaultRatchetWindowSize, uncryptedMagicBytes: Foundation.Data = Data(defaultMagicBytes.utf8), failureTolerance: Swift.Int32 = defaultFailureTolerance, keyRingSize: Swift.Int32 = defaultKeyRingSize, discardFrameWhenCryptorNotReady: Swift.Bool = defaultDiscardFrameWhenCryptorNotReady)
   @objc deinit
 }
 final public class BaseKeyProvider {
@@ -4974,7 +4974,7 @@ public enum MediaType : Swift.Equatable {
   case state(value: Mediasoup.MediaKind)
   public static func == (a: VideoSDKRTC.MediaType, b: VideoSDKRTC.MediaType) -> Swift.Bool
 }
-@_hasMissingDesignatedInitializers public class Meeting {
+@_hasMissingDesignatedInitializers public class Meeting : @unchecked Swift.Sendable {
   public var id: Swift.String {
     get
   }
@@ -4990,11 +4990,19 @@ public enum MediaType : Swift.Equatable {
   public var pinnedParticipants: [Swift.String : VideoSDKRTC.ParticipantPinState] {
     get
   }
-  public var meetingState: VideoSDKRTC.MeetingState
+  public var meetingState: VideoSDKRTC.MeetingState {
+    get
+    set
+  }
   public var hlsUrls: VideoSDKRTC.HLSUrl?
   public var hlsState: VideoSDKRTC.HLSState
   public var liveStreamState: VideoSDKRTC.LiveStreamState
-  public var activePresenterId: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var activePresenterId: Swift.String? {
+    get
+    set
+  }
+  #endif
   public var recordingState: VideoSDKRTC.RecordingState
   public var transcriptionState: VideoSDKRTC.TranscriptionState
   public var pubsub: VideoSDKRTC.PubSub {
@@ -6668,8 +6676,14 @@ public struct _NameMap : Swift.ExpressibleByDictionaryLiteral {
   public var streams: [Swift.String : VideoSDKRTC.MediaStream] {
     get
   }
-  public var pinState: VideoSDKRTC.ParticipantPinState
-  public var mode: VideoSDKRTC.Mode
+  public var pinState: VideoSDKRTC.ParticipantPinState {
+    get
+    set
+  }
+  public var mode: VideoSDKRTC.Mode {
+    get
+    set
+  }
   public var metaData: [Swift.String : Any]? {
     get
   }
@@ -6710,7 +6724,7 @@ extension VideoSDKRTC.Participant {
   @_documentation(visibility: internal) public func removeStream(_ streamId: Swift.String) -> VideoSDKRTC.MediaStream?
   #endif
   @_documentation(visibility: internal) public func removeAllStreams()
-  @_documentation(visibility: internal) public func setPinState(pinState: VideoSDKRTC.ParticipantPinState, peerId: Swift.String = "", isPin: Swift.Bool = false)
+  @_documentation(visibility: internal) public func setPinState(pinState: VideoSDKRTC.ParticipantPinState, isPin: Swift.Bool = false)
   @_documentation(visibility: internal) public func e2eeStateChanged(forParticipant: VideoSDKRTC.Participant, state: VideoSDKRTC.E2EEState, streamID: Swift.String)
   @_documentation(visibility: internal) public func handleParticipantPause(data: [Swift.String : Any])
   @_documentation(visibility: internal) public func handleParticipantResume(data: [Swift.String : Any])
@@ -6815,7 +6829,7 @@ public protocol _ProtoNameProviding {
   public func createIntObserver(name: Swift.String, absolute: Swift.Bool, callback: @escaping (any VideoSDKRTC.IntObserverMetric) -> Swift.Void) -> any VideoSDKRTC.IntObserverMetric
   public func createDoubleObserver(name: Swift.String, absolute: Swift.Bool, callback: @escaping (any VideoSDKRTC.DoubleObserverMetric) -> Swift.Void) -> any VideoSDKRTC.DoubleObserverMetric
 }
-@_hasMissingDesignatedInitializers public class PubSub {
+@_hasMissingDesignatedInitializers public class PubSub : @unchecked Swift.Sendable {
   @objc deinit
 }
 extension VideoSDKRTC.PubSub {
@@ -9558,9 +9572,20 @@ public enum VideoQuality : Swift.String, Swift.CaseIterable {
   }
 }
 @_hasMissingDesignatedInitializers final public class VideoSDK {
-  @_documentation(visibility: internal) public static var baseKeyProvider: VideoSDKRTC.BaseKeyProvider?
-  @_documentation(visibility: internal) public static var bitrateMode: VideoSDKRTC.BitrateMode
-  @_documentation(visibility: internal) public static var maxLayer: VideoSDKRTC.EncodingLayer
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static var baseKeyProvider: VideoSDKRTC.BaseKeyProvider? {
+    get
+    set
+  }
+  #endif
+  public static var bitrateMode: VideoSDKRTC.BitrateMode {
+    get
+    set
+  }
+  public static var maxLayer: VideoSDKRTC.EncodingLayer {
+    get
+    set
+  }
   public static func config(token: Swift.String)
   #if compiler(>=5.3) && $NonescapableTypes
   public static func initMeeting(meetingId: Swift.String, participantId: Swift.String = "", participantName: Swift.String = "Guest", micEnabled: Swift.Bool = true, webcamEnabled: Swift.Bool = true, customCameraVideoStream: VideoSDKRTC.CustomRTCMediaStream? = nil, customAudioTrack: VideoSDKRTC.CustomRTCMediaStream? = nil, multiStream: Swift.Bool? = true, mode: VideoSDKRTC.Mode? = .SEND_AND_RECV, preferredProtocol: VideoSDKRTC.PreferredProtocol? = .UDP_OVER_TCP, signalingBaseUrl: Swift.String? = nil, metaData: [Swift.String : Any]? = [:], secureKey: Swift.String? = nil) -> VideoSDKRTC.Meeting
