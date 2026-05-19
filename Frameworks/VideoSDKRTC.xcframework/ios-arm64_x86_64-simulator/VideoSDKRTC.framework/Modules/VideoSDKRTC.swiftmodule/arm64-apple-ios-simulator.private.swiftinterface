@@ -949,11 +949,12 @@ extension VideoSDKRTC.Opentelemetry_Proto_Common_V1_InstrumentationScope : Video
   public var videoTrack: WebRTC.RTCVideoTrack?
   public var multiStream: Swift.Bool?
   public var audioTrack: WebRTC.RTCAudioTrack?
-  public var videoCodec: VideoSDKRTC.PreferredCodec?
+  public var videoCodec: VideoSDKRTC.VideoCodec?
   public var bitrateMode: VideoSDKRTC.BitrateMode?
   public var maxLayer: VideoSDKRTC.EncodingLayer?
+  @_documentation(visibility: internal) public var audioEncoderConfig: VideoSDKRTC.CustomAudioTrackConfig?
   #if compiler(>=5.3) && $NonescapableTypes
-  @_documentation(visibility: internal) public init(videoTrack: WebRTC.RTCVideoTrack? = nil, multiStream: Swift.Bool? = nil, audioTrack: WebRTC.RTCAudioTrack? = nil, videoCodec: VideoSDKRTC.PreferredCodec? = .VP8, bitrateMode: VideoSDKRTC.BitrateMode? = BitrateMode.BALANCED, maxLayer: VideoSDKRTC.EncodingLayer? = EncodingLayer.MAX_LAYER_3)
+  @_documentation(visibility: internal) public init(videoTrack: WebRTC.RTCVideoTrack? = nil, multiStream: Swift.Bool? = nil, audioTrack: WebRTC.RTCAudioTrack? = nil, videoCodec: VideoSDKRTC.VideoCodec? = .VP8, bitrateMode: VideoSDKRTC.BitrateMode? = BitrateMode.BALANCED, maxLayer: VideoSDKRTC.EncodingLayer? = EncodingLayer.MAX_LAYER_3, audioEncoderConfig: VideoSDKRTC.CustomAudioTrackConfig? = nil)
   #endif
   @_documentation(visibility: internal) public func toJson() -> [Swift.String : Any]
   @_documentation(visibility: internal) public func toJsonString(forAudio: Swift.Bool = false) -> Swift.String
@@ -979,6 +980,20 @@ public enum CustomVideoTrackConfig {
     get
   }
 }
+public enum CustomAudioTrackConfig {
+  case speech_low_quality
+  case speech_standard
+  case music_standard
+  case standard_stereo
+  case high_quality
+  case high_quality_stereo
+  public static func == (a: VideoSDKRTC.CustomAudioTrackConfig, b: VideoSDKRTC.CustomAudioTrackConfig) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public let customAudioTrackConfigMap: [VideoSDKRTC.CustomAudioTrackConfig : [Swift.String : Any]]
 public struct NoiseConfig {
   public var noiseSupression: Swift.Bool?
   public var echoCancellation: Swift.Bool?
@@ -5290,6 +5305,8 @@ public enum VideoSDKError : Swift.Int {
   case HLS_FAILED
   case TRANSCRIPTION_FAILED
   case TRANSLATION_FAILED
+  case ERROR_VIDEO_CODEC_NOT_SUPPORTED
+  case ERROR_MULTISTREAM_NOT_SUPPORTED
   case ERROR_GET_VIDEO_MEDIA
   case ERROR_GET_AUDIO_MEDIA
   case ERROR_GET_DISPLAY_MEDIA
@@ -5385,17 +5402,6 @@ public enum PreferredProtocol : Swift.String {
   case UDP_OVER_TCP
   case UDP_ONLY
   case TCP_ONLY
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init?(rawValue: Swift.String)
-  #endif
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public enum PreferredCodec : Swift.String {
-  case H264
-  case VP8
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
   #endif
@@ -9229,6 +9235,21 @@ extension VideoSDKRTC.Opentelemetry_Proto_Collector_Trace_V1_ExportTracePartialS
   func get(instrumentationName: Swift.String, instrumentationVersion: Swift.String?) -> any VideoSDKRTC.Tracer
   #endif
 }
+@available(*, deprecated, renamed: "VideoCodec", message: "PreferredCodec was renamed to VideoCodec in 2.8.0. Use VideoCodec instead.")
+public typealias PreferredCodec = VideoSDKRTC.VideoCodec
+public enum VideoCodec : Swift.String {
+  case VP8
+  case VP9
+  case H264
+  case AV1
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 @_documentation(visibility: internal) public class TracerProviderBuilder {
   public var clock: any VideoSDKRTC.Clock {
     get
@@ -9592,10 +9613,10 @@ public enum VideoQuality : Swift.String, Swift.CaseIterable {
   #endif
   public static func setKeyProvider(_ baseKeyProvider: VideoSDKRTC.BaseKeyProvider) throws
   #if compiler(>=5.3) && $NonescapableTypes
-  public static func createCameraVideoTrack(encoderConfig: VideoSDKRTC.CustomVideoTrackConfig? = .h720p_w1280p, facingMode: AVFoundation.AVCaptureDevice.Position? = .front, multiStream: Swift.Bool? = true, codec: VideoSDKRTC.PreferredCodec? = .VP8, bitrateMode: VideoSDKRTC.BitrateMode? = .BALANCED, maxLayer: VideoSDKRTC.EncodingLayer? = .MAX_LAYER_3) throws -> VideoSDKRTC.CustomRTCMediaStream?
+  public static func createCameraVideoTrack(encoderConfig: VideoSDKRTC.CustomVideoTrackConfig? = .h720p_w1280p, facingMode: AVFoundation.AVCaptureDevice.Position? = .front, multiStream: Swift.Bool? = true, codec: VideoSDKRTC.VideoCodec? = .VP8, bitrateMode: VideoSDKRTC.BitrateMode? = .BALANCED, maxLayer: VideoSDKRTC.EncodingLayer? = .MAX_LAYER_3) throws -> VideoSDKRTC.CustomRTCMediaStream?
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  public static func createAudioTrack(noiseConfig: VideoSDKRTC.NoiseConfig?) throws -> VideoSDKRTC.CustomRTCMediaStream?
+  public static func createAudioTrack(noiseConfig: VideoSDKRTC.NoiseConfig? = nil, encoderConfig: VideoSDKRTC.CustomAudioTrackConfig? = .speech_standard) throws -> VideoSDKRTC.CustomRTCMediaStream?
   #endif
   @objc deinit
 }
@@ -9927,6 +9948,8 @@ extension VideoSDKRTC.CharacterState : Swift.Hashable {}
 extension VideoSDKRTC.CharacterState : Swift.RawRepresentable {}
 extension VideoSDKRTC.CustomVideoTrackConfig : Swift.Equatable {}
 extension VideoSDKRTC.CustomVideoTrackConfig : Swift.Hashable {}
+extension VideoSDKRTC.CustomAudioTrackConfig : Swift.Equatable {}
+extension VideoSDKRTC.CustomAudioTrackConfig : Swift.Hashable {}
 extension VideoSDKRTC.LogLevel : Swift.Equatable {}
 extension VideoSDKRTC.LogLevel : Swift.Hashable {}
 extension VideoSDKRTC.EmptyMetricStorage : VideoSDKRTC.MetricStorage {}
@@ -9988,9 +10011,6 @@ extension VideoSDKRTC.TranscriptionState : Swift.RawRepresentable {}
 extension VideoSDKRTC.PreferredProtocol : Swift.Equatable {}
 extension VideoSDKRTC.PreferredProtocol : Swift.Hashable {}
 extension VideoSDKRTC.PreferredProtocol : Swift.RawRepresentable {}
-extension VideoSDKRTC.PreferredCodec : Swift.Equatable {}
-extension VideoSDKRTC.PreferredCodec : Swift.Hashable {}
-extension VideoSDKRTC.PreferredCodec : Swift.RawRepresentable {}
 extension VideoSDKRTC.E2EEState : Swift.Equatable {}
 extension VideoSDKRTC.E2EEState : Swift.Hashable {}
 extension VideoSDKRTC.E2EEState : Swift.RawRepresentable {}
@@ -10074,6 +10094,9 @@ extension VideoSDKRTC.SynchronousMetricStorage : VideoSDKRTC.MetricStorage {}
 extension VideoSDKRTC.SynchronousMetricStorage : VideoSDKRTC.WritableMetricStorage {}
 extension VideoSDKRTC.TextFormatDecodingError : Swift.Equatable {}
 extension VideoSDKRTC.TextFormatDecodingError : Swift.Hashable {}
+extension VideoSDKRTC.VideoCodec : Swift.Equatable {}
+extension VideoSDKRTC.VideoCodec : Swift.Hashable {}
+extension VideoSDKRTC.VideoCodec : Swift.RawRepresentable {}
 extension VideoSDKRTC.VideoQuality : Swift.Equatable {}
 extension VideoSDKRTC.VideoQuality : Swift.Hashable {}
 extension VideoSDKRTC.VideoQuality : Swift.RawRepresentable {}
