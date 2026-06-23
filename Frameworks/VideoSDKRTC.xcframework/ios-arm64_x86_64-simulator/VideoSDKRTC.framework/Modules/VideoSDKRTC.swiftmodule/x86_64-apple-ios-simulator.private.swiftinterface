@@ -4914,7 +4914,7 @@ public protocol MeetingEventListener {
   @_documentation(visibility: internal) func onCharacterStateChanged(characterStateChange: VideoSDKRTC.CharacterStateChange)
   func onQualityLimitation(type: VideoSDKRTC.QualityLimitationType, state: VideoSDKRTC.QualityLimitationState, timestamp: Swift.Int)
   func onPresenterChanged(activePresenterId: Swift.String?)
-  func onCodecChanged(unsupportedCodec: VideoSDKRTC.VideoCodec, currentCodec: VideoSDKRTC.VideoCodec, kind: Swift.String, causedBy: VideoSDKRTC.Participant?)
+  func onCodecChanged(unsupportedCodec: VideoSDKRTC.VideoCodec, currentCodec: VideoSDKRTC.VideoCodec, previousCodec: VideoSDKRTC.VideoCodec?, kind: Swift.String, causedBy: VideoSDKRTC.Participant?)
 }
 extension VideoSDKRTC.MeetingEventListener {
   public func onMeetingJoined()
@@ -4962,7 +4962,7 @@ extension VideoSDKRTC.MeetingEventListener {
   @_documentation(visibility: internal) public func onCharacterStateChanged(characterStateChange: VideoSDKRTC.CharacterStateChange)
   public func onQualityLimitation(type: VideoSDKRTC.QualityLimitationType, state: VideoSDKRTC.QualityLimitationState, timestamp: Swift.String)
   public func onPresenterChanged(activePresenterId: Swift.String?)
-  public func onCodecChanged(unsupportedCodec: VideoSDKRTC.VideoCodec, currentCodec: VideoSDKRTC.VideoCodec, kind: Swift.String, causedBy: VideoSDKRTC.Participant?)
+  public func onCodecChanged(unsupportedCodec: VideoSDKRTC.VideoCodec, currentCodec: VideoSDKRTC.VideoCodec, previousCodec: VideoSDKRTC.VideoCodec?, kind: Swift.String, causedBy: VideoSDKRTC.Participant?)
 }
 public enum MeetingState : Swift.String {
   case CONNECTING
@@ -5043,6 +5043,9 @@ public enum VideoSDKError : Swift.Int {
   case ADAPTIVE_SUBSCRIPTION_DISABLE_FAILED
   case CREATE_CONSUMER_FAILED
   case CODEC_NOT_SUPPORTED
+  case MEETING_ID_DISABLED
+  case APIKEY_DEACTIVATED
+  case SOMETHING_WENT_WRONG
   case RECORDING_FAILED
   case LIVESTREAM_FAILED
   case HLS_FAILED
