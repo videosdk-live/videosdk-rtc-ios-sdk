@@ -5165,6 +5165,8 @@ public struct VideoSDKError : Swift.RawRepresentable, Swift.Hashable, Swift.Send
   public static let LIVESTREAM_DURATION_LIMIT_REACHED: VideoSDKRTC.VideoSDKError
   public static let HLS_DURATION_LIMIT_REACHED: VideoSDKRTC.VideoSDKError
   public static let TRANSCRIPTION_FAILED: VideoSDKRTC.VideoSDKError
+  public static let PARTICIPANT_RECORDING_FAILED: VideoSDKRTC.VideoSDKError
+  public static let TRACK_RECORDING_FAILED: VideoSDKRTC.VideoSDKError
   public static let TRANSLATION_FAILED: VideoSDKRTC.VideoSDKError
   public static let ERROR_VIDEO_PRODUCE_CODEC_NOT_SUPPORTED: VideoSDKRTC.VideoSDKError
   public static let ERROR_MULTISTREAM_NOT_SUPPORTED: VideoSDKRTC.VideoSDKError
@@ -5174,55 +5176,10 @@ public struct VideoSDKError : Swift.RawRepresentable, Swift.Hashable, Swift.Send
   public static let ERROR_GET_VIDEO_MEDIA_PERMISSION_DENIED: VideoSDKRTC.VideoSDKError
   public static let ERROR_GET_AUDIO_MEDIA_PERMISSION_DENIED: VideoSDKRTC.VideoSDKError
   public static let ERROR_GET_DISPLAY_MEDIA_PERMISSION_DENIED: VideoSDKRTC.VideoSDKError
-  public static let ERROR_CAMERA_ACCESS_DENIED_OR_DISMISSED: VideoSDKRTC.VideoSDKError
-  public static let ERROR_MICROPHONE_ACCESS_DENIED_OR_DISMISSED: VideoSDKRTC.VideoSDKError
-  public static let ERROR_CAMERA_PERMISSION_DENIED_BY_OS: VideoSDKRTC.VideoSDKError
-  public static let ERROR_MICROPHONE_PERMISSION_DENIED_BY_OS: VideoSDKRTC.VideoSDKError
-  public static let ERROR_CAMERA_NOT_FOUND: VideoSDKRTC.VideoSDKError
-  public static let ERROR_MICROPHONE_NOT_FOUND: VideoSDKRTC.VideoSDKError
-  public static let ERROR_CAMERA_IN_USE: VideoSDKRTC.VideoSDKError
-  public static let ERROR_MICROPHONE_IN_USE: VideoSDKRTC.VideoSDKError
-  public static let ERROR_CAMERA_PERMISSION_OR_AUTOPLAY_ISSUE: VideoSDKRTC.VideoSDKError
-  public static let ERROR_VIDEO_SOURCE_INITIATION_FAILED: VideoSDKRTC.VideoSDKError
-  public static let ERROR_WEBCAM_TRACK_ENDED: VideoSDKRTC.VideoSDKError
-  public static let ERROR_MICROPHONE_TRACK_ENDED: VideoSDKRTC.VideoSDKError
-  public static let ERROR_INVALID_CUSTOM_VIDEO_TRACK: VideoSDKRTC.VideoSDKError
-  public static let ERROR_INVALID_CUSTOM_AUDIO_TRACK: VideoSDKRTC.VideoSDKError
-  public static let ERROR_CUSTOM_VIDEO_TRACK_ENDED: VideoSDKRTC.VideoSDKError
-  public static let ERROR_CUSTOM_AUDIO_TRACK_ENDED: VideoSDKRTC.VideoSDKError
-  public static let ERROR_CAMERA_ACCESS_UNAVAILABLE: VideoSDKRTC.VideoSDKError
-  public static let ERROR_MICROPHONE_ACCESS_UNAVAILABLE: VideoSDKRTC.VideoSDKError
   public static let ERROR_ACTION_PERFORMED_BEFORE_MEETING_JOINED: VideoSDKRTC.VideoSDKError
-  public static let ERROR_MEETING_MEDIA_CONNECTION_FAILED: VideoSDKRTC.VideoSDKError
   public static let ERROR_UNABLE_TO_JOIN_MEETING: VideoSDKRTC.VideoSDKError
-  public static let ERROR_MEDIA_NOT_READY: VideoSDKRTC.VideoSDKError
-  public static let ERROR_WEBCAM_PRODUCE_FAILED: VideoSDKRTC.VideoSDKError
-  public static let ERROR_MEDIA_DEVICE_NOT_INITIALIZED: VideoSDKRTC.VideoSDKError
-  public static let ERROR_NO_WEBCAM_DEVICE_FOUND: VideoSDKRTC.VideoSDKError
-  public static let ERROR_NO_SUPPORTED_VIDEO_CODEC: VideoSDKRTC.VideoSDKError
-  public static let ERROR_VIDEO_TRACK_CREATION_FAILED: VideoSDKRTC.VideoSDKError
   public static let ERROR_ALREADY_IN_REQUESTED_STATE: VideoSDKRTC.VideoSDKError
-  public static let ERROR_OPERATION_IN_PROGRESS: VideoSDKRTC.VideoSDKError
-  public static let ERROR_OPERATION_ABORTED: VideoSDKRTC.VideoSDKError
-  public static let ERROR_END_MEETING_FAILED: VideoSDKRTC.VideoSDKError
-  public static let ERROR_MICROPHONE_PRODUCE_FAILED: VideoSDKRTC.VideoSDKError
-  public static let ERROR_NO_MICROPHONE_DEVICE_FOUND: VideoSDKRTC.VideoSDKError
-  public static let ERROR_AUDIO_TRACK_CREATION_FAILED: VideoSDKRTC.VideoSDKError
-  public static let ERROR_SCREENSHARE_PRODUCE_FAILED: VideoSDKRTC.VideoSDKError
-  public static let ERROR_WEBCAM_NOT_ENABLED: VideoSDKRTC.VideoSDKError
-  public static let ERROR_SET_WEBCAM_QUALITY_FAILED: VideoSDKRTC.VideoSDKError
-  public static let ERROR_MEDIA_DEVICE_NOT_LOADED: VideoSDKRTC.VideoSDKError
   public static let ERROR_MEETING_RECONNECTING: VideoSDKRTC.VideoSDKError
-  public static let ERROR_ACTION_NOT_SUPPORTED_IN_MODE: VideoSDKRTC.VideoSDKError
-  public static let ERROR_INVALID_MODE: VideoSDKRTC.VideoSDKError
-  public static let ERROR_ACTION_NOT_SUPPORTED: VideoSDKRTC.VideoSDKError
-  public static let ERROR_CAPTURE_IMAGE_FAILED: VideoSDKRTC.VideoSDKError
-  public static let ERROR_SEND_FAILED: VideoSDKRTC.VideoSDKError
-  public static let ERROR_INVALID_CUSTOM_TRACK_CONFIG: VideoSDKRTC.VideoSDKError
-  public static let ERROR_PAYLOAD_TOO_LARGE: VideoSDKRTC.VideoSDKError
-  public static let ERROR_INVALID_PARAMETER: VideoSDKRTC.VideoSDKError
-  public static let ERROR_FILE_UPLOAD_FAILED: VideoSDKRTC.VideoSDKError
-  public static let ERROR_FILE_FETCH_FAILED: VideoSDKRTC.VideoSDKError
   public typealias RawValue = Swift.Int
 }
 extension VideoSDKRTC.VideoSDKError {

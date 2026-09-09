@@ -138360,6 +138360,102 @@
           },
           {
             "kind": "Var",
+            "name": "PARTICIPANT_RECORDING_FAILED",
+            "printedName": "PARTICIPANT_RECORDING_FAILED",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VideoSDKError",
+                "printedName": "VideoSDKRTC.VideoSDKError",
+                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11VideoSDKRTC0A8SDKErrorV28PARTICIPANT_RECORDING_FAILEDACvpZ",
+            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV28PARTICIPANT_RECORDING_FAILEDACvpZ",
+            "moduleName": "VideoSDKRTC",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VideoSDKError",
+                    "printedName": "VideoSDKRTC.VideoSDKError",
+                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11VideoSDKRTC0A8SDKErrorV28PARTICIPANT_RECORDING_FAILEDACvgZ",
+                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV28PARTICIPANT_RECORDING_FAILEDACvgZ",
+                "moduleName": "VideoSDKRTC",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "TRACK_RECORDING_FAILED",
+            "printedName": "TRACK_RECORDING_FAILED",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VideoSDKError",
+                "printedName": "VideoSDKRTC.VideoSDKError",
+                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11VideoSDKRTC0A8SDKErrorV22TRACK_RECORDING_FAILEDACvpZ",
+            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV22TRACK_RECORDING_FAILEDACvpZ",
+            "moduleName": "VideoSDKRTC",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VideoSDKError",
+                    "printedName": "VideoSDKRTC.VideoSDKError",
+                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11VideoSDKRTC0A8SDKErrorV22TRACK_RECORDING_FAILEDACvgZ",
+                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV22TRACK_RECORDING_FAILEDACvgZ",
+                "moduleName": "VideoSDKRTC",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "TRANSLATION_FAILED",
             "printedName": "TRANSLATION_FAILED",
             "children": [
@@ -138792,870 +138888,6 @@
           },
           {
             "kind": "Var",
-            "name": "ERROR_CAMERA_ACCESS_DENIED_OR_DISMISSED",
-            "printedName": "ERROR_CAMERA_ACCESS_DENIED_OR_DISMISSED",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV39ERROR_CAMERA_ACCESS_DENIED_OR_DISMISSEDACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV39ERROR_CAMERA_ACCESS_DENIED_OR_DISMISSEDACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV39ERROR_CAMERA_ACCESS_DENIED_OR_DISMISSEDACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV39ERROR_CAMERA_ACCESS_DENIED_OR_DISMISSEDACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_MICROPHONE_ACCESS_DENIED_OR_DISMISSED",
-            "printedName": "ERROR_MICROPHONE_ACCESS_DENIED_OR_DISMISSED",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV43ERROR_MICROPHONE_ACCESS_DENIED_OR_DISMISSEDACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV43ERROR_MICROPHONE_ACCESS_DENIED_OR_DISMISSEDACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV43ERROR_MICROPHONE_ACCESS_DENIED_OR_DISMISSEDACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV43ERROR_MICROPHONE_ACCESS_DENIED_OR_DISMISSEDACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_CAMERA_PERMISSION_DENIED_BY_OS",
-            "printedName": "ERROR_CAMERA_PERMISSION_DENIED_BY_OS",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV36ERROR_CAMERA_PERMISSION_DENIED_BY_OSACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV36ERROR_CAMERA_PERMISSION_DENIED_BY_OSACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV36ERROR_CAMERA_PERMISSION_DENIED_BY_OSACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV36ERROR_CAMERA_PERMISSION_DENIED_BY_OSACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_MICROPHONE_PERMISSION_DENIED_BY_OS",
-            "printedName": "ERROR_MICROPHONE_PERMISSION_DENIED_BY_OS",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV40ERROR_MICROPHONE_PERMISSION_DENIED_BY_OSACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV40ERROR_MICROPHONE_PERMISSION_DENIED_BY_OSACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV40ERROR_MICROPHONE_PERMISSION_DENIED_BY_OSACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV40ERROR_MICROPHONE_PERMISSION_DENIED_BY_OSACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_CAMERA_NOT_FOUND",
-            "printedName": "ERROR_CAMERA_NOT_FOUND",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV22ERROR_CAMERA_NOT_FOUNDACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV22ERROR_CAMERA_NOT_FOUNDACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV22ERROR_CAMERA_NOT_FOUNDACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV22ERROR_CAMERA_NOT_FOUNDACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_MICROPHONE_NOT_FOUND",
-            "printedName": "ERROR_MICROPHONE_NOT_FOUND",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV26ERROR_MICROPHONE_NOT_FOUNDACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV26ERROR_MICROPHONE_NOT_FOUNDACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV26ERROR_MICROPHONE_NOT_FOUNDACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV26ERROR_MICROPHONE_NOT_FOUNDACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_CAMERA_IN_USE",
-            "printedName": "ERROR_CAMERA_IN_USE",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV19ERROR_CAMERA_IN_USEACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV19ERROR_CAMERA_IN_USEACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV19ERROR_CAMERA_IN_USEACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV19ERROR_CAMERA_IN_USEACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_MICROPHONE_IN_USE",
-            "printedName": "ERROR_MICROPHONE_IN_USE",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV23ERROR_MICROPHONE_IN_USEACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV23ERROR_MICROPHONE_IN_USEACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV23ERROR_MICROPHONE_IN_USEACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV23ERROR_MICROPHONE_IN_USEACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_CAMERA_PERMISSION_OR_AUTOPLAY_ISSUE",
-            "printedName": "ERROR_CAMERA_PERMISSION_OR_AUTOPLAY_ISSUE",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV41ERROR_CAMERA_PERMISSION_OR_AUTOPLAY_ISSUEACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV41ERROR_CAMERA_PERMISSION_OR_AUTOPLAY_ISSUEACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV41ERROR_CAMERA_PERMISSION_OR_AUTOPLAY_ISSUEACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV41ERROR_CAMERA_PERMISSION_OR_AUTOPLAY_ISSUEACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_VIDEO_SOURCE_INITIATION_FAILED",
-            "printedName": "ERROR_VIDEO_SOURCE_INITIATION_FAILED",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV36ERROR_VIDEO_SOURCE_INITIATION_FAILEDACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV36ERROR_VIDEO_SOURCE_INITIATION_FAILEDACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV36ERROR_VIDEO_SOURCE_INITIATION_FAILEDACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV36ERROR_VIDEO_SOURCE_INITIATION_FAILEDACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_WEBCAM_TRACK_ENDED",
-            "printedName": "ERROR_WEBCAM_TRACK_ENDED",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV24ERROR_WEBCAM_TRACK_ENDEDACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV24ERROR_WEBCAM_TRACK_ENDEDACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV24ERROR_WEBCAM_TRACK_ENDEDACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV24ERROR_WEBCAM_TRACK_ENDEDACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_MICROPHONE_TRACK_ENDED",
-            "printedName": "ERROR_MICROPHONE_TRACK_ENDED",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV28ERROR_MICROPHONE_TRACK_ENDEDACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV28ERROR_MICROPHONE_TRACK_ENDEDACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV28ERROR_MICROPHONE_TRACK_ENDEDACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV28ERROR_MICROPHONE_TRACK_ENDEDACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_INVALID_CUSTOM_VIDEO_TRACK",
-            "printedName": "ERROR_INVALID_CUSTOM_VIDEO_TRACK",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV32ERROR_INVALID_CUSTOM_VIDEO_TRACKACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV32ERROR_INVALID_CUSTOM_VIDEO_TRACKACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV32ERROR_INVALID_CUSTOM_VIDEO_TRACKACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV32ERROR_INVALID_CUSTOM_VIDEO_TRACKACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_INVALID_CUSTOM_AUDIO_TRACK",
-            "printedName": "ERROR_INVALID_CUSTOM_AUDIO_TRACK",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV32ERROR_INVALID_CUSTOM_AUDIO_TRACKACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV32ERROR_INVALID_CUSTOM_AUDIO_TRACKACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV32ERROR_INVALID_CUSTOM_AUDIO_TRACKACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV32ERROR_INVALID_CUSTOM_AUDIO_TRACKACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_CUSTOM_VIDEO_TRACK_ENDED",
-            "printedName": "ERROR_CUSTOM_VIDEO_TRACK_ENDED",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV30ERROR_CUSTOM_VIDEO_TRACK_ENDEDACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV30ERROR_CUSTOM_VIDEO_TRACK_ENDEDACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV30ERROR_CUSTOM_VIDEO_TRACK_ENDEDACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV30ERROR_CUSTOM_VIDEO_TRACK_ENDEDACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_CUSTOM_AUDIO_TRACK_ENDED",
-            "printedName": "ERROR_CUSTOM_AUDIO_TRACK_ENDED",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV30ERROR_CUSTOM_AUDIO_TRACK_ENDEDACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV30ERROR_CUSTOM_AUDIO_TRACK_ENDEDACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV30ERROR_CUSTOM_AUDIO_TRACK_ENDEDACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV30ERROR_CUSTOM_AUDIO_TRACK_ENDEDACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_CAMERA_ACCESS_UNAVAILABLE",
-            "printedName": "ERROR_CAMERA_ACCESS_UNAVAILABLE",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV31ERROR_CAMERA_ACCESS_UNAVAILABLEACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV31ERROR_CAMERA_ACCESS_UNAVAILABLEACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV31ERROR_CAMERA_ACCESS_UNAVAILABLEACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV31ERROR_CAMERA_ACCESS_UNAVAILABLEACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_MICROPHONE_ACCESS_UNAVAILABLE",
-            "printedName": "ERROR_MICROPHONE_ACCESS_UNAVAILABLE",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV35ERROR_MICROPHONE_ACCESS_UNAVAILABLEACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV35ERROR_MICROPHONE_ACCESS_UNAVAILABLEACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV35ERROR_MICROPHONE_ACCESS_UNAVAILABLEACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV35ERROR_MICROPHONE_ACCESS_UNAVAILABLEACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
             "name": "ERROR_ACTION_PERFORMED_BEFORE_MEETING_JOINED",
             "printedName": "ERROR_ACTION_PERFORMED_BEFORE_MEETING_JOINED",
             "children": [
@@ -139695,54 +138927,6 @@
                 "declKind": "Accessor",
                 "usr": "s:11VideoSDKRTC0A8SDKErrorV44ERROR_ACTION_PERFORMED_BEFORE_MEETING_JOINEDACvgZ",
                 "mangledName": "$s11VideoSDKRTC0A8SDKErrorV44ERROR_ACTION_PERFORMED_BEFORE_MEETING_JOINEDACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_MEETING_MEDIA_CONNECTION_FAILED",
-            "printedName": "ERROR_MEETING_MEDIA_CONNECTION_FAILED",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV37ERROR_MEETING_MEDIA_CONNECTION_FAILEDACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV37ERROR_MEETING_MEDIA_CONNECTION_FAILEDACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV37ERROR_MEETING_MEDIA_CONNECTION_FAILEDACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV37ERROR_MEETING_MEDIA_CONNECTION_FAILEDACvgZ",
                 "moduleName": "VideoSDKRTC",
                 "static": true,
                 "implicit": true,
@@ -139800,294 +138984,6 @@
           },
           {
             "kind": "Var",
-            "name": "ERROR_MEDIA_NOT_READY",
-            "printedName": "ERROR_MEDIA_NOT_READY",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV21ERROR_MEDIA_NOT_READYACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV21ERROR_MEDIA_NOT_READYACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV21ERROR_MEDIA_NOT_READYACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV21ERROR_MEDIA_NOT_READYACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_WEBCAM_PRODUCE_FAILED",
-            "printedName": "ERROR_WEBCAM_PRODUCE_FAILED",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV27ERROR_WEBCAM_PRODUCE_FAILEDACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV27ERROR_WEBCAM_PRODUCE_FAILEDACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV27ERROR_WEBCAM_PRODUCE_FAILEDACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV27ERROR_WEBCAM_PRODUCE_FAILEDACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_MEDIA_DEVICE_NOT_INITIALIZED",
-            "printedName": "ERROR_MEDIA_DEVICE_NOT_INITIALIZED",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV34ERROR_MEDIA_DEVICE_NOT_INITIALIZEDACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV34ERROR_MEDIA_DEVICE_NOT_INITIALIZEDACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV34ERROR_MEDIA_DEVICE_NOT_INITIALIZEDACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV34ERROR_MEDIA_DEVICE_NOT_INITIALIZEDACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_NO_WEBCAM_DEVICE_FOUND",
-            "printedName": "ERROR_NO_WEBCAM_DEVICE_FOUND",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV28ERROR_NO_WEBCAM_DEVICE_FOUNDACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV28ERROR_NO_WEBCAM_DEVICE_FOUNDACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV28ERROR_NO_WEBCAM_DEVICE_FOUNDACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV28ERROR_NO_WEBCAM_DEVICE_FOUNDACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_NO_SUPPORTED_VIDEO_CODEC",
-            "printedName": "ERROR_NO_SUPPORTED_VIDEO_CODEC",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV30ERROR_NO_SUPPORTED_VIDEO_CODECACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV30ERROR_NO_SUPPORTED_VIDEO_CODECACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV30ERROR_NO_SUPPORTED_VIDEO_CODECACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV30ERROR_NO_SUPPORTED_VIDEO_CODECACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_VIDEO_TRACK_CREATION_FAILED",
-            "printedName": "ERROR_VIDEO_TRACK_CREATION_FAILED",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV33ERROR_VIDEO_TRACK_CREATION_FAILEDACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV33ERROR_VIDEO_TRACK_CREATION_FAILEDACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV33ERROR_VIDEO_TRACK_CREATION_FAILEDACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV33ERROR_VIDEO_TRACK_CREATION_FAILEDACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
             "name": "ERROR_ALREADY_IN_REQUESTED_STATE",
             "printedName": "ERROR_ALREADY_IN_REQUESTED_STATE",
             "children": [
@@ -140136,486 +139032,6 @@
           },
           {
             "kind": "Var",
-            "name": "ERROR_OPERATION_IN_PROGRESS",
-            "printedName": "ERROR_OPERATION_IN_PROGRESS",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV27ERROR_OPERATION_IN_PROGRESSACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV27ERROR_OPERATION_IN_PROGRESSACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV27ERROR_OPERATION_IN_PROGRESSACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV27ERROR_OPERATION_IN_PROGRESSACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_OPERATION_ABORTED",
-            "printedName": "ERROR_OPERATION_ABORTED",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV23ERROR_OPERATION_ABORTEDACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV23ERROR_OPERATION_ABORTEDACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV23ERROR_OPERATION_ABORTEDACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV23ERROR_OPERATION_ABORTEDACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_END_MEETING_FAILED",
-            "printedName": "ERROR_END_MEETING_FAILED",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV24ERROR_END_MEETING_FAILEDACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV24ERROR_END_MEETING_FAILEDACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV24ERROR_END_MEETING_FAILEDACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV24ERROR_END_MEETING_FAILEDACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_MICROPHONE_PRODUCE_FAILED",
-            "printedName": "ERROR_MICROPHONE_PRODUCE_FAILED",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV31ERROR_MICROPHONE_PRODUCE_FAILEDACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV31ERROR_MICROPHONE_PRODUCE_FAILEDACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV31ERROR_MICROPHONE_PRODUCE_FAILEDACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV31ERROR_MICROPHONE_PRODUCE_FAILEDACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_NO_MICROPHONE_DEVICE_FOUND",
-            "printedName": "ERROR_NO_MICROPHONE_DEVICE_FOUND",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV32ERROR_NO_MICROPHONE_DEVICE_FOUNDACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV32ERROR_NO_MICROPHONE_DEVICE_FOUNDACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV32ERROR_NO_MICROPHONE_DEVICE_FOUNDACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV32ERROR_NO_MICROPHONE_DEVICE_FOUNDACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_AUDIO_TRACK_CREATION_FAILED",
-            "printedName": "ERROR_AUDIO_TRACK_CREATION_FAILED",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV33ERROR_AUDIO_TRACK_CREATION_FAILEDACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV33ERROR_AUDIO_TRACK_CREATION_FAILEDACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV33ERROR_AUDIO_TRACK_CREATION_FAILEDACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV33ERROR_AUDIO_TRACK_CREATION_FAILEDACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_SCREENSHARE_PRODUCE_FAILED",
-            "printedName": "ERROR_SCREENSHARE_PRODUCE_FAILED",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV32ERROR_SCREENSHARE_PRODUCE_FAILEDACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV32ERROR_SCREENSHARE_PRODUCE_FAILEDACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV32ERROR_SCREENSHARE_PRODUCE_FAILEDACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV32ERROR_SCREENSHARE_PRODUCE_FAILEDACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_WEBCAM_NOT_ENABLED",
-            "printedName": "ERROR_WEBCAM_NOT_ENABLED",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV24ERROR_WEBCAM_NOT_ENABLEDACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV24ERROR_WEBCAM_NOT_ENABLEDACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV24ERROR_WEBCAM_NOT_ENABLEDACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV24ERROR_WEBCAM_NOT_ENABLEDACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_SET_WEBCAM_QUALITY_FAILED",
-            "printedName": "ERROR_SET_WEBCAM_QUALITY_FAILED",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV31ERROR_SET_WEBCAM_QUALITY_FAILEDACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV31ERROR_SET_WEBCAM_QUALITY_FAILEDACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV31ERROR_SET_WEBCAM_QUALITY_FAILEDACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV31ERROR_SET_WEBCAM_QUALITY_FAILEDACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_MEDIA_DEVICE_NOT_LOADED",
-            "printedName": "ERROR_MEDIA_DEVICE_NOT_LOADED",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV29ERROR_MEDIA_DEVICE_NOT_LOADEDACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV29ERROR_MEDIA_DEVICE_NOT_LOADEDACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV29ERROR_MEDIA_DEVICE_NOT_LOADEDACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV29ERROR_MEDIA_DEVICE_NOT_LOADEDACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
             "name": "ERROR_MEETING_RECONNECTING",
             "printedName": "ERROR_MEETING_RECONNECTING",
             "children": [
@@ -140655,486 +139071,6 @@
                 "declKind": "Accessor",
                 "usr": "s:11VideoSDKRTC0A8SDKErrorV26ERROR_MEETING_RECONNECTINGACvgZ",
                 "mangledName": "$s11VideoSDKRTC0A8SDKErrorV26ERROR_MEETING_RECONNECTINGACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_ACTION_NOT_SUPPORTED_IN_MODE",
-            "printedName": "ERROR_ACTION_NOT_SUPPORTED_IN_MODE",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV34ERROR_ACTION_NOT_SUPPORTED_IN_MODEACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV34ERROR_ACTION_NOT_SUPPORTED_IN_MODEACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV34ERROR_ACTION_NOT_SUPPORTED_IN_MODEACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV34ERROR_ACTION_NOT_SUPPORTED_IN_MODEACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_INVALID_MODE",
-            "printedName": "ERROR_INVALID_MODE",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV18ERROR_INVALID_MODEACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV18ERROR_INVALID_MODEACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV18ERROR_INVALID_MODEACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV18ERROR_INVALID_MODEACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_ACTION_NOT_SUPPORTED",
-            "printedName": "ERROR_ACTION_NOT_SUPPORTED",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV26ERROR_ACTION_NOT_SUPPORTEDACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV26ERROR_ACTION_NOT_SUPPORTEDACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV26ERROR_ACTION_NOT_SUPPORTEDACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV26ERROR_ACTION_NOT_SUPPORTEDACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_CAPTURE_IMAGE_FAILED",
-            "printedName": "ERROR_CAPTURE_IMAGE_FAILED",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV26ERROR_CAPTURE_IMAGE_FAILEDACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV26ERROR_CAPTURE_IMAGE_FAILEDACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV26ERROR_CAPTURE_IMAGE_FAILEDACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV26ERROR_CAPTURE_IMAGE_FAILEDACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_SEND_FAILED",
-            "printedName": "ERROR_SEND_FAILED",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV17ERROR_SEND_FAILEDACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV17ERROR_SEND_FAILEDACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV17ERROR_SEND_FAILEDACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV17ERROR_SEND_FAILEDACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_INVALID_CUSTOM_TRACK_CONFIG",
-            "printedName": "ERROR_INVALID_CUSTOM_TRACK_CONFIG",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV33ERROR_INVALID_CUSTOM_TRACK_CONFIGACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV33ERROR_INVALID_CUSTOM_TRACK_CONFIGACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV33ERROR_INVALID_CUSTOM_TRACK_CONFIGACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV33ERROR_INVALID_CUSTOM_TRACK_CONFIGACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_PAYLOAD_TOO_LARGE",
-            "printedName": "ERROR_PAYLOAD_TOO_LARGE",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV23ERROR_PAYLOAD_TOO_LARGEACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV23ERROR_PAYLOAD_TOO_LARGEACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV23ERROR_PAYLOAD_TOO_LARGEACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV23ERROR_PAYLOAD_TOO_LARGEACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_INVALID_PARAMETER",
-            "printedName": "ERROR_INVALID_PARAMETER",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV23ERROR_INVALID_PARAMETERACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV23ERROR_INVALID_PARAMETERACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV23ERROR_INVALID_PARAMETERACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV23ERROR_INVALID_PARAMETERACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_FILE_UPLOAD_FAILED",
-            "printedName": "ERROR_FILE_UPLOAD_FAILED",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV24ERROR_FILE_UPLOAD_FAILEDACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV24ERROR_FILE_UPLOAD_FAILEDACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV24ERROR_FILE_UPLOAD_FAILEDACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV24ERROR_FILE_UPLOAD_FAILEDACvgZ",
-                "moduleName": "VideoSDKRTC",
-                "static": true,
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ERROR_FILE_FETCH_FAILED",
-            "printedName": "ERROR_FILE_FETCH_FAILED",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoSDKError",
-                "printedName": "VideoSDKRTC.VideoSDKError",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoSDKRTC0A8SDKErrorV23ERROR_FILE_FETCH_FAILEDACvpZ",
-            "mangledName": "$s11VideoSDKRTC0A8SDKErrorV23ERROR_FILE_FETCH_FAILEDACvpZ",
-            "moduleName": "VideoSDKRTC",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoSDKError",
-                    "printedName": "VideoSDKRTC.VideoSDKError",
-                    "usr": "s:11VideoSDKRTC0A8SDKErrorV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoSDKRTC0A8SDKErrorV23ERROR_FILE_FETCH_FAILEDACvgZ",
-                "mangledName": "$s11VideoSDKRTC0A8SDKErrorV23ERROR_FILE_FETCH_FAILEDACvgZ",
                 "moduleName": "VideoSDKRTC",
                 "static": true,
                 "implicit": true,
@@ -293353,2309 +291289,1707 @@
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "Dictionary",
       "offset": 5812,
-      "length": 6758,
-      "value": "[(4000, \"UNKNOWN_ERROR\"), (4001, \"INVALID_API_KEY\"), (4002, \"INVALID_TOKEN\"), (4003, \"INVALID_MEETING_ID\"), (4004, \"INVALID_PARTICIPANT_ID\"), (4005, \"DUPLICATE_PARTICIPANT\"), (4006, \"ACCOUNT_DEACTIVATED\"), (4007, \"ACCOUNT_DISCONTINUED\"), (4008, \"INVALID_PERMISSIONS\"), (4009, \"MAX_PARTCIPANT_REACHED\"), (4010, \"MAX_SPEAKER_REACHED\"), (4011, \"START_RECORDING_FAILED\"), (4012, \"STOP_RECORDING_FAILED\"), (4013, \"START_LIVESTREAM_FAILED\"), (4014, \"STOP_LIVESTREAM_FAILED\"), (4015, \"INVALID_LIVESTREAM_CONFIG\"), (4016, \"START_HLS_FAILED\"), (4017, \"STOP_HLS_FAILED\"), (4018, \"PREV_RECORDING_PROCESSING\"), (4019, \"PREV_RTMP_RECORDING_PROCESSING\"), (4020, \"PREV_HLS_STREAMING_PROCESSING\"), (4021, \"ADD_ON_SERVICES_DISABLED\"), (4022, \"UNAUTHORIZED_MEETING_ID\"), (4023, \"UNAUTHORIZED_PARTCIPANT_ID\"), (4024, \"UNAUTHORIZED_ROLE\"), (4025, \"UNAUTHORIZED_REQUEST\"), (4026, \"MAX_SPEAKER_LIMIT_REACHED_ON_ORGANIZATION\"), (4027, \"MAX_VIEWER_LIMIT_REACHED_ON_ORGANIZATION\"), (4028, \"MAX_RECORDING_LIMIT_REACHED_ON_ORGANIZATION\"), (4029, \"MAX_HLS_LIMIT_REACHED_ON_ORGANIZATION\"), (4030, \"MAX_LIVESTREAM_LIMIT_REACHED_ON_ORGANIZATION\"), (4031, \"START_TRANSCRIPTION_FAILED\"), (4032, \"STOP_TRANSCRIPTION_FAILED\"), (4033, \"CHARACTER_JOIN_FAILED\"), (4034, \"CHARACTER_LEAVE_FAILED\"), (4035, \"START_PARTICIPANT_RECORDING_FAILED\"), (4036, \"STOP_PARTICIPANT_RECORDING_FAILED\"), (4037, \"START_TRACK_RECORDING_FAILED\"), (4038, \"STOP_TRACK_RECORDING_FAILED\"), (4039, \"START_COMPOSITE_RECORDING_FAILED\"), (4040, \"STOP_COMPPOSITE_RECORDING_FAILED\"), (4041, \"MAX_RECV_ONLY_LIMIT_REACHED_ON_ORGANIZATION\"), (4042, \"START_TRANSLATION_FAILED\"), (4043, \"STOP_TRANSLATION_FAILED\"), (4044, \"CHANGE_TRANSLATION_LANGUAGE_FAILED\"), (4045, \"FAILED_TO_SET_VALUE\"), (4046, \"FAILED_TO_GET_VALUE\"), (4047, \"ADAPTIVE_SUBSCRIPTION_NOT_ENABLED_BY_SDK\"), (4048, \"ADAPTIVE_SUBSCRIPTION_ENABLE_FAILED\"), (4049, \"ADAPTIVE_SUBSCRIPTION_DISABLE_FAILED\"), (4050, \"CREATE_CONSUMER_FAILED\"), (4051, \"CODEC_NOT_SUPPORTED\"), (4052, \"MEETING_ID_DISABLED\"), (4053, \"APIKEY_DEACTIVATED\"), (4054, \"START_WHITEBOARD_FAILED\"), (4055, \"STOP_WHITEBOARD_FAILED\"), (4056, \"WHITEBOARD_OPERATION_IN_PROGRESS\"), (4057, \"PAUSE_ALL_STREAMS_FAILED\"), (4058, \"RESUME_ALL_STREAMS_FAILED\"), (4059, \"RESPOND_ENTRY_FAILED\"), (4065, \"CHANGE_MODE_FAILED\"), (4066, \"REMOVE_PARTICIPANT_FAILED\"), (4067, \"ENABLE_PARTICIPANT_MIC_FAILED\"), (4068, \"DISABLE_PARTICIPANT_MIC_FAILED\"), (4069, \"ENABLE_PARTICIPANT_WEBCAM_FAILED\"), (4070, \"DISABLE_PARTICIPANT_WEBCAM_FAILED\"), (4071, \"PIN_FAILED\"), (4072, \"UNPIN_FAILED\"), (4073, \"SET_QUALITY_FAILED\"), (4074, \"PAUSE_STREAM_FAILED\"), (4075, \"RESUME_STREAM_FAILED\"), (4076, \"SWITCH_MEETING_FAILED\"), (4077, \"SWITCH_PARTICIPANT_ROOM_FAILED\"), (4078, \"REQUEST_MEDIA_RELAY_FAILED\"), (4079, \"STOP_MEDIA_RELAY_FAILED\"), (4080, \"CONSUME_MIC_STREAMS_FAILED\"), (4081, \"CONSUME_WEBCAM_STREAMS_FAILED\"), (4082, \"STOP_CONSUMING_MIC_STREAMS_FAILED\"), (4083, \"STOP_CONSUMING_WEBCAM_STREAMS_FAILED\"), (4084, \"RESPOND_MEDIA_RELAY_REQUEST_FAILED\"), (4085, \"FAILED_TO_OBSERVE_VALUE\"), (4086, \"FAILED_TO_STOP_OBSERVING_VALUE\"), (4087, \"PUBSUB_PUBLISH_FAILED\"), (4088, \"PUBSUB_SUBSCRIBE_FAILED\"), (4089, \"PUBSUB_UNSUBSCRIBE_FAILED\"), (5000, \"SOMETHING_WENT_WRONG\"), (5001, \"RECORDING_FAILED\"), (5002, \"LIVESTREAM_FAILED\"), (5003, \"HLS_FAILED\"), (5004, \"RECORDING_DURATION_LIMIT_REACHED\"), (5005, \"LIVESTREAM_DURATION_LIMIT_REACHED\"), (5006, \"HLS_DURATION_LIMIT_REACHED\"), (5007, \"TRANSCRIPTION_FAILED\"), (5015, \"TRANSLATION_FAILED\"), (3008, \"ERROR_VIDEO_PRODUCE_CODEC_NOT_SUPPORTED\"), (3009, \"ERROR_MULTISTREAM_NOT_SUPPORTED\"), (3011, \"ERROR_GET_VIDEO_MEDIA\"), (3012, \"ERROR_GET_AUDIO_MEDIA\"), (3013, \"ERROR_GET_DISPLAY_MEDIA\"), (3014, \"ERROR_GET_VIDEO_MEDIA_PERMISSION_DENIED\"), (3015, \"ERROR_GET_AUDIO_MEDIA_PERMISSION_DENIED\"), (3016, \"ERROR_GET_DISPLAY_MEDIA_PERMISSION_DENIED\"), (3017, \"ERROR_CAMERA_ACCESS_DENIED_OR_DISMISSED\"), (3018, \"ERROR_MICROPHONE_ACCESS_DENIED_OR_DISMISSED\"), (3019, \"ERROR_CAMERA_PERMISSION_DENIED_BY_OS\"), (3020, \"ERROR_MICROPHONE_PERMISSION_DENIED_BY_OS\"), (3021, \"ERROR_CAMERA_NOT_FOUND\"), (3022, \"ERROR_MICROPHONE_NOT_FOUND\"), (3023, \"ERROR_CAMERA_IN_USE\"), (3024, \"ERROR_MICROPHONE_IN_USE\"), (3025, \"ERROR_CAMERA_PERMISSION_OR_AUTOPLAY_ISSUE\"), (3026, \"ERROR_VIDEO_SOURCE_INITIATION_FAILED\"), (3027, \"ERROR_WEBCAM_TRACK_ENDED\"), (3028, \"ERROR_MICROPHONE_TRACK_ENDED\"), (3029, \"ERROR_INVALID_CUSTOM_VIDEO_TRACK\"), (3030, \"ERROR_INVALID_CUSTOM_AUDIO_TRACK\"), (3031, \"ERROR_CUSTOM_VIDEO_TRACK_ENDED\"), (3032, \"ERROR_CUSTOM_AUDIO_TRACK_ENDED\"), (3033, \"ERROR_CAMERA_ACCESS_UNAVAILABLE\"), (3034, \"ERROR_MICROPHONE_ACCESS_UNAVAILABLE\"), (3035, \"ERROR_ACTION_PERFORMED_BEFORE_MEETING_JOINED\"), (3044, \"ERROR_MEETING_MEDIA_CONNECTION_FAILED\"), (3047, \"ERROR_UNABLE_TO_JOIN_MEETING\"), (3048, \"ERROR_MEDIA_NOT_READY\"), (3049, \"ERROR_WEBCAM_PRODUCE_FAILED\"), (3050, \"ERROR_MEDIA_DEVICE_NOT_INITIALIZED\"), (3051, \"ERROR_NO_WEBCAM_DEVICE_FOUND\"), (3052, \"ERROR_NO_SUPPORTED_VIDEO_CODEC\"), (3053, \"ERROR_VIDEO_TRACK_CREATION_FAILED\"), (3054, \"ERROR_ALREADY_IN_REQUESTED_STATE\"), (3055, \"ERROR_OPERATION_IN_PROGRESS\"), (3056, \"ERROR_OPERATION_ABORTED\"), (3057, \"ERROR_END_MEETING_FAILED\"), (3058, \"ERROR_MICROPHONE_PRODUCE_FAILED\"), (3059, \"ERROR_NO_MICROPHONE_DEVICE_FOUND\"), (3060, \"ERROR_AUDIO_TRACK_CREATION_FAILED\"), (3061, \"ERROR_SCREENSHARE_PRODUCE_FAILED\"), (3062, \"ERROR_WEBCAM_NOT_ENABLED\"), (3063, \"ERROR_SET_WEBCAM_QUALITY_FAILED\"), (3064, \"ERROR_MEDIA_DEVICE_NOT_LOADED\"), (3065, \"ERROR_MEETING_RECONNECTING\"), (3066, \"ERROR_ACTION_NOT_SUPPORTED_IN_MODE\"), (3067, \"ERROR_INVALID_MODE\"), (3068, \"ERROR_ACTION_NOT_SUPPORTED\"), (3069, \"ERROR_CAPTURE_IMAGE_FAILED\"), (3070, \"ERROR_SEND_FAILED\"), (3071, \"ERROR_INVALID_CUSTOM_TRACK_CONFIG\"), (3072, \"ERROR_PAYLOAD_TOO_LARGE\"), (3073, \"ERROR_INVALID_PARAMETER\"), (3074, \"ERROR_FILE_UPLOAD_FAILED\"), (3075, \"ERROR_FILE_FETCH_FAILED\")]"
+      "length": 4724,
+      "value": "[(4000, \"UNKNOWN_ERROR\"), (4001, \"INVALID_API_KEY\"), (4002, \"INVALID_TOKEN\"), (4003, \"INVALID_MEETING_ID\"), (4004, \"INVALID_PARTICIPANT_ID\"), (4005, \"DUPLICATE_PARTICIPANT\"), (4006, \"ACCOUNT_DEACTIVATED\"), (4007, \"ACCOUNT_DISCONTINUED\"), (4008, \"INVALID_PERMISSIONS\"), (4009, \"MAX_PARTCIPANT_REACHED\"), (4010, \"MAX_SPEAKER_REACHED\"), (4011, \"START_RECORDING_FAILED\"), (4012, \"STOP_RECORDING_FAILED\"), (4013, \"START_LIVESTREAM_FAILED\"), (4014, \"STOP_LIVESTREAM_FAILED\"), (4015, \"INVALID_LIVESTREAM_CONFIG\"), (4016, \"START_HLS_FAILED\"), (4017, \"STOP_HLS_FAILED\"), (4018, \"PREV_RECORDING_PROCESSING\"), (4019, \"PREV_RTMP_RECORDING_PROCESSING\"), (4020, \"PREV_HLS_STREAMING_PROCESSING\"), (4021, \"ADD_ON_SERVICES_DISABLED\"), (4022, \"UNAUTHORIZED_MEETING_ID\"), (4023, \"UNAUTHORIZED_PARTCIPANT_ID\"), (4024, \"UNAUTHORIZED_ROLE\"), (4025, \"UNAUTHORIZED_REQUEST\"), (4026, \"MAX_SPEAKER_LIMIT_REACHED_ON_ORGANIZATION\"), (4027, \"MAX_VIEWER_LIMIT_REACHED_ON_ORGANIZATION\"), (4028, \"MAX_RECORDING_LIMIT_REACHED_ON_ORGANIZATION\"), (4029, \"MAX_HLS_LIMIT_REACHED_ON_ORGANIZATION\"), (4030, \"MAX_LIVESTREAM_LIMIT_REACHED_ON_ORGANIZATION\"), (4031, \"START_TRANSCRIPTION_FAILED\"), (4032, \"STOP_TRANSCRIPTION_FAILED\"), (4033, \"CHARACTER_JOIN_FAILED\"), (4034, \"CHARACTER_LEAVE_FAILED\"), (4035, \"START_PARTICIPANT_RECORDING_FAILED\"), (4036, \"STOP_PARTICIPANT_RECORDING_FAILED\"), (4037, \"START_TRACK_RECORDING_FAILED\"), (4038, \"STOP_TRACK_RECORDING_FAILED\"), (4039, \"START_COMPOSITE_RECORDING_FAILED\"), (4040, \"STOP_COMPPOSITE_RECORDING_FAILED\"), (4041, \"MAX_RECV_ONLY_LIMIT_REACHED_ON_ORGANIZATION\"), (4042, \"START_TRANSLATION_FAILED\"), (4043, \"STOP_TRANSLATION_FAILED\"), (4044, \"CHANGE_TRANSLATION_LANGUAGE_FAILED\"), (4045, \"FAILED_TO_SET_VALUE\"), (4046, \"FAILED_TO_GET_VALUE\"), (4047, \"ADAPTIVE_SUBSCRIPTION_NOT_ENABLED_BY_SDK\"), (4048, \"ADAPTIVE_SUBSCRIPTION_ENABLE_FAILED\"), (4049, \"ADAPTIVE_SUBSCRIPTION_DISABLE_FAILED\"), (4050, \"CREATE_CONSUMER_FAILED\"), (4051, \"CODEC_NOT_SUPPORTED\"), (4052, \"MEETING_ID_DISABLED\"), (4053, \"APIKEY_DEACTIVATED\"), (4054, \"START_WHITEBOARD_FAILED\"), (4055, \"STOP_WHITEBOARD_FAILED\"), (4056, \"WHITEBOARD_OPERATION_IN_PROGRESS\"), (4057, \"PAUSE_ALL_STREAMS_FAILED\"), (4058, \"RESUME_ALL_STREAMS_FAILED\"), (4059, \"RESPOND_ENTRY_FAILED\"), (4065, \"CHANGE_MODE_FAILED\"), (4066, \"REMOVE_PARTICIPANT_FAILED\"), (4067, \"ENABLE_PARTICIPANT_MIC_FAILED\"), (4068, \"DISABLE_PARTICIPANT_MIC_FAILED\"), (4069, \"ENABLE_PARTICIPANT_WEBCAM_FAILED\"), (4070, \"DISABLE_PARTICIPANT_WEBCAM_FAILED\"), (4071, \"PIN_FAILED\"), (4072, \"UNPIN_FAILED\"), (4073, \"SET_QUALITY_FAILED\"), (4074, \"PAUSE_STREAM_FAILED\"), (4075, \"RESUME_STREAM_FAILED\"), (4076, \"SWITCH_MEETING_FAILED\"), (4077, \"SWITCH_PARTICIPANT_ROOM_FAILED\"), (4078, \"REQUEST_MEDIA_RELAY_FAILED\"), (4079, \"STOP_MEDIA_RELAY_FAILED\"), (4080, \"CONSUME_MIC_STREAMS_FAILED\"), (4081, \"CONSUME_WEBCAM_STREAMS_FAILED\"), (4082, \"STOP_CONSUMING_MIC_STREAMS_FAILED\"), (4083, \"STOP_CONSUMING_WEBCAM_STREAMS_FAILED\"), (4084, \"RESPOND_MEDIA_RELAY_REQUEST_FAILED\"), (4085, \"FAILED_TO_OBSERVE_VALUE\"), (4086, \"FAILED_TO_STOP_OBSERVING_VALUE\"), (4087, \"PUBSUB_PUBLISH_FAILED\"), (4088, \"PUBSUB_SUBSCRIBE_FAILED\"), (4089, \"PUBSUB_UNSUBSCRIBE_FAILED\"), (5000, \"SOMETHING_WENT_WRONG\"), (5001, \"RECORDING_FAILED\"), (5002, \"LIVESTREAM_FAILED\"), (5003, \"HLS_FAILED\"), (5004, \"RECORDING_DURATION_LIMIT_REACHED\"), (5005, \"LIVESTREAM_DURATION_LIMIT_REACHED\"), (5006, \"HLS_DURATION_LIMIT_REACHED\"), (5007, \"TRANSCRIPTION_FAILED\"), (5012, \"PARTICIPANT_RECORDING_FAILED\"), (5013, \"TRACK_RECORDING_FAILED\"), (5015, \"TRANSLATION_FAILED\"), (3008, \"ERROR_VIDEO_PRODUCE_CODEC_NOT_SUPPORTED\"), (3009, \"ERROR_MULTISTREAM_NOT_SUPPORTED\"), (3011, \"ERROR_GET_VIDEO_MEDIA\"), (3012, \"ERROR_GET_AUDIO_MEDIA\"), (3013, \"ERROR_GET_DISPLAY_MEDIA\"), (3014, \"ERROR_GET_VIDEO_MEDIA_PERMISSION_DENIED\"), (3015, \"ERROR_GET_AUDIO_MEDIA_PERMISSION_DENIED\"), (3016, \"ERROR_GET_DISPLAY_MEDIA_PERMISSION_DENIED\"), (3035, \"ERROR_ACTION_PERFORMED_BEFORE_MEETING_JOINED\"), (3047, \"ERROR_UNABLE_TO_JOIN_MEETING\"), (3054, \"ERROR_ALREADY_IN_REQUESTED_STATE\"), (3065, \"ERROR_MEETING_RECONNECTING\")]"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 12729,
+      "offset": 10704,
       "length": 4,
       "value": "4000"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 12741,
+      "offset": 10724,
       "length": 15,
       "value": "\"UNKNOWN_ERROR\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 12953,
+      "offset": 10950,
       "length": 4,
       "value": "4001"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 12965,
+      "offset": 10970,
       "length": 17,
       "value": "\"INVALID_API_KEY\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 13141,
+      "offset": 11160,
       "length": 4,
       "value": "4002"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 13153,
+      "offset": 11180,
       "length": 15,
       "value": "\"INVALID_TOKEN\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 13372,
+      "offset": 11413,
       "length": 4,
       "value": "4003"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 13384,
+      "offset": 11433,
       "length": 20,
       "value": "\"INVALID_MEETING_ID\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 13596,
+      "offset": 11659,
       "length": 4,
       "value": "4004"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 13608,
+      "offset": 11679,
       "length": 24,
       "value": "\"INVALID_PARTICIPANT_ID\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 13820,
+      "offset": 11905,
       "length": 4,
       "value": "4005"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 13832,
+      "offset": 11925,
       "length": 23,
       "value": "\"DUPLICATE_PARTICIPANT\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 14085,
+      "offset": 12192,
       "length": 4,
       "value": "4006"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 14097,
+      "offset": 12212,
       "length": 21,
       "value": "\"ACCOUNT_DEACTIVATED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 14347,
+      "offset": 12476,
       "length": 4,
       "value": "4007"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 14359,
+      "offset": 12496,
       "length": 22,
       "value": "\"ACCOUNT_DISCONTINUED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 14606,
+      "offset": 12757,
       "length": 4,
       "value": "4008"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 14618,
+      "offset": 12777,
       "length": 21,
       "value": "\"INVALID_PERMISSIONS\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 14854,
+      "offset": 13027,
       "length": 4,
       "value": "4009"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 14866,
+      "offset": 13047,
       "length": 24,
       "value": "\"MAX_PARTCIPANT_REACHED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 15099,
+      "offset": 13294,
       "length": 4,
       "value": "4010"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 15111,
+      "offset": 13314,
       "length": 21,
       "value": "\"MAX_SPEAKER_REACHED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 15305,
+      "offset": 13522,
       "length": 4,
       "value": "4011"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 15317,
+      "offset": 13542,
       "length": 24,
       "value": "\"START_RECORDING_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 15512,
+      "offset": 13751,
       "length": 4,
       "value": "4012"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 15524,
+      "offset": 13771,
       "length": 23,
       "value": "\"STOP_RECORDING_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 15722,
+      "offset": 13983,
       "length": 4,
       "value": "4013"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 15734,
+      "offset": 14003,
       "length": 25,
       "value": "\"START_LIVESTREAM_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 15932,
+      "offset": 14215,
       "length": 4,
       "value": "4014"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 15944,
+      "offset": 14235,
       "length": 24,
       "value": "\"STOP_LIVESTREAM_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 16145,
+      "offset": 14450,
       "length": 4,
       "value": "4015"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 16157,
+      "offset": 14470,
       "length": 27,
       "value": "\"INVALID_LIVESTREAM_CONFIG\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 16345,
+      "offset": 14672,
       "length": 4,
       "value": "4016"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 16357,
+      "offset": 14692,
       "length": 18,
       "value": "\"START_HLS_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 16534,
+      "offset": 14883,
       "length": 4,
       "value": "4017"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 16546,
+      "offset": 14903,
       "length": 17,
       "value": "\"STOP_HLS_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 16766,
+      "offset": 15137,
       "length": 4,
       "value": "4018"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 16778,
+      "offset": 15157,
       "length": 27,
       "value": "\"PREV_RECORDING_PROCESSING\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 17018,
+      "offset": 15411,
       "length": 4,
       "value": "4019"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 17030,
+      "offset": 15431,
       "length": 32,
       "value": "\"PREV_RTMP_RECORDING_PROCESSING\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 17273,
+      "offset": 15688,
       "length": 4,
       "value": "4020"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 17285,
+      "offset": 15708,
       "length": 31,
       "value": "\"PREV_HLS_STREAMING_PROCESSING\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 17526,
+      "offset": 15963,
       "length": 4,
       "value": "4021"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 17538,
+      "offset": 15983,
       "length": 26,
       "value": "\"ADD_ON_SERVICES_DISABLED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 17730,
+      "offset": 16189,
       "length": 4,
       "value": "4022"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 17742,
+      "offset": 16209,
       "length": 25,
       "value": "\"UNAUTHORIZED_MEETING_ID\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 17940,
+      "offset": 16421,
       "length": 4,
       "value": "4023"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 17952,
+      "offset": 16441,
       "length": 28,
       "value": "\"UNAUTHORIZED_PARTCIPANT_ID\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 18154,
+      "offset": 16657,
       "length": 4,
       "value": "4024"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 18166,
+      "offset": 16677,
       "length": 19,
       "value": "\"UNAUTHORIZED_ROLE\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 18355,
+      "offset": 16880,
       "length": 4,
       "value": "4025"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 18367,
+      "offset": 16900,
       "length": 22,
       "value": "\"UNAUTHORIZED_REQUEST\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 18623,
+      "offset": 17170,
       "length": 4,
       "value": "4026"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 18635,
+      "offset": 17190,
       "length": 43,
       "value": "\"MAX_SPEAKER_LIMIT_REACHED_ON_ORGANIZATION\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 19002,
+      "offset": 17571,
       "length": 4,
       "value": "4027"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 19014,
+      "offset": 17591,
       "length": 42,
       "value": "\"MAX_VIEWER_LIMIT_REACHED_ON_ORGANIZATION\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 19297,
+      "offset": 17900,
       "length": 4,
       "value": "4028"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 19309,
+      "offset": 17924,
       "length": 45,
       "value": "\"MAX_RECORDING_LIMIT_REACHED_ON_ORGANIZATION\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 19583,
+      "offset": 18216,
       "length": 4,
       "value": "4029"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 19595,
+      "offset": 18236,
       "length": 39,
       "value": "\"MAX_HLS_LIMIT_REACHED_ON_ORGANIZATION\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 19877,
+      "offset": 18544,
       "length": 4,
       "value": "4030"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 19889,
+      "offset": 18568,
       "length": 46,
       "value": "\"MAX_LIVESTREAM_LIMIT_REACHED_ON_ORGANIZATION\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 20116,
+      "offset": 18813,
       "length": 4,
       "value": "4031"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 20128,
+      "offset": 18833,
       "length": 28,
       "value": "\"START_TRANSCRIPTION_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 20335,
+      "offset": 19054,
       "length": 4,
       "value": "4032"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 20347,
+      "offset": 19074,
       "length": 27,
       "value": "\"STOP_TRANSCRIPTION_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 20545,
+      "offset": 19286,
       "length": 4,
       "value": "4033"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 20557,
+      "offset": 19306,
       "length": 23,
       "value": "\"CHARACTER_JOIN_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 20753,
+      "offset": 19516,
       "length": 4,
       "value": "4034"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 20765,
+      "offset": 19536,
       "length": 24,
       "value": "\"CHARACTER_LEAVE_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 20986,
+      "offset": 19771,
       "length": 4,
       "value": "4035"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 20998,
+      "offset": 19791,
       "length": 36,
       "value": "\"START_PARTICIPANT_RECORDING_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 21229,
+      "offset": 20036,
       "length": 4,
       "value": "4036"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 21241,
+      "offset": 20056,
       "length": 35,
       "value": "\"STOP_PARTICIPANT_RECORDING_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 21461,
+      "offset": 20290,
       "length": 4,
       "value": "4037"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 21473,
+      "offset": 20310,
       "length": 30,
       "value": "\"START_TRACK_RECORDING_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 21686,
+      "offset": 20537,
       "length": 4,
       "value": "4038"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 21698,
+      "offset": 20557,
       "length": 29,
       "value": "\"STOP_TRACK_RECORDING_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 21920,
+      "offset": 20793,
       "length": 4,
       "value": "4039"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 21932,
+      "offset": 20813,
       "length": 34,
       "value": "\"START_COMPOSITE_RECORDING_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 22158,
+      "offset": 21053,
       "length": 4,
       "value": "4040"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 22170,
+      "offset": 21073,
       "length": 34,
       "value": "\"STOP_COMPPOSITE_RECORDING_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 22516,
+      "offset": 21445,
       "length": 4,
       "value": "4041"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 22528,
+      "offset": 21469,
       "length": 45,
       "value": "\"MAX_RECV_ONLY_LIMIT_REACHED_ON_ORGANIZATION\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 22750,
+      "offset": 21709,
       "length": 4,
       "value": "4042"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 22762,
+      "offset": 21729,
       "length": 26,
       "value": "\"START_TRANSLATION_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 22963,
+      "offset": 21944,
       "length": 4,
       "value": "4043"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 22975,
+      "offset": 21964,
       "length": 25,
       "value": "\"STOP_TRANSLATION_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 23197,
+      "offset": 22200,
       "length": 4,
       "value": "4044"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 23209,
+      "offset": 22220,
       "length": 36,
       "value": "\"CHANGE_TRANSLATION_LANGUAGE_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 23395,
+      "offset": 22420,
       "length": 4,
       "value": "4045"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 23407,
+      "offset": 22440,
       "length": 21,
       "value": "\"FAILED_TO_SET_VALUE\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 23578,
+      "offset": 22625,
       "length": 4,
       "value": "4046"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 23590,
+      "offset": 22645,
       "length": 21,
       "value": "\"FAILED_TO_GET_VALUE\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 23835,
+      "offset": 22904,
       "length": 4,
       "value": "4047"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 23847,
+      "offset": 22924,
       "length": 42,
       "value": "\"ADAPTIVE_SUBSCRIPTION_NOT_ENABLED_BY_SDK\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 24061,
+      "offset": 23152,
       "length": 4,
       "value": "4048"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 24073,
+      "offset": 23172,
       "length": 37,
       "value": "\"ADAPTIVE_SUBSCRIPTION_ENABLE_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 24284,
+      "offset": 23397,
       "length": 4,
       "value": "4049"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 24296,
+      "offset": 23417,
       "length": 38,
       "value": "\"ADAPTIVE_SUBSCRIPTION_DISABLE_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 24478,
+      "offset": 23613,
       "length": 4,
       "value": "4050"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 24490,
+      "offset": 23633,
       "length": 24,
       "value": "\"CREATE_CONSUMER_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 24696,
+      "offset": 23853,
       "length": 4,
       "value": "4051"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 24708,
+      "offset": 23873,
       "length": 21,
       "value": "\"CODEC_NOT_SUPPORTED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 24915,
+      "offset": 24094,
       "length": 4,
       "value": "4052"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 24927,
+      "offset": 24114,
       "length": 21,
       "value": "\"MEETING_ID_DISABLED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 25143,
+      "offset": 24344,
       "length": 4,
       "value": "4053"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 25155,
+      "offset": 24364,
       "length": 20,
       "value": "\"APIKEY_DEACTIVATED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 25350,
+      "offset": 24573,
       "length": 4,
       "value": "4054"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 25362,
+      "offset": 24593,
       "length": 25,
       "value": "\"START_WHITEBOARD_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 25560,
+      "offset": 24805,
       "length": 4,
       "value": "4055"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 25572,
+      "offset": 24825,
       "length": 24,
       "value": "\"STOP_WHITEBOARD_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 25770,
+      "offset": 25037,
       "length": 4,
       "value": "4056"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 25782,
+      "offset": 25057,
       "length": 34,
       "value": "\"WHITEBOARD_OPERATION_IN_PROGRESS\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 25993,
+      "offset": 25282,
       "length": 4,
       "value": "4057"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 26005,
+      "offset": 25302,
       "length": 26,
       "value": "\"PAUSE_ALL_STREAMS_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 26210,
+      "offset": 25521,
       "length": 4,
       "value": "4058"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 26222,
+      "offset": 25541,
       "length": 27,
       "value": "\"RESUME_ALL_STREAMS_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 26421,
+      "offset": 25754,
       "length": 4,
       "value": "4059"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 26433,
+      "offset": 25774,
       "length": 22,
       "value": "\"RESPOND_ENTRY_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 26620,
+      "offset": 25975,
       "length": 4,
       "value": "4065"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 26632,
+      "offset": 25995,
       "length": 20,
       "value": "\"CHANGE_MODE_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 26831,
+      "offset": 26208,
       "length": 4,
       "value": "4066"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 26843,
+      "offset": 26228,
       "length": 27,
       "value": "\"REMOVE_PARTICIPANT_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 27057,
+      "offset": 26456,
       "length": 4,
       "value": "4067"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 27069,
+      "offset": 26476,
       "length": 31,
       "value": "\"ENABLE_PARTICIPANT_MIC_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 27289,
+      "offset": 26710,
       "length": 4,
       "value": "4068"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 27301,
+      "offset": 26730,
       "length": 32,
       "value": "\"DISABLE_PARTICIPANT_MIC_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 27526,
+      "offset": 26969,
       "length": 4,
       "value": "4069"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 27538,
+      "offset": 26989,
       "length": 34,
       "value": "\"ENABLE_PARTICIPANT_WEBCAM_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 27767,
+      "offset": 27232,
       "length": 4,
       "value": "4070"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 27779,
+      "offset": 27252,
       "length": 35,
       "value": "\"DISABLE_PARTICIPANT_WEBCAM_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 27963,
+      "offset": 27450,
       "length": 4,
       "value": "4071"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 27975,
+      "offset": 27470,
       "length": 12,
       "value": "\"PIN_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 28140,
+      "offset": 27649,
       "length": 4,
       "value": "4072"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 28152,
+      "offset": 27669,
       "length": 14,
       "value": "\"UNPIN_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 28331,
+      "offset": 27862,
       "length": 4,
       "value": "4073"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 28343,
+      "offset": 27882,
       "length": 20,
       "value": "\"SET_QUALITY_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 28530,
+      "offset": 28083,
       "length": 4,
       "value": "4074"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 28542,
+      "offset": 28103,
       "length": 21,
       "value": "\"PAUSE_STREAM_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 28732,
+      "offset": 28307,
       "length": 4,
       "value": "4075"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 28744,
+      "offset": 28327,
       "length": 22,
       "value": "\"RESUME_STREAM_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 28937,
+      "offset": 28534,
       "length": 4,
       "value": "4076"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 28949,
+      "offset": 28554,
       "length": 23,
       "value": "\"SWITCH_MEETING_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 29161,
+      "offset": 28780,
       "length": 4,
       "value": "4077"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 29173,
+      "offset": 28800,
       "length": 32,
       "value": "\"SWITCH_PARTICIPANT_ROOM_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 29378,
+      "offset": 29019,
       "length": 4,
       "value": "4078"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 29390,
+      "offset": 29039,
       "length": 28,
       "value": "\"REQUEST_MEDIA_RELAY_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 29593,
+      "offset": 29256,
       "length": 4,
       "value": "4079"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 29605,
+      "offset": 29276,
       "length": 25,
       "value": "\"STOP_MEDIA_RELAY_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 29811,
+      "offset": 29496,
       "length": 4,
       "value": "4080"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 29823,
+      "offset": 29516,
       "length": 28,
       "value": "\"CONSUME_MIC_STREAMS_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 30038,
+      "offset": 29745,
       "length": 4,
       "value": "4081"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 30050,
+      "offset": 29765,
       "length": 31,
       "value": "\"CONSUME_WEBCAM_STREAMS_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 30276,
+      "offset": 30005,
       "length": 4,
       "value": "4082"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 30288,
+      "offset": 30025,
       "length": 35,
       "value": "\"STOP_CONSUMING_MIC_STREAMS_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 30524,
+      "offset": 30275,
       "length": 4,
       "value": "4083"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 30536,
+      "offset": 30295,
       "length": 38,
       "value": "\"STOP_CONSUMING_WEBCAM_STREAMS_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 30766,
+      "offset": 30539,
       "length": 4,
       "value": "4084"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 30778,
+      "offset": 30559,
       "length": 36,
       "value": "\"RESPOND_MEDIA_RELAY_REQUEST_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 30972,
+      "offset": 30767,
       "length": 4,
       "value": "4085"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 30984,
+      "offset": 30787,
       "length": 25,
       "value": "\"FAILED_TO_OBSERVE_VALUE\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 31181,
+      "offset": 30998,
       "length": 4,
       "value": "4086"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 31193,
+      "offset": 31018,
       "length": 32,
       "value": "\"FAILED_TO_STOP_OBSERVING_VALUE\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 31377,
+      "offset": 31216,
       "length": 4,
       "value": "4087"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 31389,
+      "offset": 31236,
       "length": 23,
       "value": "\"PUBSUB_PUBLISH_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 31568,
+      "offset": 31429,
       "length": 4,
       "value": "4088"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 31580,
+      "offset": 31449,
       "length": 25,
       "value": "\"PUBSUB_SUBSCRIBE_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 31767,
+      "offset": 31650,
       "length": 4,
       "value": "4089"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 31779,
+      "offset": 31670,
       "length": 27,
       "value": "\"PUBSUB_UNSUBSCRIBE_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 31989,
+      "offset": 31894,
       "length": 4,
       "value": "5000"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 32001,
+      "offset": 31914,
       "length": 22,
       "value": "\"SOMETHING_WENT_WRONG\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 32177,
+      "offset": 32104,
       "length": 4,
       "value": "5001"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 32189,
+      "offset": 32124,
       "length": 18,
       "value": "\"RECORDING_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 32363,
+      "offset": 32312,
       "length": 4,
       "value": "5002"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 32375,
+      "offset": 32332,
       "length": 19,
       "value": "\"LIVESTREAM_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 32536,
+      "offset": 32507,
       "length": 4,
       "value": "5003"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 32548,
+      "offset": 32527,
       "length": 12,
       "value": "\"HLS_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 32753,
+      "offset": 32746,
       "length": 4,
       "value": "5004"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 32765,
+      "offset": 32766,
       "length": 34,
       "value": "\"RECORDING_DURATION_LIMIT_REACHED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 32994,
+      "offset": 33009,
       "length": 4,
       "value": "5005"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 33006,
+      "offset": 33029,
       "length": 35,
       "value": "\"LIVESTREAM_DURATION_LIMIT_REACHED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 33222,
+      "offset": 33259,
       "length": 4,
       "value": "5006"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 33234,
+      "offset": 33279,
       "length": 28,
       "value": "\"HLS_DURATION_LIMIT_REACHED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 33424,
+      "offset": 33483,
       "length": 4,
       "value": "5007"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 33436,
+      "offset": 33503,
       "length": 22,
       "value": "\"TRANSCRIPTION_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 33615,
+      "offset": 33717,
+      "length": 4,
+      "value": "5012"
+    },
+    {
+      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 33737,
+      "length": 30,
+      "value": "\"PARTICIPANT_RECORDING_FAILED\""
+    },
+    {
+      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
+      "kind": "IntegerLiteral",
+      "offset": 33947,
+      "length": 4,
+      "value": "5013"
+    },
+    {
+      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 33967,
+      "length": 24,
+      "value": "\"TRACK_RECORDING_FAILED\""
+    },
+    {
+      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
+      "kind": "IntegerLiteral",
+      "offset": 34162,
       "length": 4,
       "value": "5015"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 33627,
+      "offset": 34182,
       "length": 20,
       "value": "\"TRANSLATION_FAILED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 33908,
+      "offset": 34477,
       "length": 4,
       "value": "3008"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 33920,
+      "offset": 34497,
       "length": 41,
       "value": "\"ERROR_VIDEO_PRODUCE_CODEC_NOT_SUPPORTED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 34142,
+      "offset": 34733,
       "length": 4,
       "value": "3009"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 34154,
+      "offset": 34753,
       "length": 33,
       "value": "\"ERROR_MULTISTREAM_NOT_SUPPORTED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 34361,
+      "offset": 34974,
       "length": 4,
       "value": "3011"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 34373,
+      "offset": 34994,
       "length": 23,
       "value": "\"ERROR_GET_VIDEO_MEDIA\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 34570,
+      "offset": 35205,
       "length": 4,
       "value": "3012"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 34582,
+      "offset": 35225,
       "length": 23,
       "value": "\"ERROR_GET_AUDIO_MEDIA\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 34782,
+      "offset": 35439,
       "length": 4,
       "value": "3013"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 34794,
+      "offset": 35459,
       "length": 25,
       "value": "\"ERROR_GET_DISPLAY_MEDIA\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 34997,
+      "offset": 35676,
       "length": 4,
       "value": "3014"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 35009,
+      "offset": 35696,
       "length": 41,
       "value": "\"ERROR_GET_VIDEO_MEDIA_PERMISSION_DENIED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 35232,
+      "offset": 35933,
       "length": 4,
       "value": "3015"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 35244,
+      "offset": 35953,
       "length": 41,
       "value": "\"ERROR_GET_AUDIO_MEDIA_PERMISSION_DENIED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 35464,
+      "offset": 36187,
       "length": 4,
       "value": "3016"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 35476,
+      "offset": 36207,
       "length": 43,
       "value": "\"ERROR_GET_DISPLAY_MEDIA_PERMISSION_DENIED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 35700,
-      "length": 4,
-      "value": "3017"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 35712,
-      "length": 41,
-      "value": "\"ERROR_CAMERA_ACCESS_DENIED_OR_DISMISSED\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 35942,
-      "length": 4,
-      "value": "3018"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 35954,
-      "length": 45,
-      "value": "\"ERROR_MICROPHONE_ACCESS_DENIED_OR_DISMISSED\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 36180,
-      "length": 4,
-      "value": "3019"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 36192,
-      "length": 38,
-      "value": "\"ERROR_CAMERA_PERMISSION_DENIED_BY_OS\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 36419,
-      "length": 4,
-      "value": "3020"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 36431,
-      "length": 42,
-      "value": "\"ERROR_MICROPHONE_PERMISSION_DENIED_BY_OS\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 36608,
-      "length": 4,
-      "value": "3021"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 36620,
-      "length": 24,
-      "value": "\"ERROR_CAMERA_NOT_FOUND\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 36787,
-      "length": 4,
-      "value": "3022"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 36799,
-      "length": 28,
-      "value": "\"ERROR_MICROPHONE_NOT_FOUND\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 36982,
-      "length": 4,
-      "value": "3023"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 36994,
-      "length": 21,
-      "value": "\"ERROR_CAMERA_IN_USE\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 37178,
-      "length": 4,
-      "value": "3024"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 37190,
-      "length": 25,
-      "value": "\"ERROR_MICROPHONE_IN_USE\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 37397,
-      "length": 4,
-      "value": "3025"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 37409,
-      "length": 43,
-      "value": "\"ERROR_CAMERA_PERMISSION_OR_AUTOPLAY_ISSUE\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 37622,
-      "length": 4,
-      "value": "3026"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 37634,
-      "length": 38,
-      "value": "\"ERROR_VIDEO_SOURCE_INITIATION_FAILED\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 37834,
-      "length": 4,
-      "value": "3027"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 37846,
-      "length": 26,
-      "value": "\"ERROR_WEBCAM_TRACK_ENDED\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 38042,
-      "length": 4,
-      "value": "3028"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 38054,
-      "length": 30,
-      "value": "\"ERROR_MICROPHONE_TRACK_ENDED\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 38251,
-      "length": 4,
-      "value": "3029"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 38263,
-      "length": 34,
-      "value": "\"ERROR_INVALID_CUSTOM_VIDEO_TRACK\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 38464,
-      "length": 4,
-      "value": "3030"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 38476,
-      "length": 34,
-      "value": "\"ERROR_INVALID_CUSTOM_AUDIO_TRACK\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 38674,
-      "length": 4,
-      "value": "3031"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 38686,
-      "length": 32,
-      "value": "\"ERROR_CUSTOM_VIDEO_TRACK_ENDED\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 38882,
-      "length": 4,
-      "value": "3032"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 38894,
-      "length": 32,
-      "value": "\"ERROR_CUSTOM_AUDIO_TRACK_ENDED\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 39079,
-      "length": 4,
-      "value": "3033"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 39091,
-      "length": 33,
-      "value": "\"ERROR_CAMERA_ACCESS_UNAVAILABLE\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 39285,
-      "length": 4,
-      "value": "3034"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 39297,
-      "length": 37,
-      "value": "\"ERROR_MICROPHONE_ACCESS_UNAVAILABLE\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 39518,
+      "offset": 36460,
       "length": 4,
       "value": "3035"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 39530,
+      "offset": 36484,
       "length": 46,
       "value": "\"ERROR_ACTION_PERFORMED_BEFORE_MEETING_JOINED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 39759,
-      "length": 4,
-      "value": "3044"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 39771,
-      "length": 39,
-      "value": "\"ERROR_MEETING_MEDIA_CONNECTION_FAILED\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 39979,
+      "offset": 36717,
       "length": 4,
       "value": "3047"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 39991,
+      "offset": 36737,
       "length": 30,
       "value": "\"ERROR_UNABLE_TO_JOIN_MEETING\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 40186,
-      "length": 4,
-      "value": "3048"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 40198,
-      "length": 23,
-      "value": "\"ERROR_MEDIA_NOT_READY\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 40415,
-      "length": 4,
-      "value": "3049"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 40427,
-      "length": 29,
-      "value": "\"ERROR_WEBCAM_PRODUCE_FAILED\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 40628,
-      "length": 4,
-      "value": "3050"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 40640,
-      "length": 36,
-      "value": "\"ERROR_MEDIA_DEVICE_NOT_INITIALIZED\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 40850,
-      "length": 4,
-      "value": "3051"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 40862,
-      "length": 30,
-      "value": "\"ERROR_NO_WEBCAM_DEVICE_FOUND\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 41071,
-      "length": 4,
-      "value": "3052"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 41083,
-      "length": 32,
-      "value": "\"ERROR_NO_SUPPORTED_VIDEO_CODEC\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 41277,
-      "length": 4,
-      "value": "3053"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 41289,
-      "length": 35,
-      "value": "\"ERROR_VIDEO_TRACK_CREATION_FAILED\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 41490,
+      "offset": 36947,
       "length": 4,
       "value": "3054"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 41502,
+      "offset": 36967,
       "length": 34,
       "value": "\"ERROR_ALREADY_IN_REQUESTED_STATE\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 41706,
-      "length": 4,
-      "value": "3055"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 41718,
-      "length": 29,
-      "value": "\"ERROR_OPERATION_IN_PROGRESS\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 41912,
-      "length": 4,
-      "value": "3056"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 41924,
-      "length": 25,
-      "value": "\"ERROR_OPERATION_ABORTED\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 42113,
-      "length": 4,
-      "value": "3057"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 42125,
-      "length": 26,
-      "value": "\"ERROR_END_MEETING_FAILED\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 42353,
-      "length": 4,
-      "value": "3058"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 42365,
-      "length": 33,
-      "value": "\"ERROR_MICROPHONE_PRODUCE_FAILED\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 42580,
-      "length": 4,
-      "value": "3059"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 42592,
-      "length": 34,
-      "value": "\"ERROR_NO_MICROPHONE_DEVICE_FOUND\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 42788,
-      "length": 4,
-      "value": "3060"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 42800,
-      "length": 35,
-      "value": "\"ERROR_AUDIO_TRACK_CREATION_FAILED\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 42994,
-      "length": 4,
-      "value": "3061"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 43006,
-      "length": 34,
-      "value": "\"ERROR_SCREENSHARE_PRODUCE_FAILED\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 43220,
-      "length": 4,
-      "value": "3062"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 43232,
-      "length": 26,
-      "value": "\"ERROR_WEBCAM_NOT_ENABLED\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 43418,
-      "length": 4,
-      "value": "3063"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 43430,
-      "length": 33,
-      "value": "\"ERROR_SET_WEBCAM_QUALITY_FAILED\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 43653,
-      "length": 4,
-      "value": "3064"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 43665,
-      "length": 31,
-      "value": "\"ERROR_MEDIA_DEVICE_NOT_LOADED\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 43869,
+      "offset": 37188,
       "length": 4,
       "value": "3065"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 43881,
+      "offset": 37208,
       "length": 28,
       "value": "\"ERROR_MEETING_RECONNECTING\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 44096,
-      "length": 4,
-      "value": "3066"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 44108,
-      "length": 36,
-      "value": "\"ERROR_ACTION_NOT_SUPPORTED_IN_MODE\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 44289,
-      "length": 4,
-      "value": "3067"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 44301,
-      "length": 20,
-      "value": "\"ERROR_INVALID_MODE\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 44477,
-      "length": 4,
-      "value": "3068"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 44489,
-      "length": 28,
-      "value": "\"ERROR_ACTION_NOT_SUPPORTED\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 44685,
-      "length": 4,
-      "value": "3069"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 44697,
-      "length": 28,
-      "value": "\"ERROR_CAPTURE_IMAGE_FAILED\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 44883,
-      "length": 4,
-      "value": "3070"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 44895,
-      "length": 19,
-      "value": "\"ERROR_SEND_FAILED\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 45078,
-      "length": 4,
-      "value": "3071"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 45090,
-      "length": 35,
-      "value": "\"ERROR_INVALID_CUSTOM_TRACK_CONFIG\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 45285,
-      "length": 4,
-      "value": "3072"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 45297,
-      "length": 25,
-      "value": "\"ERROR_PAYLOAD_TOO_LARGE\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 45486,
-      "length": 4,
-      "value": "3073"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 45498,
-      "length": 25,
-      "value": "\"ERROR_INVALID_PARAMETER\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 45687,
-      "length": 4,
-      "value": "3074"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 45699,
-      "length": 26,
-      "value": "\"ERROR_FILE_UPLOAD_FAILED\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "IntegerLiteral",
-      "offset": 45887,
-      "length": 4,
-      "value": "3075"
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 45899,
-      "length": 25,
-      "value": "\"ERROR_FILE_FETCH_FAILED\""
-    },
-    {
-      "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
-      "kind": "StringLiteral",
-      "offset": 67420,
+      "offset": 52679,
       "length": 13,
       "value": "\"HLS_STARTED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 68619,
+      "offset": 53878,
       "length": 19,
       "value": "\"RECORDING_STARTED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 69345,
+      "offset": 54604,
       "length": 20,
       "value": "\"LIVESTREAM_STARTED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 70191,
+      "offset": 55450,
       "length": 24,
       "value": "\"TRANSCRIPTION_STARTING\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 70859,
+      "offset": 56118,
       "length": 14,
       "value": "\"UDP_OVER_TCP\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 71749,
+      "offset": 57008,
       "length": 19,
       "value": "\"EncryptionSuccess\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 73043,
+      "offset": 58302,
       "length": 14,
       "value": "\"HIGH_QUALITY\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 74349,
+      "offset": 59608,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 74662,
+      "offset": 59921,
       "length": 11,
       "value": "3"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 74946,
+      "offset": 60205,
       "length": 17,
       "value": "\"FREEZE_DETECTED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 75553,
+      "offset": 60812,
       "length": 5,
       "value": "\"CPU\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "StringLiteral",
-      "offset": 75960,
+      "offset": 61219,
       "length": 10,
       "value": "\"DETECTED\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 76625,
+      "offset": 61884,
       "length": 4,
       "value": "1001"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 76757,
+      "offset": 62016,
       "length": 4,
       "value": "1002"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 76906,
+      "offset": 62165,
       "length": 4,
       "value": "1003"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 77056,
+      "offset": 62315,
       "length": 4,
       "value": "1004"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 77173,
+      "offset": 62432,
       "length": 4,
       "value": "1005"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 77292,
+      "offset": 62551,
       "length": 4,
       "value": "1006"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 77416,
+      "offset": 62675,
       "length": 4,
       "value": "1007"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 77538,
+      "offset": 62797,
       "length": 4,
       "value": "1008"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 77693,
+      "offset": 62952,
       "length": 4,
       "value": "1009"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 77816,
+      "offset": 63075,
       "length": 4,
       "value": "1010"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 77957,
+      "offset": 63216,
       "length": 4,
       "value": "1011"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 78136,
+      "offset": 63395,
       "length": 4,
       "value": "1101"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 78373,
+      "offset": 63628,
       "length": 4,
       "value": "1102"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 78501,
+      "offset": 63752,
       "length": 4,
       "value": "1103"
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Public\/MeetingStateEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 78622,
+      "offset": 63873,
       "length": 4,
       "value": "1104"
     },
@@ -299570,7 +296904,7 @@
       "kind": "StringLiteral",
       "offset": 1086,
       "length": 7,
-      "value": "\"3.2.0\""
+      "value": "\"3.2.1\""
     },
     {
       "filePath": "\/Users\/parthasodariya\/Documents\/Development\/videosdk-rtc-ios-sdk-private\/VideoSDKRTC\/Internal\/SDKConfig.swift",
